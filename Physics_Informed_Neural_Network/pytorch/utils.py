@@ -56,7 +56,7 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     
     
     # save training data points to tensor and send to device
-    all_st_train = torch.from_numpy(all_st_train).float().requires_grad_().to(device) 
+    all_st_train = torch.from_numpy(all_st_train).float().to(device) 
     
     n_st_train = torch.from_numpy(n_st_train).float().requires_grad_().to(device)
     n_v_train = torch.from_numpy(n_v_train).float().to(device)
