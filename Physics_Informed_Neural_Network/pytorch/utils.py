@@ -53,18 +53,10 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     # Generate the training labels
     all_st_train = np.vstack((n_st_train, bc_st_train)) # append training points to collocation points
     
-    
-    
-    # save training data points to tensor and send to device
-    all_st_train = torch.from_numpy(all_st_train).float().to(device) 
-    
-    n_st_train = torch.from_numpy(n_st_train).float().requires_grad_().to(device)
-    n_v_train = torch.from_numpy(n_v_train).float().to(device)
-    
-    bc_st_train = torch.from_numpy(bc_st_train).float().to(device)
-    bc_v_train = torch.from_numpy(bc_v_train).float().to(device)
-    
     return all_st_train, bc_st_train, bc_v_train, n_st_train, n_v_train
+
+
+
 
 def testingData(lb, ub, u, f, num):
   device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -86,6 +78,9 @@ def testingData(lb, ub, u, f, num):
   y_test = torch.from_numpy(xy_test[:,[1]]).to(device)
 #   f_test = f(x_test, y_test)
   return x_test, y_test, xy_test, u_test, f_test, X, Y, U
+
+
+
 
 def PINNplot(PINN, X, U, info):
     error_vec, u_pred = PINN.test(True)
