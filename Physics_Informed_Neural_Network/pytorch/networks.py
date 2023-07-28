@@ -1,6 +1,7 @@
 # This is supposed to be a template for how to implement PINNS models for the code
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import torch.autograd as autograd
 import numpy as np
 import math
@@ -19,6 +20,48 @@ class FeedforwardNeuralNetwork(nn.Module):
     def forward(self, x):
         for layer in self.layers:
             x = self.relu(layer(x))
+        x = self.output(x)
+        return x
+
+
+
+
+class AdaptiveReluFunction(torch.autograd.Function):
+    @staticmethod
+    def forward(ctx, input, slopes):
+        ctx.save_for_backward(input, slopes)
+        output = F.relu(input) * slopes
+        return output
+    @staticmethod
+    def backward(ctx, grad_output):
+        input, slopes = ctx.saved_tensors
+        grad_input = grad_output * (input > 0).float() * slopes
+        grad_slopes = (grad_output * (input > 0).float() * input).sum(dim=0)
+        return grad_input, grad_slopes
+
+class AdaptiveRelu(nn.Module):
+    def __init__(self, num_neurons):
+        super(AdaptiveRelu, self).__init__()
+        self.slopes = nn.Parameter(torch.ones(num_neurons))
+
+    def forward(self, input):
+        return AdaptiveReluFunction.apply(input, self.slopes)
+
+
+# Define the feedforward neural network
+class ImprovedFNN(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size, n_layers):
+        super(ImprovedFNN, self).__init__()
+        self.input = nn.Linear(input_size, hidden_size)
+        self.hidden = nn.ModuleList([
+          AdaptiveRelu(hidden_size) for i in range(n_layers)
+          ])
+        self.output = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        x = self.input(x)
+        for layer in self.hidden:
+            x = layer(x)
         x = self.output(x)
         return x
 
