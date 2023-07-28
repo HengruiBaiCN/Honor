@@ -7,8 +7,8 @@ import numpy as np
 
 # Create a toy dataset with boundary and initial conditions
 torch.manual_seed(42)
-X = torch.from_numpy(np.linspace(0, 1, 100)).float()  # Spatial grid
-t = torch.from_numpy(np.linspace(0, 0.2, 10)).float()  # Time grid
+X = torch.from_numpy(np.linspace(0, 1, 100)).float().requires_grad_()  # Spatial grid
+t = torch.from_numpy(np.linspace(0, 0.2, 10)).float().requires_grad_()  # Time grid
 print(X.dtype)
 X, t = torch.meshgrid(X, t)
 X = X.reshape(-1, 1)

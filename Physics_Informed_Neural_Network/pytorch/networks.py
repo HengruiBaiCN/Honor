@@ -54,7 +54,7 @@ class ImprovedFNN(nn.Module):
         super(ImprovedFNN, self).__init__()
         self.input = nn.Linear(input_size, hidden_size)
         self.hidden = nn.ModuleList([
-          AdaptiveRelu(hidden_size) for i in range(n_layers)
+          AdaptiveRelu(hidden_size) for i in range(n_layers-1)
           ])
         self.output = nn.Linear(hidden_size, output_size)
 
