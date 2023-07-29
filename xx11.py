@@ -65,7 +65,7 @@ class LocalAdaptivePINN(nn.Module):
 def physics_loss(u, x, t, alpha=0.1):
     u_x = torch.autograd.grad(u, x, torch.ones_like(u), create_graph=True)[0]
     u_t = torch.autograd.grad(u, t, torch.ones_like(u), create_graph=True)[0]
-    u_xx = torch.autograd.grad(u_x, x, torch.ones_like(u_x), create_graph=True)[0]
+    u_xx = torch.autograd.grad(u_x, x, torch.ones_like(u_x), create_graph=True, allow_unused=True)[0]
     heat_eq_loss = u_t - alpha * u_xx  # Heat conduction equation: d(u)/dt - alpha * d^2(u)/dx^2 = 0
     return torch.mean(heat_eq_loss**2)
 
@@ -84,8 +84,17 @@ for epoch in range(num_epochs):
     # Forward pass
     u_pred = model(X, t)
     loss_data = criterion(u_pred, u_initial)  # Data fitting loss
-    loss_physics = physics_loss(u_pred, X, t)  # Physics loss (heat conduction equation)
-    total_loss = loss_data + loss_physics
+
+    # Calculate gradients for the physics loss outside of the physics_loss function
+    u_x = torch.autograd.grad(u_pred, X, torch.ones_like(u_pred), create_graph=True)[0]
+    u_t = torch.autograd.grad(u_pred, t, torch.ones_like(u_pred), create_graph=True)[0]
+    u_xx = torch.autograd.grad(u_x, X, torch.ones_like(u_x), create_graph=True, allow_unused=True)[0]
+    if u_xx is None:
+        u_xx = 0
+    heat_eq_loss = u_t - 0.1 * u_xx  # Heat conduction equation: d(u)/dt - alpha * d^2(u)/dx^2 = 0
+    # return torch.mean(heat_eq_loss**2)
+
+    total_loss = loss_data + torch.mean(heat_eq_loss**2)
 
     # Backward and optimize
     optimizer.zero_grad()

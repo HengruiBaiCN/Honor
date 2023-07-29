@@ -30,7 +30,7 @@ class AdaptiveReluFunction(torch.autograd.Function):
     @staticmethod
     def forward(ctx, input, slopes):
         ctx.save_for_backward(input, slopes)
-        output = F.relu(input) * slopes
+        output = nn.ReLU(input) * slopes
         return output
     @staticmethod
     def backward(ctx, grad_output):
