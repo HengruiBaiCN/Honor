@@ -5,6 +5,7 @@ import torch.optim as optim
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # Create a toy dataset with boundary and initial conditions
 torch.manual_seed(42)
 X = torch.from_numpy(np.linspace(0, 1, 100)).float().requires_grad_()  # Spatial grid
