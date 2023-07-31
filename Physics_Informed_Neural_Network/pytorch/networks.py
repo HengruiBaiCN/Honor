@@ -26,93 +26,6 @@ class FeedforwardNeuralNetwork(nn.Module):
 
 
 
-# class AdaptiveReluFunction(torch.autograd.Function):
-#     @staticmethod
-#     def forward(ctx, input, slopes):
-#         ctx.save_for_backward(input, slopes)
-#         output = nn.ReLU(input) * slopes
-#         return output
-#     @staticmethod
-#     def backward(ctx, grad_output):
-#         input, slopes = ctx.saved_tensors
-#         grad_input = grad_output * (input > 0).float() * slopes
-#         grad_slopes = (grad_output * (input > 0).float() * input).sum(dim=0)
-#         return grad_input, grad_slopes
-
-# class AdaptiveRelu(nn.Module):
-#     def __init__(self, num_neurons):
-#         super(AdaptiveRelu, self).__init__()
-#         self.slopes = nn.Parameter(torch.ones(num_neurons))
-
-#     def forward(self, input):
-#         return AdaptiveReluFunction.apply(input, self.slopes)
-
-
-# # Define the feedforward neural network
-# class ImprovedFNN(nn.Module):
-#     def __init__(self, input_size, hidden_size, output_size, n_layers):
-#         super(ImprovedFNN, self).__init__()
-#         self.input = nn.Linear(input_size, hidden_size)
-#         self.hidden = nn.ModuleList([
-#           AdaptiveRelu(hidden_size) for i in range(n_layers-1)
-#           ])
-#         self.output = nn.Linear(hidden_size, output_size)
-
-#     def forward(self, x):
-#         x = self.input(x)
-#         for layer in self.hidden:
-#             x = layer(x)
-#         x = self.output(x)
-#         return x
-
-
-
-
-
-# Deep Garlerkin Method (Neural Network)
-# The deep garlerkin method from paper
-class DGMCell(nn.Module):
-  def __init__(self, input_dim, hidden_dim, output_dim,  n_layers):
-    super(DGMCell, self).__init__()
-    self.input_dim = input_dim
-    self.hidden_dim = hidden_dim
-    self.output_dim = output_dim
-    self.n = n_layers
-
-    self.sig_act = nn.Tanh()
-
-    self.Sw = nn.Linear(self.input_dim, self.hidden_dim)
-
-    self.Uz = nn.Linear(self.input_dim, self.hidden_dim)
-    self.Wsz = nn.Linear(self.hidden_dim, self.hidden_dim)
-
-    self.Ug = nn.Linear(self.input_dim, self.hidden_dim)
-    self.Wsg = nn.Linear(self.hidden_dim, self.hidden_dim)
-
-    self.Ur = nn.Linear(self.input_dim, self.hidden_dim)
-    self.Wsr = nn.Linear(self.hidden_dim, self.hidden_dim)
-    
-    self.Uh = nn.Linear(self.input_dim, self.hidden_dim)
-    self.Wsh = nn.Linear(self.hidden_dim, self.hidden_dim)
-
-    self.Wf = nn.Linear(hidden_dim, output_dim)
-    
-
-  def forward(self, x):
-    S1 = self.Sw(x)
-    for i in range(self.n):
-      if i==0:
-        S = S1
-      else:
-        S = self.sig_act(out)
-      Z = self.sig_act(self.Uz(x) + self.Wsz(S))
-      G = self.sig_act(self.Ug(x) + self.Wsg(S1))
-      R = self.sig_act(self.Ur(x) + self.Wsr(S))
-      H = self.sig_act(self.Uh(x) + self.Wsh(S*R))
-      out = (1-G)*H + Z*S
-    out = self.Wf(out)
-    return out
-
 
 
 # The Discriminator Network
@@ -138,6 +51,7 @@ class Discriminator(nn.Module):
 
     def forward(self, x, y):
         return self.map(torch.cat((x,y), 1))
+
 
 
 
@@ -191,7 +105,7 @@ class AdaptiveLinear(nn.Linear):
         )
 
 
-class Net(nn.Module):
+class ImprovedNeuralNetwork(nn.Module):
     r"""Neural approximator for the unknown function that is supposed
     to be solved.
 
@@ -220,9 +134,9 @@ class Net(nn.Module):
         functions
     """
     def __init__(self, sizes, activation, dropout_rate=0.0, adaptive_rate=None, adaptive_rate_scaler=None):
-        super(Net, self).__init__()
+        super(ImprovedNeuralNetwork, self).__init__()
         self.regressor = nn.Sequential(
-            *[Net.linear_block(in_features, out_features, activation, dropout_rate, adaptive_rate, adaptive_rate_scaler)
+            *[ImprovedNeuralNetwork.linear_block(in_features, out_features, activation, dropout_rate, adaptive_rate, adaptive_rate_scaler)
             for in_features, out_features in zip(sizes[:-1], sizes[1:-1])],     
             AdaptiveLinear(sizes[-2], sizes[-1]) # output layer is regular linear transformation
             )
@@ -244,3 +158,92 @@ class Net(nn.Module):
             activation_dispatcher[activation],
             nn.Dropout(dropout_rate),
             )
+
+
+
+
+
+# # Deep Garlerkin Method (Neural Network)
+# # The deep garlerkin method from paper
+# class DGMCell(nn.Module):
+#   def __init__(self, input_dim, hidden_dim, output_dim,  n_layers):
+#     super(DGMCell, self).__init__()
+#     self.input_dim = input_dim
+#     self.hidden_dim = hidden_dim
+#     self.output_dim = output_dim
+#     self.n = n_layers
+
+#     self.sig_act = nn.Tanh()
+
+#     self.Sw = nn.Linear(self.input_dim, self.hidden_dim)
+
+#     self.Uz = nn.Linear(self.input_dim, self.hidden_dim)
+#     self.Wsz = nn.Linear(self.hidden_dim, self.hidden_dim)
+
+#     self.Ug = nn.Linear(self.input_dim, self.hidden_dim)
+#     self.Wsg = nn.Linear(self.hidden_dim, self.hidden_dim)
+
+#     self.Ur = nn.Linear(self.input_dim, self.hidden_dim)
+#     self.Wsr = nn.Linear(self.hidden_dim, self.hidden_dim)
+    
+#     self.Uh = nn.Linear(self.input_dim, self.hidden_dim)
+#     self.Wsh = nn.Linear(self.hidden_dim, self.hidden_dim)
+
+#     self.Wf = nn.Linear(hidden_dim, output_dim)
+    
+
+#   def forward(self, x):
+#     S1 = self.Sw(x)
+#     for i in range(self.n):
+#       if i==0:
+#         S = S1
+#       else:
+#         S = self.sig_act(out)
+#       Z = self.sig_act(self.Uz(x) + self.Wsz(S))
+#       G = self.sig_act(self.Ug(x) + self.Wsg(S1))
+#       R = self.sig_act(self.Ur(x) + self.Wsr(S))
+#       H = self.sig_act(self.Uh(x) + self.Wsh(S*R))
+#       out = (1-G)*H + Z*S
+#     out = self.Wf(out)
+#     return out
+
+
+
+# class AdaptiveReluFunction(torch.autograd.Function):
+#     @staticmethod
+#     def forward(ctx, input, slopes):
+#         ctx.save_for_backward(input, slopes)
+#         output = nn.ReLU(input) * slopes
+#         return output
+#     @staticmethod
+#     def backward(ctx, grad_output):
+#         input, slopes = ctx.saved_tensors
+#         grad_input = grad_output * (input > 0).float() * slopes
+#         grad_slopes = (grad_output * (input > 0).float() * input).sum(dim=0)
+#         return grad_input, grad_slopes
+
+# class AdaptiveRelu(nn.Module):
+#     def __init__(self, num_neurons):
+#         super(AdaptiveRelu, self).__init__()
+#         self.slopes = nn.Parameter(torch.ones(num_neurons))
+
+#     def forward(self, input):
+#         return AdaptiveReluFunction.apply(input, self.slopes)
+
+
+# # Define the feedforward neural network
+# class ImprovedFNN(nn.Module):
+#     def __init__(self, input_size, hidden_size, output_size, n_layers):
+#         super(ImprovedFNN, self).__init__()
+#         self.input = nn.Linear(input_size, hidden_size)
+#         self.hidden = nn.ModuleList([
+#           AdaptiveRelu(hidden_size) for i in range(n_layers-1)
+#           ])
+#         self.output = nn.Linear(hidden_size, output_size)
+
+#     def forward(self, x):
+#         x = self.input(x)
+#         for layer in self.hidden:
+#             x = layer(x)
+#         x = self.output(x)
+#         return x
