@@ -49,8 +49,8 @@ class Discriminator(nn.Module):
             nn.Linear(2  * hidden_size, output_size),
         )
 
-    def forward(self, x, y):
-        return self.map(torch.cat((x,y), 1))
+    def forward(self, x):
+        return self.map(x)
 
 
 
