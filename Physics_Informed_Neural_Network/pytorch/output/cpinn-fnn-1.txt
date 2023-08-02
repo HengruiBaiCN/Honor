@@ -1,121 +1,131 @@
-0/60000 PDE Loss: 0.00098, BC Loss: 4291.06104, total loss: 4291.062012, neural network loss: -5530.423828
-500/60000 PDE Loss: 0.02650, BC Loss: 105.42360, total loss: 105.450104, neural network loss: 160.043625
-1000/60000 PDE Loss: 0.11946, BC Loss: 101.93536, total loss: 102.054817, neural network loss: 160.723633
-1500/60000 PDE Loss: 0.31457, BC Loss: 97.29599, total loss: 97.610565, neural network loss: 157.620392
-2000/60000 PDE Loss: 0.63795, BC Loss: 92.70820, total loss: 93.346153, neural network loss: 155.309860
-2500/60000 PDE Loss: 0.95524, BC Loss: 87.07766, total loss: 88.032906, neural network loss: 148.953644
-3000/60000 PDE Loss: 0.97691, BC Loss: 83.82030, total loss: 84.797211, neural network loss: 149.808807
-3500/60000 PDE Loss: 0.36891, BC Loss: 79.46974, total loss: 79.838654, neural network loss: 132.014221
-4000/60000 PDE Loss: 0.13144, BC Loss: 75.54202, total loss: 75.673462, neural network loss: 116.877548
-4500/60000 PDE Loss: 0.07695, BC Loss: 71.96567, total loss: 72.042618, neural network loss: 109.343605
-5000/60000 PDE Loss: 0.04429, BC Loss: 77.72810, total loss: 77.772392, neural network loss: 162.125443
-5500/60000 PDE Loss: 0.04281, BC Loss: 65.48936, total loss: 65.532166, neural network loss: 99.874657
-6000/60000 PDE Loss: 0.06577, BC Loss: 57.70810, total loss: 57.773869, neural network loss: 83.607430
-6500/60000 PDE Loss: 0.02807, BC Loss: 46.85758, total loss: 46.885651, neural network loss: 51.836994
-7000/60000 PDE Loss: 0.00797, BC Loss: 39.54140, total loss: 39.549366, neural network loss: 32.783852
-7500/60000 PDE Loss: 0.03242, BC Loss: 29.41727, total loss: 29.449686, neural network loss: 22.479763
-8000/60000 PDE Loss: 0.02491, BC Loss: 22.67880, total loss: 22.703718, neural network loss: 12.713593
-8500/60000 PDE Loss: 0.01734, BC Loss: 17.40004, total loss: 17.417377, neural network loss: 7.369011
-9000/60000 PDE Loss: 0.01182, BC Loss: 13.58644, total loss: 13.598265, neural network loss: 4.690919
-9500/60000 PDE Loss: 0.00872, BC Loss: 10.77606, total loss: 10.784781, neural network loss: 3.025040
-10000/60000 PDE Loss: 0.00704, BC Loss: 8.62468, total loss: 8.631723, neural network loss: 2.127833
-10500/60000 PDE Loss: 0.00579, BC Loss: 7.02537, total loss: 7.031165, neural network loss: 1.545388
-11000/60000 PDE Loss: 0.00497, BC Loss: 5.80660, total loss: 5.811563, neural network loss: 1.166174
-11500/60000 PDE Loss: 0.00443, BC Loss: 4.86516, total loss: 4.869584, neural network loss: 0.908156
-12000/60000 PDE Loss: 0.00365, BC Loss: 4.27018, total loss: 4.273827, neural network loss: 0.751542
-12500/60000 PDE Loss: 0.00318, BC Loss: 3.73110, total loss: 3.734287, neural network loss: 0.630396
-13000/60000 PDE Loss: 0.00256, BC Loss: 3.30333, total loss: 3.305893, neural network loss: 0.538833
-13500/60000 PDE Loss: 0.00219, BC Loss: 2.95641, total loss: 2.958595, neural network loss: 0.472557
-14000/60000 PDE Loss: 0.00195, BC Loss: 2.65304, total loss: 2.654998, neural network loss: 0.419248
-14500/60000 PDE Loss: 0.00183, BC Loss: 2.37704, total loss: 2.378875, neural network loss: 0.373137
-15000/60000 PDE Loss: 0.00191, BC Loss: 2.11940, total loss: 2.121314, neural network loss: 0.331300
-15500/60000 PDE Loss: 0.00228, BC Loss: 1.84845, total loss: 1.850734, neural network loss: 0.282977
-16000/60000 PDE Loss: 0.00305, BC Loss: 1.60930, total loss: 1.612354, neural network loss: 0.246073
-16500/60000 PDE Loss: 0.00314, BC Loss: 1.48934, total loss: 1.492479, neural network loss: 0.229953
-17000/60000 PDE Loss: 0.00324, BC Loss: 1.38965, total loss: 1.392891, neural network loss: 0.217597
-17500/60000 PDE Loss: 0.00317, BC Loss: 1.30419, total loss: 1.307361, neural network loss: 0.204622
-18000/60000 PDE Loss: 0.00322, BC Loss: 1.23624, total loss: 1.239460, neural network loss: 0.197098
-18500/60000 PDE Loss: 0.00325, BC Loss: 1.18893, total loss: 1.192172, neural network loss: 0.194365
-19000/60000 PDE Loss: 0.00304, BC Loss: 1.13739, total loss: 1.140425, neural network loss: 0.184460
-19500/60000 PDE Loss: 0.00288, BC Loss: 1.09297, total loss: 1.095845, neural network loss: 0.176401
-20000/60000 PDE Loss: 0.00284, BC Loss: 1.05486, total loss: 1.057697, neural network loss: 0.171353
-20500/60000 PDE Loss: 0.00270, BC Loss: 1.02114, total loss: 1.023840, neural network loss: 0.164842
-21000/60000 PDE Loss: 0.00247, BC Loss: 0.99108, total loss: 0.993550, neural network loss: 0.157411
-21500/60000 PDE Loss: 0.00235, BC Loss: 0.96476, total loss: 0.967111, neural network loss: 0.152229
-22000/60000 PDE Loss: 0.00217, BC Loss: 0.94097, total loss: 0.943140, neural network loss: 0.146279
-22500/60000 PDE Loss: 0.00203, BC Loss: 0.91970, total loss: 0.921734, neural network loss: 0.141324
-23000/60000 PDE Loss: 0.00188, BC Loss: 0.90033, total loss: 0.902209, neural network loss: 0.136363
-23500/60000 PDE Loss: 0.00174, BC Loss: 0.88269, total loss: 0.884423, neural network loss: 0.131752
-24000/60000 PDE Loss: 0.00161, BC Loss: 0.86659, total loss: 0.868207, neural network loss: 0.127623
-24500/60000 PDE Loss: 0.00149, BC Loss: 0.85172, total loss: 0.853204, neural network loss: 0.123597
-25000/60000 PDE Loss: 0.00139, BC Loss: 0.83799, total loss: 0.839372, neural network loss: 0.120160
-25500/60000 PDE Loss: 0.00128, BC Loss: 0.82518, total loss: 0.826458, neural network loss: 0.116784
-26000/60000 PDE Loss: 0.00120, BC Loss: 0.81321, total loss: 0.814410, neural network loss: 0.113832
-26500/60000 PDE Loss: 0.00112, BC Loss: 0.80192, total loss: 0.803039, neural network loss: 0.111060
-27000/60000 PDE Loss: 0.00105, BC Loss: 0.79126, total loss: 0.792308, neural network loss: 0.108604
-27500/60000 PDE Loss: 0.00099, BC Loss: 0.78115, total loss: 0.782135, neural network loss: 0.106309
-28000/60000 PDE Loss: 0.00093, BC Loss: 0.77151, total loss: 0.772443, neural network loss: 0.104138
-28500/60000 PDE Loss: 0.00088, BC Loss: 0.76230, total loss: 0.763184, neural network loss: 0.102160
-29000/60000 PDE Loss: 0.00084, BC Loss: 0.75343, total loss: 0.754269, neural network loss: 0.100350
-29500/60000 PDE Loss: 0.00080, BC Loss: 0.74489, total loss: 0.745692, neural network loss: 0.098645
-30000/60000 PDE Loss: 0.00077, BC Loss: 0.73665, total loss: 0.737413, neural network loss: 0.097073
-30500/60000 PDE Loss: 0.00074, BC Loss: 0.72864, total loss: 0.729377, neural network loss: 0.095612
-31000/60000 PDE Loss: 0.00072, BC Loss: 0.72080, total loss: 0.721521, neural network loss: 0.094395
-31500/60000 PDE Loss: 0.00069, BC Loss: 0.71323, total loss: 0.713926, neural network loss: 0.093129
-32000/60000 PDE Loss: 0.00068, BC Loss: 0.70585, total loss: 0.706531, neural network loss: 0.091959
-32500/60000 PDE Loss: 0.00066, BC Loss: 0.69864, total loss: 0.699301, neural network loss: 0.090853
-33000/60000 PDE Loss: 0.00065, BC Loss: 0.69159, total loss: 0.692236, neural network loss: 0.089779
-33500/60000 PDE Loss: 0.00064, BC Loss: 0.68466, total loss: 0.685294, neural network loss: 0.088790
-34000/60000 PDE Loss: 0.00062, BC Loss: 0.67787, total loss: 0.678490, neural network loss: 0.087813
-34500/60000 PDE Loss: 0.00061, BC Loss: 0.67115, total loss: 0.671765, neural network loss: 0.086864
-35000/60000 PDE Loss: 0.00060, BC Loss: 0.66457, total loss: 0.665177, neural network loss: 0.085957
-35500/60000 PDE Loss: 0.00059, BC Loss: 0.65806, total loss: 0.658651, neural network loss: 0.085023
-36000/60000 PDE Loss: 0.00059, BC Loss: 0.65165, total loss: 0.652235, neural network loss: 0.084146
-36500/60000 PDE Loss: 0.00058, BC Loss: 0.64531, total loss: 0.645888, neural network loss: 0.083288
-37000/60000 PDE Loss: 0.00057, BC Loss: 0.63905, total loss: 0.639620, neural network loss: 0.082420
-37500/60000 PDE Loss: 0.00056, BC Loss: 0.63288, total loss: 0.633446, neural network loss: 0.081581
-38000/60000 PDE Loss: 0.00056, BC Loss: 0.62678, total loss: 0.627336, neural network loss: 0.080782
-38500/60000 PDE Loss: 0.00055, BC Loss: 0.62074, total loss: 0.621292, neural network loss: 0.079990
-39000/60000 PDE Loss: 0.00054, BC Loss: 0.61476, total loss: 0.615301, neural network loss: 0.079211
-39500/60000 PDE Loss: 0.00054, BC Loss: 0.60888, total loss: 0.609415, neural network loss: 0.078424
-40000/60000 PDE Loss: 0.00053, BC Loss: 0.60305, total loss: 0.603578, neural network loss: 0.077652
-40500/60000 PDE Loss: 0.00053, BC Loss: 0.59730, total loss: 0.597825, neural network loss: 0.076943
-41000/60000 PDE Loss: 0.00052, BC Loss: 0.59155, total loss: 0.592077, neural network loss: 0.076175
-41500/60000 PDE Loss: 0.00052, BC Loss: 0.58589, total loss: 0.586406, neural network loss: 0.075442
-42000/60000 PDE Loss: 0.00051, BC Loss: 0.58030, total loss: 0.580811, neural network loss: 0.074740
-42500/60000 PDE Loss: 0.00051, BC Loss: 0.57475, total loss: 0.575256, neural network loss: 0.074047
-43000/60000 PDE Loss: 0.00051, BC Loss: 0.56923, total loss: 0.569731, neural network loss: 0.073349
-43500/60000 PDE Loss: 0.00050, BC Loss: 0.56379, total loss: 0.564289, neural network loss: 0.072665
-44000/60000 PDE Loss: 0.00050, BC Loss: 0.55841, total loss: 0.558905, neural network loss: 0.071989
-44500/60000 PDE Loss: 0.00049, BC Loss: 0.55304, total loss: 0.553536, neural network loss: 0.071310
-45000/60000 PDE Loss: 0.00049, BC Loss: 0.54774, total loss: 0.548230, neural network loss: 0.070651
-45500/60000 PDE Loss: 0.00049, BC Loss: 0.54247, total loss: 0.542961, neural network loss: 0.069975
-46000/60000 PDE Loss: 0.00048, BC Loss: 0.53727, total loss: 0.537758, neural network loss: 0.069325
-46500/60000 PDE Loss: 0.00048, BC Loss: 0.53214, total loss: 0.532619, neural network loss: 0.068698
-47000/60000 PDE Loss: 0.00048, BC Loss: 0.52698, total loss: 0.527457, neural network loss: 0.068045
-47500/60000 PDE Loss: 0.00047, BC Loss: 0.52196, total loss: 0.522431, neural network loss: 0.067428
-48000/60000 PDE Loss: 0.00047, BC Loss: 0.51694, total loss: 0.517411, neural network loss: 0.066803
-48500/60000 PDE Loss: 0.00047, BC Loss: 0.51198, total loss: 0.512448, neural network loss: 0.066205
-49000/60000 PDE Loss: 0.00047, BC Loss: 0.50708, total loss: 0.507551, neural network loss: 0.065596
-49500/60000 PDE Loss: 0.00046, BC Loss: 0.50217, total loss: 0.502637, neural network loss: 0.064997
-50000/60000 PDE Loss: 0.00046, BC Loss: 0.49739, total loss: 0.497848, neural network loss: 0.064400
-50500/60000 PDE Loss: 0.00046, BC Loss: 0.49256, total loss: 0.493021, neural network loss: 0.063794
-51000/60000 PDE Loss: 0.00045, BC Loss: 0.48781, total loss: 0.488260, neural network loss: 0.063199
-51500/60000 PDE Loss: 0.00045, BC Loss: 0.48312, total loss: 0.483571, neural network loss: 0.062621
-52000/60000 PDE Loss: 0.00045, BC Loss: 0.47843, total loss: 0.478883, neural network loss: 0.062060
-52500/60000 PDE Loss: 0.00045, BC Loss: 0.47384, total loss: 0.474284, neural network loss: 0.061510
-53000/60000 PDE Loss: 0.00045, BC Loss: 0.46927, total loss: 0.469716, neural network loss: 0.060958
-53500/60000 PDE Loss: 0.00044, BC Loss: 0.46475, total loss: 0.465195, neural network loss: 0.060413
-54000/60000 PDE Loss: 0.00044, BC Loss: 0.46029, total loss: 0.460728, neural network loss: 0.059873
-54500/60000 PDE Loss: 0.00044, BC Loss: 0.45582, total loss: 0.456262, neural network loss: 0.059316
-55000/60000 PDE Loss: 0.00044, BC Loss: 0.45139, total loss: 0.451829, neural network loss: 0.058763
-55500/60000 PDE Loss: 0.00043, BC Loss: 0.44702, total loss: 0.447452, neural network loss: 0.058215
-56000/60000 PDE Loss: 0.00043, BC Loss: 0.44273, total loss: 0.443167, neural network loss: 0.057685
-56500/60000 PDE Loss: 0.00043, BC Loss: 0.43844, total loss: 0.438870, neural network loss: 0.057155
-57000/60000 PDE Loss: 0.00043, BC Loss: 0.43420, total loss: 0.434627, neural network loss: 0.056634
-57500/60000 PDE Loss: 0.00043, BC Loss: 0.42998, total loss: 0.430409, neural network loss: 0.056120
-58000/60000 PDE Loss: 0.00042, BC Loss: 0.42580, total loss: 0.426223, neural network loss: 0.055600
-58500/60000 PDE Loss: 0.00042, BC Loss: 0.42167, total loss: 0.422091, neural network loss: 0.055110
-59000/60000 PDE Loss: 0.00042, BC Loss: 0.41758, total loss: 0.417997, neural network loss: 0.054592
-59500/60000 PDE Loss: 0.00042, BC Loss: 0.41351, total loss: 0.413928, neural network loss: 0.054091
-run time: 1768.4005970954895
+setting:
+optimizer = CGDs.BCGD(max_params=D_BCGD.parameters(), min_params=PINNBCGD.parameters(), device = device,
+                 lr_max=0.0002, lr_min=0.0002, tol=1e-10, collect_info=True)
+lossFunction = nn.MSELoss()
+lossfunction2 = nn.L1Loss()
+
+
+
+
+0/60000 PDE Loss: 0.00034, BC Loss: 3800.47852,                   mse loss: 3800.478760, nn loss: -16.440866
+500/60000 PDE Loss: 0.01276, BC Loss: 78.86437,                   mse loss: 78.877129, nn loss: 0.565432
+1000/60000 PDE Loss: 0.02036, BC Loss: 78.35330,                   mse loss: 78.373657, nn loss: 1.658333
+1500/60000 PDE Loss: 0.05384, BC Loss: 77.16500,                   mse loss: 77.218849, nn loss: 3.823408
+2000/60000 PDE Loss: 0.30771, BC Loss: 73.19434,                   mse loss: 73.502052, nn loss: 29.312267
+2500/60000 PDE Loss: 213.61203, BC Loss: 268.33319,                   mse loss: 481.945221, nn loss: 37.108009
+3000/60000 PDE Loss: 0.27071, BC Loss: 47.18174,                   mse loss: 47.452450, nn loss: 4.568260
+3500/60000 PDE Loss: 339.85443, BC Loss: 534.69067,                   mse loss: 874.545105, nn loss: 13.844949
+4000/60000 PDE Loss: 2.21034, BC Loss: 47.07934,                   mse loss: 49.289677, nn loss: 27.252914
+4500/60000 PDE Loss: 20.69425, BC Loss: 28.92205,                   mse loss: 49.616299, nn loss: -2.902919
+5000/60000 PDE Loss: 33.93310, BC Loss: 45.46328,                   mse loss: 79.396378, nn loss: 2.766714
+5500/60000 PDE Loss: 7.79450, BC Loss: 29.40602,                   mse loss: 37.200516, nn loss: -3.193401
+6000/60000 PDE Loss: 14.25570, BC Loss: 22.66540,                   mse loss: 36.921097, nn loss: 0.427070
+6500/60000 PDE Loss: 2.47744, BC Loss: 10.16480,                   mse loss: 12.642241, nn loss: 3.004180
+7000/60000 PDE Loss: 9.02811, BC Loss: 12.47718,                   mse loss: 21.505287, nn loss: -1.475311
+7500/60000 PDE Loss: 17.43563, BC Loss: 22.37913,                   mse loss: 39.814766, nn loss: 0.824256
+8000/60000 PDE Loss: 0.49798, BC Loss: 8.02428,                   mse loss: 8.522260, nn loss: 1.673694
+8500/60000 PDE Loss: 0.47763, BC Loss: 1.39766,                   mse loss: 1.875290, nn loss: 0.759828
+9000/60000 PDE Loss: 1.52986, BC Loss: 6.60829,                   mse loss: 8.138152, nn loss: -1.214511
+9500/60000 PDE Loss: 1.47538, BC Loss: 6.46997,                   mse loss: 7.945351, nn loss: 1.296457
+10000/60000 PDE Loss: 0.14585, BC Loss: 0.59839,                   mse loss: 0.744245, nn loss: 0.058144
+10500/60000 PDE Loss: 0.12122, BC Loss: 4.10883,                   mse loss: 4.230042, nn loss: -0.956085
+11000/60000 PDE Loss: 1.75781, BC Loss: 7.70175,                   mse loss: 9.459565, nn loss: 0.881823
+11500/60000 PDE Loss: 0.33092, BC Loss: 1.30630,                   mse loss: 1.637225, nn loss: 0.659415
+12000/60000 PDE Loss: 0.15979, BC Loss: 1.41772,                   mse loss: 1.577514, nn loss: -0.838375
+12500/60000 PDE Loss: 3.51054, BC Loss: 5.66905,                   mse loss: 9.179586, nn loss: -0.067882
+13000/60000 PDE Loss: 0.64571, BC Loss: 2.58649,                   mse loss: 3.232198, nn loss: 0.625448
+13500/60000 PDE Loss: 0.08379, BC Loss: 1.64652,                   mse loss: 1.730313, nn loss: 0.143974
+14000/60000 PDE Loss: 0.11885, BC Loss: 2.74651,                   mse loss: 2.865366, nn loss: -0.234902
+14500/60000 PDE Loss: 0.14468, BC Loss: 3.99150,                   mse loss: 4.136174, nn loss: -0.425546
+15000/60000 PDE Loss: 0.06910, BC Loss: 5.22089,                   mse loss: 5.289981, nn loss: 0.137779
+15500/60000 PDE Loss: 0.35546, BC Loss: 1.45491,                   mse loss: 1.810371, nn loss: 0.612005
+16000/60000 PDE Loss: 0.14646, BC Loss: 0.46788,                   mse loss: 0.614343, nn loss: -0.479099
+16500/60000 PDE Loss: 0.77037, BC Loss: 2.93450,                   mse loss: 3.704868, nn loss: -0.328516
+17000/60000 PDE Loss: 6.86601, BC Loss: 7.71851,                   mse loss: 14.584519, nn loss: -0.038901
+17500/60000 PDE Loss: 2.64611, BC Loss: 3.89779,                   mse loss: 6.543896, nn loss: 0.570516
+18000/60000 PDE Loss: 0.12540, BC Loss: 0.78061,                   mse loss: 0.906014, nn loss: 0.283113
+18500/60000 PDE Loss: 0.28892, BC Loss: 0.59691,                   mse loss: 0.885826, nn loss: -0.108255
+19000/60000 PDE Loss: 0.10681, BC Loss: 3.29718,                   mse loss: 3.403991, nn loss: -0.404921
+19500/60000 PDE Loss: 0.04589, BC Loss: 2.15228,                   mse loss: 2.198168, nn loss: 0.309898
+20000/60000 PDE Loss: 2.63910, BC Loss: 2.62051,                   mse loss: 5.259610, nn loss: -0.071983
+20500/60000 PDE Loss: 2.63753, BC Loss: 2.59617,                   mse loss: 5.233704, nn loss: 0.307495
+21000/60000 PDE Loss: 1.26579, BC Loss: 1.66671,                   mse loss: 2.932495, nn loss: -0.202841
+21500/60000 PDE Loss: 6.33881, BC Loss: 7.12850,                   mse loss: 13.467311, nn loss: -0.092831
+22000/60000 PDE Loss: 3.20966, BC Loss: 4.63905,                   mse loss: 7.848715, nn loss: -0.131014
+22500/60000 PDE Loss: 0.21568, BC Loss: 2.02705,                   mse loss: 2.242733, nn loss: 0.159202
+23000/60000 PDE Loss: 0.54246, BC Loss: 0.70960,                   mse loss: 1.252064, nn loss: 0.177447
+23500/60000 PDE Loss: 1.69035, BC Loss: 9.48857,                   mse loss: 11.178923, nn loss: -0.594751
+24000/60000 PDE Loss: 0.13597, BC Loss: 36.46320,                   mse loss: 36.599174, nn loss: 46.262405
+24500/60000 PDE Loss: 0.01722, BC Loss: 51.85109,                   mse loss: 51.868309, nn loss: 37.811539
+25000/60000 PDE Loss: 6.14280, BC Loss: 61.42031,                   mse loss: 67.563110, nn loss: -1.678797
+25500/60000 PDE Loss: 14.25446, BC Loss: 38.96611,                   mse loss: 53.220573, nn loss: -1.536253
+26000/60000 PDE Loss: 7.29780, BC Loss: 37.42434,                   mse loss: 44.722149, nn loss: 1.899429
+26500/60000 PDE Loss: 1.22960, BC Loss: 20.42961,                   mse loss: 21.659218, nn loss: 1.053176
+27000/60000 PDE Loss: 7.60238, BC Loss: 27.51110,                   mse loss: 35.113480, nn loss: -3.314261
+27500/60000 PDE Loss: 32.15071, BC Loss: 82.65031,                   mse loss: 114.801025, nn loss: 0.388903
+28000/60000 PDE Loss: 0.45525, BC Loss: 13.77376,                   mse loss: 14.229010, nn loss: 1.345477
+28500/60000 PDE Loss: 1.12073, BC Loss: 11.66479,                   mse loss: 12.785522, nn loss: 2.104677
+29000/60000 PDE Loss: 2.50130, BC Loss: 9.92504,                   mse loss: 12.426336, nn loss: 1.733600
+29500/60000 PDE Loss: 1.72131, BC Loss: 2.43503,                   mse loss: 4.156343, nn loss: 0.698619
+30000/60000 PDE Loss: 0.61645, BC Loss: 3.06884,                   mse loss: 3.685287, nn loss: 0.722106
+30500/60000 PDE Loss: 4.53072, BC Loss: 4.78784,                   mse loss: 9.318553, nn loss: -0.298869
+31000/60000 PDE Loss: 7.05210, BC Loss: 8.26257,                   mse loss: 15.314665, nn loss: 0.251423
+31500/60000 PDE Loss: 3.75469, BC Loss: 6.80619,                   mse loss: 10.560876, nn loss: 0.126813
+32000/60000 PDE Loss: 0.28223, BC Loss: 3.20362,                   mse loss: 3.485851, nn loss: 0.072870
+32500/60000 PDE Loss: 0.07487, BC Loss: 1.06990,                   mse loss: 1.144772, nn loss: -0.010082
+33000/60000 PDE Loss: 0.21340, BC Loss: 0.30805,                   mse loss: 0.521454, nn loss: 0.150380
+33500/60000 PDE Loss: 0.04027, BC Loss: 0.34588,                   mse loss: 0.386149, nn loss: 0.000792
+34000/60000 PDE Loss: 0.16525, BC Loss: 0.46768,                   mse loss: 0.632923, nn loss: 0.020664
+34500/60000 PDE Loss: 0.71995, BC Loss: 0.68593,                   mse loss: 1.405879, nn loss: -0.023180
+35000/60000 PDE Loss: 1.20708, BC Loss: 0.88494,                   mse loss: 2.092018, nn loss: 0.038138
+35500/60000 PDE Loss: 0.12862, BC Loss: 0.36155,                   mse loss: 0.490169, nn loss: 0.050433
+36000/60000 PDE Loss: 0.06782, BC Loss: 0.08803,                   mse loss: 0.155849, nn loss: 0.030651
+36500/60000 PDE Loss: 0.07944, BC Loss: 0.15042,                   mse loss: 0.229854, nn loss: -0.019826
+37000/60000 PDE Loss: 0.05670, BC Loss: 0.05808,                   mse loss: 0.114781, nn loss: 0.026395
+37500/60000 PDE Loss: 0.01719, BC Loss: 0.08814,                   mse loss: 0.105332, nn loss: -0.008299
+38000/60000 PDE Loss: 0.05037, BC Loss: 0.14803,                   mse loss: 0.198401, nn loss: 0.002000
+38500/60000 PDE Loss: 0.11406, BC Loss: 0.25331,                   mse loss: 0.367363, nn loss: -0.013637
+39000/60000 PDE Loss: 0.14306, BC Loss: 0.25809,                   mse loss: 0.401144, nn loss: -0.006166
+39500/60000 PDE Loss: 0.07001, BC Loss: 0.12024,                   mse loss: 0.190247, nn loss: -0.022787
+40000/60000 PDE Loss: 0.03499, BC Loss: 0.13568,                   mse loss: 0.170671, nn loss: -0.002820
+40500/60000 PDE Loss: 0.02332, BC Loss: 0.17111,                   mse loss: 0.194424, nn loss: -0.007215
+41000/60000 PDE Loss: 0.02409, BC Loss: 0.06323,                   mse loss: 0.087321, nn loss: -0.009676
+41500/60000 PDE Loss: 0.03442, BC Loss: 0.08593,                   mse loss: 0.120351, nn loss: -0.006408
+42000/60000 PDE Loss: 0.05058, BC Loss: 0.11214,                   mse loss: 0.162727, nn loss: -0.011676
+42500/60000 PDE Loss: 0.05356, BC Loss: 0.08478,                   mse loss: 0.138340, nn loss: -0.013125
+43000/60000 PDE Loss: 0.05744, BC Loss: 0.08886,                   mse loss: 0.146307, nn loss: -0.013507
+43500/60000 PDE Loss: 0.06487, BC Loss: 0.11121,                   mse loss: 0.176082, nn loss: -0.016451
+44000/60000 PDE Loss: 0.05960, BC Loss: 0.09552,                   mse loss: 0.155124, nn loss: -0.016955
+44500/60000 PDE Loss: 0.05622, BC Loss: 0.09926,                   mse loss: 0.155478, nn loss: -0.018040
+45000/60000 PDE Loss: 0.06028, BC Loss: 0.10274,                   mse loss: 0.163011, nn loss: -0.019530
+45500/60000 PDE Loss: 0.06143, BC Loss: 0.10918,                   mse loss: 0.170611, nn loss: -0.019809
+46000/60000 PDE Loss: 0.06225, BC Loss: 0.11959,                   mse loss: 0.181836, nn loss: -0.020409
+46500/60000 PDE Loss: 0.06666, BC Loss: 0.11881,                   mse loss: 0.185470, nn loss: -0.020806
+47000/60000 PDE Loss: 0.06809, BC Loss: 0.12333,                   mse loss: 0.191419, nn loss: -0.020715
+47500/60000 PDE Loss: 0.06582, BC Loss: 0.13117,                   mse loss: 0.196986, nn loss: -0.020614
+48000/60000 PDE Loss: 0.06525, BC Loss: 0.12904,                   mse loss: 0.194285, nn loss: -0.020152
+48500/60000 PDE Loss: 0.06378, BC Loss: 0.12991,                   mse loss: 0.193690, nn loss: -0.019402
+49000/60000 PDE Loss: 0.06112, BC Loss: 0.13560,                   mse loss: 0.196715, nn loss: -0.018185
+49500/60000 PDE Loss: 0.05999, BC Loss: 0.13411,                   mse loss: 0.194108, nn loss: -0.016380
+50000/60000 PDE Loss: 0.05829, BC Loss: 0.13479,                   mse loss: 0.193072, nn loss: -0.013985
+50500/60000 PDE Loss: 0.05572, BC Loss: 0.14015,                   mse loss: 0.195864, nn loss: -0.010946
+51000/60000 PDE Loss: 0.05364, BC Loss: 0.14140,                   mse loss: 0.195036, nn loss: -0.007394
+51500/60000 PDE Loss: 0.05130, BC Loss: 0.14449,                   mse loss: 0.195782, nn loss: -0.003368
+52000/60000 PDE Loss: 0.05130, BC Loss: 0.13799,                   mse loss: 0.189293, nn loss: 0.001658
+52500/60000 PDE Loss: 0.04776, BC Loss: 0.12758,                   mse loss: 0.175344, nn loss: 0.006409
+53000/60000 PDE Loss: 0.04165, BC Loss: 0.11660,                   mse loss: 0.158249, nn loss: 0.011364
+53500/60000 PDE Loss: 0.03696, BC Loss: 0.10749,                   mse loss: 0.144457, nn loss: 0.017407
+54000/60000 PDE Loss: 0.03237, BC Loss: 0.10194,                   mse loss: 0.134307, nn loss: 0.022507
+54500/60000 PDE Loss: 0.02939, BC Loss: 0.09359,                   mse loss: 0.122985, nn loss: 0.027496
+55000/60000 PDE Loss: 0.02647, BC Loss: 0.08220,                   mse loss: 0.108665, nn loss: 0.033702
+55500/60000 PDE Loss: 0.02271, BC Loss: 0.06754,                   mse loss: 0.090246, nn loss: 0.039408
+56000/60000 PDE Loss: 0.01730, BC Loss: 0.06341,                   mse loss: 0.080714, nn loss: 0.040356
+56500/60000 PDE Loss: 0.01364, BC Loss: 0.05790,                   mse loss: 0.071539, nn loss: 0.041860
+57000/60000 PDE Loss: 0.01150, BC Loss: 0.03069,                   mse loss: 0.042191, nn loss: 0.042722
+57500/60000 PDE Loss: 0.00981, BC Loss: 0.01819,                   mse loss: 0.027998, nn loss: 0.041461
+58000/60000 PDE Loss: 0.00766, BC Loss: 0.01382,                   mse loss: 0.021485, nn loss: 0.039692
+58500/60000 PDE Loss: 0.00650, BC Loss: 0.01120,                   mse loss: 0.017699, nn loss: 0.037698
+59000/60000 PDE Loss: 0.00553, BC Loss: 0.00981,                   mse loss: 0.015339, nn loss: 0.035433
+59500/60000 PDE Loss: 0.00464, BC Loss: 0.00866,                   mse loss: 0.013297, nn loss: 0.033397
+run time: 1812.955014705658
+finish
