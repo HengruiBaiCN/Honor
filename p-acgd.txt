@@ -1,0 +1,1015 @@
+(honor) PS C:\Users\hengr\Programs\Projects\CPINN\Poisson> python .\train_1Dis_GACGD.py
+cuda
+PINN_Poisson_2d(
+  (activation): Tanh()
+  (loss_function): MSELoss()
+  (linears): ModuleList(
+    (0): Linear(in_features=2, out_features=50, bias=True)
+    (1-2): 2 x Linear(in_features=50, out_features=50, bias=True)
+    (3): Linear(in_features=50, out_features=1, bias=True)
+  )
+)
+Discriminator(
+  (map): Sequential(
+    (0): Linear(in_features=2, out_features=50, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=50, out_features=50, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=50, out_features=50, bias=True)
+    (5): ReLU()
+    (6): Linear(in_features=50, out_features=50, bias=True)
+    (7): ReLU()
+    (8): Linear(in_features=50, out_features=2, bias=True)
+  )
+)
+0/34001 PDE Loss: 1.1267039358039912, BC Loss: 0.4251642952214232,                   mse loss: 1.5518682310254144, nn loss: -0.005094110894454075
+10/34001 PDE Loss: 0.5946522287564889, BC Loss: 0.21858023904986268,                   mse loss: 0.8132324678063516, nn loss: 0.04321492557311827
+20/34001 PDE Loss: 0.21034676678310857, BC Loss: 0.0511484056286363,                   mse loss: 0.26149517241174486, nn loss: 0.03554248720634179
+30/34001 PDE Loss: 0.6371841674985552, BC Loss: 0.03904847662038269,                   mse loss: 0.6762326441189379, nn loss: -0.003138363819775455
+40/34001 PDE Loss: 0.11953135142441271, BC Loss: 0.009086327091552918,                   mse loss: 0.12861767851596562, nn loss: 0.008545022522460482
+50/34001 PDE Loss: 0.08943080652444793, BC Loss: 0.010462942110256595,                   mse loss: 0.09989374863470453, nn loss: 0.003191807886889102
+60/34001 PDE Loss: 0.046687363857152255, BC Loss: 0.0048174821537206435,                   mse loss: 0.0515048460108729, nn loss: 0.0015449996930670925
+70/34001 PDE Loss: 0.03431722178986957, BC Loss: 0.0025574544671838196,                   mse loss: 0.03687467625705339, nn loss: 0.0018419984760710186
+80/34001 PDE Loss: 0.029490862697602434, BC Loss: 0.004616914414454219,                   mse loss: 0.034107777112056654, nn loss: 0.0029649305872551796
+90/34001 PDE Loss: 0.029518134937660603, BC Loss: 0.004804827894992044,                   mse loss: 0.03432296283265265, nn loss: 0.004859176071291389
+100/34001 PDE Loss: 0.03420674450353351, BC Loss: 0.0039210777618379124,                   mse loss: 0.038127822265371425, nn loss: 0.0061566146989780555
+110/34001 PDE Loss: 0.036771679805819295, BC Loss: 0.0038810145645790063,                   mse loss: 0.0406526943703983, nn loss: 0.007497192680661216
+120/34001 PDE Loss: 0.031830336182710826, BC Loss: 0.003822167643157507,                   mse loss: 0.035652503825868334, nn loss: 0.010336391188056591
+130/34001 PDE Loss: 0.02821536551447463, BC Loss: 0.004191706461280343,                   mse loss: 0.03240707197575497, nn loss: 0.014623583820783374
+140/34001 PDE Loss: 0.024448782987014056, BC Loss: 0.004411679670654006,                   mse loss: 0.028860462657668062, nn loss: 0.021350656304619665
+150/34001 PDE Loss: 0.020388453225360967, BC Loss: 0.004627010782278714,                   mse loss: 0.02501546400763968, nn loss: 0.032502072846602344
+160/34001 PDE Loss: 0.018560654505172313, BC Loss: 0.004705069851978097,                   mse loss: 0.023265724357150408, nn loss: 0.03954553346972399
+170/34001 PDE Loss: 0.046916092714274375, BC Loss: 0.0013226601123729129,                   mse loss: 0.04823875282664729, nn loss: 0.02902793893218828
+180/34001 PDE Loss: 0.02259035367262784, BC Loss: 0.0010444473553341813,                   mse loss: 0.023634801027962022, nn loss: 0.0334684477039653
+190/34001 PDE Loss: 0.04309768627920513, BC Loss: 0.0015090391662230468,                   mse loss: 0.04460672544542817, nn loss: 0.011064036913635864
+200/34001 PDE Loss: 0.009502023491999285, BC Loss: 0.0004787959275267199,                   mse loss: 0.009980819419526004, nn loss: 0.012951518221245713
+210/34001 PDE Loss: 0.008967858445099095, BC Loss: 0.0002520418334026606,                   mse loss: 0.009219900278501756, nn loss: 0.007409263734267103
+220/34001 PDE Loss: 0.005146071996820332, BC Loss: 0.00017718623075443864,                   mse loss: 0.005323258227574771, nn loss: 0.007119788635863243
+230/34001 PDE Loss: 0.0022265429205142774, BC Loss: 9.732524467432324e-05,                   mse loss: 0.002323868165188601, nn loss: 0.004750093274010684
+240/34001 PDE Loss: 0.0014551620227452571, BC Loss: 8.380756276580956e-05,                   mse loss: 0.0015389695855110668, nn loss: 0.0018404447013233923
+250/34001 PDE Loss: 0.0014891342531293788, BC Loss: 5.609210769723188e-05,                   mse loss: 0.0015452263608266108, nn loss: -0.0002535326201142602
+260/34001 PDE Loss: 0.0015332575646538826, BC Loss: 0.00010815031113857743,                   mse loss: 0.00164140787579246, nn loss: -0.00011776941046035844
+270/34001 PDE Loss: 0.0011100057434181676, BC Loss: 8.9084131830776e-05,                   mse loss: 0.0011990898752489436, nn loss: 0.0007899797153654705
+280/34001 PDE Loss: 0.0007049056719634646, BC Loss: 5.698021515347551e-05,                   mse loss: 0.0007618858871169401, nn loss: 0.0006693520007021528
+290/34001 PDE Loss: 0.0006092739150822347, BC Loss: 4.857161641234485e-05,                   mse loss: 0.0006578455314945796, nn loss: 0.0007331906831895309
+300/34001 PDE Loss: 0.0003661393444491005, BC Loss: 5.6255724933628944e-05,                   mse loss: 0.00042239506938272943, nn loss: 0.0007622936256131995
+310/34001 PDE Loss: 0.00028029017308774237, BC Loss: 6.445707895927607e-05,                   mse loss: 0.0003447472520470184, nn loss: 0.0008210267513746633
+320/34001 PDE Loss: 0.00023155778444615565, BC Loss: 2.8159233087551118e-05,                   mse loss: 0.00025971701753370677, nn loss: 0.0008433318372940753
+330/34001 PDE Loss: 0.0002179544059437979, BC Loss: 1.2763850965213926e-05,                   mse loss: 0.00023071825690901184, nn loss: 0.0007122745976122463
+340/34001 PDE Loss: 0.0001934492508324514, BC Loss: 1.1051896414175603e-05,                   mse loss: 0.000204501147246627, nn loss: 0.000699345473351789
+350/34001 PDE Loss: 0.0001657856851876038, BC Loss: 9.904088038099003e-06,                   mse loss: 0.00017568977322570282, nn loss: 0.0007473028230644403
+360/34001 PDE Loss: 0.00012750605675115764, BC Loss: 6.288830554128783e-06,                   mse loss: 0.00013379488730528642, nn loss: 0.000658957618310917
+370/34001 PDE Loss: 0.00011095968708292793, BC Loss: 9.410394859313901e-06,                   mse loss: 0.00012037008194224183, nn loss: 0.0005081688206686586
+380/34001 PDE Loss: 0.00014074966418972301, BC Loss: 1.0795200179258666e-05,                   mse loss: 0.00015154486436898167, nn loss: 0.00032080499925352926
+390/34001 PDE Loss: 0.00018296231740979417, BC Loss: 1.1195341727908334e-05,                   mse loss: 0.0001941576591377025, nn loss: 0.0001821141479491383
+400/34001 PDE Loss: 0.0002079712679537162, BC Loss: 1.14842781717338e-05,                   mse loss: 0.00021945554612545, nn loss: 0.00015606750587820025
+410/34001 PDE Loss: 0.00017563896787763198, BC Loss: 1.1221078051891513e-05,                   mse loss: 0.0001868600459295235, nn loss: 0.00023612696352423882
+420/34001 PDE Loss: 0.00012365768218664617, BC Loss: 1.253092622769146e-05,                   mse loss: 0.00013618860841433763, nn loss: 0.0002180484019411683
+430/34001 PDE Loss: 0.0001061750970298669, BC Loss: 1.1287068843120144e-05,                   mse loss: 0.00011746216587298704, nn loss: 0.00015009769649475282
+440/34001 PDE Loss: 9.908488870027722e-05, BC Loss: 1.0224817348027976e-05,                   mse loss: 0.0001093097060483052, nn loss: 0.0001585873021584243
+450/34001 PDE Loss: 9.704248014955732e-05, BC Loss: 1.0221817373532423e-05,                   mse loss: 0.00010726429752308974, nn loss: 0.00023185662324782592
+460/34001 PDE Loss: 8.872579197471796e-05, BC Loss: 1.0226753704202572e-05,                   mse loss: 9.895254567892053e-05, nn loss: 0.0002723329680169956
+470/34001 PDE Loss: 7.822830547088742e-05, BC Loss: 8.624576743028036e-06,                   mse loss: 8.685288221391546e-05, nn loss: 0.0002765635117030581
+480/34001 PDE Loss: 6.777137256015671e-05, BC Loss: 7.3833437370242665e-06,                   mse loss: 7.515471629718099e-05, nn loss: 0.00029078165081733665
+490/34001 PDE Loss: 4.97347576105508e-05, BC Loss: 5.565297452520164e-06,                   mse loss: 5.530005506307097e-05, nn loss: 0.0002979443078121111
+500/34001 PDE Loss: 3.13733100129157e-05, BC Loss: 4.3156278899592585e-06,                   mse loss: 3.568893790287496e-05, nn loss: 0.0002835463612568188
+510/34001 PDE Loss: 2.1837063821908883e-05, BC Loss: 3.66426963350976e-06,                   mse loss: 2.5501333455418644e-05, nn loss: 0.0002501734048065441
+520/34001 PDE Loss: 1.9405719212714833e-05, BC Loss: 3.325217146890894e-06,                   mse loss: 2.2730936359605728e-05, nn loss: 0.00021841567652146603
+530/34001 PDE Loss: 1.951539963322791e-05, BC Loss: 3.773097626117225e-06,                   mse loss: 2.3288497259345135e-05, nn loss: 0.00020466090818431994
+540/34001 PDE Loss: 1.8662666055778916e-05, BC Loss: 4.359563636305884e-06,                   mse loss: 2.30222296920848e-05, nn loss: 0.00019345117800018407
+550/34001 PDE Loss: 1.8324773113690867e-05, BC Loss: 3.7358738678257206e-06,                   mse loss: 2.2060646981516588e-05, nn loss: 0.00018944034206751117
+560/34001 PDE Loss: 1.632855656611295e-05, BC Loss: 2.5745643225506136e-06,                   mse loss: 1.8903120888663563e-05, nn loss: 0.00017736987493207365
+570/34001 PDE Loss: 1.1310266743541467e-05, BC Loss: 1.2994101459081983e-06,                   mse loss: 1.2609676889449665e-05, nn loss: 0.0001511227914596965
+580/34001 PDE Loss: 1.0389923639098285e-05, BC Loss: 6.696878395635703e-07,                   mse loss: 1.1059611478661856e-05, nn loss: 0.00011178755602875259
+590/34001 PDE Loss: 1.337476826187064e-05, BC Loss: 4.3444456935065287e-07,                   mse loss: 1.3809212831221294e-05, nn loss: 7.768956510813294e-05
+600/34001 PDE Loss: 1.4811937848701801e-05, BC Loss: 6.887570323476958e-07,                   mse loss: 1.5500694881049498e-05, nn loss: 5.1285618370131516e-05
+610/34001 PDE Loss: 1.421164449627392e-05, BC Loss: 1.152539095767168e-06,                   mse loss: 1.536418359204109e-05, nn loss: 2.657681079684781e-05
+620/34001 PDE Loss: 1.5676996569504955e-05, BC Loss: 1.5130190796772478e-06,                   mse loss: 1.7190015649182203e-05, nn loss: 2.297290201433086e-05
+630/34001 PDE Loss: 1.616972942146963e-05, BC Loss: 1.6265249756664077e-06,                   mse loss: 1.7796254397136038e-05, nn loss: 3.555772683202387e-05
+640/34001 PDE Loss: 1.4123845327619598e-05, BC Loss: 1.5897865819440309e-06,                   mse loss: 1.571363190956363e-05, nn loss: 5.3671835979874675e-05
+650/34001 PDE Loss: 1.4436773386943148e-05, BC Loss: 1.2018839529416602e-06,                   mse loss: 1.5638657339884807e-05, nn loss: 5.259114193094857e-05
+660/34001 PDE Loss: 1.1585464885068441e-05, BC Loss: 5.511723449048929e-07,                   mse loss: 1.2136637229973334e-05, nn loss: 3.099340396040143e-05
+670/34001 PDE Loss: 1.1585931582975688e-05, BC Loss: 3.2988614042859573e-07,                   mse loss: 1.1915817723404284e-05, nn loss: 1.0919152375819074e-06
+680/34001 PDE Loss: 1.2360739666323235e-05, BC Loss: 2.679074002539117e-07,                   mse loss: 1.2628647066577147e-05, nn loss: -1.603670083030731e-05
+690/34001 PDE Loss: 1.2944891049173347e-05, BC Loss: 2.71099934738704e-07,                   mse loss: 1.3215990983912051e-05, nn loss: -1.2423717809983922e-05
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 102
+  warnings.warn('CG iter num: %d' % (i + 1))
+700/34001 PDE Loss: 1.2594831612153752e-05, BC Loss: 2.3041262350518768e-07,                   mse loss: 1.282524423565894e-05, nn loss: 4.3916125236501285e-06
+710/34001 PDE Loss: 1.0808581202640425e-05, BC Loss: 2.679656594126548e-07,                   mse loss: 1.107654686205308e-05, nn loss: 1.4509801657397965e-05
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 104
+  warnings.warn('CG iter num: %d' % (i + 1))
+720/34001 PDE Loss: 8.936673210109033e-06, BC Loss: 1.8914008420805667e-07,                   mse loss: 9.12581329431709e-06, nn loss: 1.364700428048215e-05
+730/34001 PDE Loss: 9.067494887565538e-06, BC Loss: 2.3883154015236286e-07,                   mse loss: 9.306326427717901e-06, nn loss: 1.0525825832544517e-05
+740/34001 PDE Loss: 1.049522921269378e-05, BC Loss: 3.0478672814459753e-07,                   mse loss: 1.0800015940838378e-05, nn loss: 1.385412498372873e-05
+750/34001 PDE Loss: 9.808747819171423e-06, BC Loss: 2.9956583805307574e-07,                   mse loss: 1.0108313657224499e-05, nn loss: 2.2548539462134524e-05
+760/34001 PDE Loss: 7.649145883576797e-06, BC Loss: 2.653350378866712e-07,                   mse loss: 7.914480921463468e-06, nn loss: 3.1390940547505686e-05
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 114
+  warnings.warn('CG iter num: %d' % (i + 1))
+770/34001 PDE Loss: 4.691570079665763e-06, BC Loss: 2.1305656214365816e-07,                   mse loss: 4.904626641809421e-06, nn loss: 2.2585155074321804e-05
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 110
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 103
+  warnings.warn('CG iter num: %d' % (i + 1))
+780/34001 PDE Loss: 4.141560197086497e-06, BC Loss: 1.3950703233494945e-07,                   mse loss: 4.281067229421446e-06, nn loss: 1.0751008597406335e-05
+790/34001 PDE Loss: 3.8004742381387374e-06, BC Loss: 1.2101384697652544e-07,                   mse loss: 3.921488085115263e-06, nn loss: 1.4613987726163333e-05
+800/34001 PDE Loss: 2.8238701791803152e-06, BC Loss: 1.3046625535731682e-07,                   mse loss: 2.954336434537632e-06, nn loss: 1.0648717056777706e-05
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 105
+  warnings.warn('CG iter num: %d' % (i + 1))
+810/34001 PDE Loss: 2.8439337833549532e-06, BC Loss: 1.1661563860465937e-07,                   mse loss: 2.9605494219596124e-06, nn loss: 7.6290959301843624e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 112
+  warnings.warn('CG iter num: %d' % (i + 1))
+820/34001 PDE Loss: 3.0331664822870224e-06, BC Loss: 1.0972729477070422e-07,                   mse loss: 3.1428937770577268e-06, nn loss: 1.0730086322854366e-05
+830/34001 PDE Loss: 2.7075146125873e-06, BC Loss: 6.491702326107439e-08,                   mse loss: 2.7724316358483742e-06, nn loss: 7.677898263033863e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 107
+  warnings.warn('CG iter num: %d' % (i + 1))
+840/34001 PDE Loss: 2.9297904121370815e-06, BC Loss: 4.9306358327981745e-08,                   mse loss: 2.9790967704650634e-06, nn loss: 6.558225757624231e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 113
+  warnings.warn('CG iter num: %d' % (i + 1))
+850/34001 PDE Loss: 2.646188319245781e-06, BC Loss: 5.945777932303506e-08,                   mse loss: 2.7056460985688158e-06, nn loss: 9.648102612683278e-06
+860/34001 PDE Loss: 1.8791688049030636e-06, BC Loss: 3.6386427785165634e-08,                   mse loss: 1.9155552326882292e-06, nn loss: 1.1400332144700977e-05
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 123
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 111
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 128
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 132
+  warnings.warn('CG iter num: %d' % (i + 1))
+870/34001 PDE Loss: 1.5659366466199636e-06, BC Loss: 2.8399682093381747e-08,                   mse loss: 1.5943363287133453e-06, nn loss: 1.0721289369555254e-05
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 129
+  warnings.warn('CG iter num: %d' % (i + 1))
+880/34001 PDE Loss: 1.539348912278641e-06, BC Loss: 3.157400980254597e-08,                   mse loss: 1.570922922081187e-06, nn loss: 8.905695967144431e-06
+890/34001 PDE Loss: 1.5788200695560148e-06, BC Loss: 5.6508520221726755e-08,                   mse loss: 1.6353285897777415e-06, nn loss: 6.821972413699577e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 131
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 122
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 141
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 142
+  warnings.warn('CG iter num: %d' % (i + 1))
+900/34001 PDE Loss: 1.4720431284696283e-06, BC Loss: 4.722390530695098e-08,                   mse loss: 1.5192670337765792e-06, nn loss: 7.261870933727066e-06
+910/34001 PDE Loss: 1.3367690334478111e-06, BC Loss: 4.983000913490884e-08,                   mse loss: 1.38659904258272e-06, nn loss: 8.84496739049834e-06
+920/34001 PDE Loss: 1.023153394666783e-06, BC Loss: 3.677946874738052e-08,                   mse loss: 1.0599328634141634e-06, nn loss: 9.388438675986584e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 106
+  warnings.warn('CG iter num: %d' % (i + 1))
+930/34001 PDE Loss: 8.546296571393771e-07, BC Loss: 3.993829414562099e-08,                   mse loss: 8.945679512849981e-07, nn loss: 8.793853809865176e-06
+940/34001 PDE Loss: 8.000499149301735e-07, BC Loss: 2.8082560407654567e-08,                   mse loss: 8.281324753378281e-07, nn loss: 8.787464570310563e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 121
+  warnings.warn('CG iter num: %d' % (i + 1))
+950/34001 PDE Loss: 9.514485544124364e-07, BC Loss: 1.5710395262843287e-08,                   mse loss: 9.671589496752797e-07, nn loss: 8.355941209443422e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 120
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 145
+  warnings.warn('CG iter num: %d' % (i + 1))
+960/34001 PDE Loss: 9.511590062544276e-07, BC Loss: 1.4041106875231053e-08,                   mse loss: 9.652001131296587e-07, nn loss: 8.446305600895984e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 155
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 124
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 143
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 130
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 115
+  warnings.warn('CG iter num: %d' % (i + 1))
+970/34001 PDE Loss: 9.172324516209096e-07, BC Loss: 1.1305355519739898e-08,                   mse loss: 9.285378071406495e-07, nn loss: 8.873815473688076e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 134
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 148
+  warnings.warn('CG iter num: %d' % (i + 1))
+980/34001 PDE Loss: 6.452204635285907e-07, BC Loss: 1.2951073500254295e-08,                   mse loss: 6.58171537028845e-07, nn loss: 9.248804874004238e-06
+990/34001 PDE Loss: 6.424660630192872e-07, BC Loss: 4.778169640187731e-08,                   mse loss: 6.902477594211645e-07, nn loss: 9.156871395748719e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 146
+  warnings.warn('CG iter num: %d' % (i + 1))
+1000/34001 PDE Loss: 4.1423623428409954e-07, BC Loss: 9.154175838036336e-09,                   mse loss: 4.233904101221359e-07, nn loss: 8.864904053930083e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 127
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 181
+  warnings.warn('CG iter num: %d' % (i + 1))
+1010/34001 PDE Loss: 3.648841954346856e-07, BC Loss: 8.503484427004142e-09,                   mse loss: 3.733876798616897e-07, nn loss: 8.270049319041156e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 136
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 150
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 156
+  warnings.warn('CG iter num: %d' % (i + 1))
+1020/34001 PDE Loss: 3.481132991452751e-07, BC Loss: 1.0760047599291341e-08,                   mse loss: 3.5887334674456647e-07, nn loss: 7.661522663949254e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 133
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 139
+  warnings.warn('CG iter num: %d' % (i + 1))
+1030/34001 PDE Loss: 3.0631184288874927e-07, BC Loss: 1.2186038808567622e-08,                   mse loss: 3.184978816973169e-07, nn loss: 7.070139980510992e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 125
+  warnings.warn('CG iter num: %d' % (i + 1))
+1040/34001 PDE Loss: 6.962878263696269e-07, BC Loss: 7.250233723509715e-08,                   mse loss: 7.68790163604724e-07, nn loss: 6.768124759848911e-06
+1050/34001 PDE Loss: 2.8896272613486e-07, BC Loss: 9.893057205686638e-09,                   mse loss: 2.988557833405466e-07, nn loss: 5.614027916856587e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 108
+  warnings.warn('CG iter num: %d' % (i + 1))
+1060/34001 PDE Loss: 2.5618305738415123e-07, BC Loss: 5.840390951240883e-09,                   mse loss: 2.620234483353921e-07, nn loss: 4.939996013902677e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 168
+  warnings.warn('CG iter num: %d' % (i + 1))
+1070/34001 PDE Loss: 2.680420898545619e-07, BC Loss: 5.565048346352682e-09,                   mse loss: 2.736071382009146e-07, nn loss: 4.531742754668458e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 116
+  warnings.warn('CG iter num: %d' % (i + 1))
+1080/34001 PDE Loss: 2.6747329435095803e-07, BC Loss: 5.606856266228975e-09,                   mse loss: 2.73080150617187e-07, nn loss: 4.4247713052167455e-06
+1090/34001 PDE Loss: 2.817459228062571e-07, BC Loss: 5.605879403763817e-09,                   mse loss: 2.8735180221002093e-07, nn loss: 4.5162792337263754e-06
+1100/34001 PDE Loss: 2.5831927563040683e-07, BC Loss: 4.5445312449520805e-09,                   mse loss: 2.628638068753589e-07, nn loss: 4.768334421917508e-06
+1110/34001 PDE Loss: 2.352321829085681e-07, BC Loss: 2.5900637385075815e-09,                   mse loss: 2.3782224664707567e-07, nn loss: 4.764477911402508e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 135
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 126
+  warnings.warn('CG iter num: %d' % (i + 1))
+1120/34001 PDE Loss: 2.0065835550098308e-07, BC Loss: 1.562351608853261e-09,                   mse loss: 2.0222070710983634e-07, nn loss: 4.415250900363458e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 138
+  warnings.warn('CG iter num: %d' % (i + 1))
+1130/34001 PDE Loss: 1.7126135659686567e-07, BC Loss: 1.5365012710856912e-09,                   mse loss: 1.7279785786795135e-07, nn loss: 3.806986912570821e-06
+1140/34001 PDE Loss: 1.719042361847664e-07, BC Loss: 3.762079646954642e-09,                   mse loss: 1.7566631583172104e-07, nn loss: 3.3066931182107137e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 118
+  warnings.warn('CG iter num: %d' % (i + 1))
+1150/34001 PDE Loss: 6.876172488100547e-06, BC Loss: 4.360731235369186e-07,                   mse loss: 7.312245611637466e-06, nn loss: 6.252654970512075e-06
+1160/34001 PDE Loss: 8.560200357589948e-07, BC Loss: 3.4797912533443784e-08,                   mse loss: 8.908179482924385e-07, nn loss: 4.942649014919639e-06
+1170/34001 PDE Loss: 2.7927262227688276e-07, BC Loss: 8.936203303631204e-09,                   mse loss: 2.8820882558051396e-07, nn loss: 2.2799323801550474e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 117
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 152
+  warnings.warn('CG iter num: %d' % (i + 1))
+1180/34001 PDE Loss: 1.8801656944867564e-07, BC Loss: 9.854439605308703e-09,                   mse loss: 1.9787100905398434e-07, nn loss: 2.764891491023657e-06
+1190/34001 PDE Loss: 1.581287066058015e-07, BC Loss: 5.16867160065659e-09,                   mse loss: 1.632973782064581e-07, nn loss: 3.1263097502961355e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 119
+  warnings.warn('CG iter num: %d' % (i + 1))
+1200/34001 PDE Loss: 1.473501315066557e-07, BC Loss: 4.968628702124175e-09,                   mse loss: 1.5231876020877986e-07, nn loss: 2.9485053751306353e-06
+1210/34001 PDE Loss: 1.324511293115243e-07, BC Loss: 1.6467208855695165e-09,                   mse loss: 1.3409785019709382e-07, nn loss: 2.5221592885204533e-06
+1220/34001 PDE Loss: 1.200644147552406e-07, BC Loss: 2.228220506287529e-09,                   mse loss: 1.2229263526152811e-07, nn loss: 2.3103880822616876e-06
+1230/34001 PDE Loss: 1.1956325654396845e-07, BC Loss: 3.077004067294361e-09,                   mse loss: 1.2264026061126282e-07, nn loss: 2.0755162952428276e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 140
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 147
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 149
+  warnings.warn('CG iter num: %d' % (i + 1))
+1240/34001 PDE Loss: 1.2521384409734078e-07, BC Loss: 3.183486926026246e-09,                   mse loss: 1.28397331023367e-07, nn loss: 1.887332173817526e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 137
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 151
+  warnings.warn('CG iter num: %d' % (i + 1))
+1250/34001 PDE Loss: 1.3797452098306013e-07, BC Loss: 2.5430202822079764e-09,                   mse loss: 1.405175412652681e-07, nn loss: 1.8776079226879675e-06
+1260/34001 PDE Loss: 1.4062123517081328e-07, BC Loss: 2.571071933436339e-09,                   mse loss: 1.4319230710424962e-07, nn loss: 1.8381286814505326e-06
+1270/34001 PDE Loss: 1.400887615318261e-07, BC Loss: 3.683515054077663e-09,                   mse loss: 1.4377227658590377e-07, nn loss: 1.9756067445296667e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 171
+  warnings.warn('CG iter num: %d' % (i + 1))
+1280/34001 PDE Loss: 1.5032215409947268e-07, BC Loss: 3.1542518284528447e-09,                   mse loss: 1.5347640592792552e-07, nn loss: 1.9961911164906705e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 109
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 159
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 196
+  warnings.warn('CG iter num: %d' % (i + 1))
+1290/34001 PDE Loss: 1.4785362146025925e-07, BC Loss: 1.9162952652932277e-09,                   mse loss: 1.4976991672555247e-07, nn loss: 1.9685866546959762e-06
+1300/34001 PDE Loss: 1.4075045259096953e-07, BC Loss: 2.573797420522942e-09,                   mse loss: 1.4332425001149246e-07, nn loss: 2.0744800664548102e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 166
+  warnings.warn('CG iter num: %d' % (i + 1))
+1310/34001 PDE Loss: 1.301969886224825e-07, BC Loss: 1.907262155155896e-09,                   mse loss: 1.3210425077763838e-07, nn loss: 2.176094021672839e-06
+1320/34001 PDE Loss: 1.141603245423934e-07, BC Loss: 4.182737859745194e-09,                   mse loss: 1.183430624021386e-07, nn loss: 2.37469687767475e-06
+1330/34001 PDE Loss: 7.808003295149754e-06, BC Loss: 1.0596509645895392e-06,                   mse loss: 8.867654259739293e-06, nn loss: 9.660619532764224e-06
+1340/34001 PDE Loss: 7.289471145062789e-07, BC Loss: 3.692381621607675e-08,                   mse loss: 7.658709307223557e-07, nn loss: -7.426160884598075e-07
+1350/34001 PDE Loss: 4.101054910372102e-07, BC Loss: 1.685232334151495e-08,                   mse loss: 4.269578143787252e-07, nn loss: 1.3329536938323304e-06
+1360/34001 PDE Loss: 1.8967481374106e-07, BC Loss: 6.728367611899572e-09,                   mse loss: 1.964031813529596e-07, nn loss: 2.050818745735577e-06
+1370/34001 PDE Loss: 1.5807141508715605e-07, BC Loss: 1.689360617398371e-09,                   mse loss: 1.597607757045544e-07, nn loss: 1.7463398342895751e-06
+1380/34001 PDE Loss: 1.2867418630233975e-07, BC Loss: 3.3152854210994937e-09,                   mse loss: 1.3198947172343924e-07, nn loss: 2.0081197616488555e-06
+1390/34001 PDE Loss: 1.276734918386945e-07, BC Loss: 1.9154745438781442e-09,                   mse loss: 1.2958896638257264e-07, nn loss: 2.0516161232416756e-06
+1400/34001 PDE Loss: 9.877804470295287e-08, BC Loss: 2.109158970202275e-09,                   mse loss: 1.0088720367315514e-07, nn loss: 1.8222512376182817e-06
+1410/34001 PDE Loss: 1.1648266103249086e-07, BC Loss: 1.7739666567116939e-09,                   mse loss: 1.1825662768920255e-07, nn loss: 2.00711783169126e-06
+1420/34001 PDE Loss: 8.669935002967858e-08, BC Loss: 1.404888810529003e-09,                   mse loss: 8.810423884020758e-08, nn loss: 1.7523014724999673e-06
+1430/34001 PDE Loss: 8.23647717923541e-08, BC Loss: 1.749220551427977e-09,                   mse loss: 8.411399234378208e-08, nn loss: 1.5578636678111268e-06
+1440/34001 PDE Loss: 7.098327653975657e-08, BC Loss: 2.1947769338143386e-09,                   mse loss: 7.317805347357091e-08, nn loss: 1.3864470333180778e-06
+1450/34001 PDE Loss: 6.709832738029612e-08, BC Loss: 2.2691318698136253e-09,                   mse loss: 6.936745925010974e-08, nn loss: 1.2214048101863186e-06
+1460/34001 PDE Loss: 8.054725661416095e-08, BC Loss: 3.710276497217904e-09,                   mse loss: 8.425753311137885e-08, nn loss: 1.102016223715678e-06
+1470/34001 PDE Loss: 8.000641660994347e-08, BC Loss: 2.624199040294178e-09,                   mse loss: 8.263061565023765e-08, nn loss: 1.4547613406129981e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 169
+  warnings.warn('CG iter num: %d' % (i + 1))
+1480/34001 PDE Loss: 7.572964406032998e-08, BC Loss: 3.0980030333646575e-09,                   mse loss: 7.882764709369464e-08, nn loss: 1.6374287145112635e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 165
+  warnings.warn('CG iter num: %d' % (i + 1))
+1490/34001 PDE Loss: 7.971912114374614e-08, BC Loss: 2.8920856743198027e-09,                   mse loss: 8.261120681806595e-08, nn loss: 1.8841430306992428e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 153
+  warnings.warn('CG iter num: %d' % (i + 1))
+1500/34001 PDE Loss: 7.439856244172565e-08, BC Loss: 2.7755887238205405e-09,                   mse loss: 7.717415116554619e-08, nn loss: 1.9818989199762356e-06
+1510/34001 PDE Loss: 8.506056185875727e-08, BC Loss: 3.1750274383527117e-09,                   mse loss: 8.823558929710998e-08, nn loss: 2.0136187584757303e-06
+1520/34001 PDE Loss: 1.1708577748130198e-07, BC Loss: 9.496646957544734e-09,                   mse loss: 1.265824244388467e-07, nn loss: 2.4341164267662313e-06
+1530/34001 PDE Loss: 5.119145154526827e-06, BC Loss: 3.734157811493518e-07,                   mse loss: 5.492560935676179e-06, nn loss: -3.5438339913746823e-07
+1540/34001 PDE Loss: 2.722126476279895e-07, BC Loss: 7.731786775550443e-09,                   mse loss: 2.7994443440353994e-07, nn loss: 1.4069401943847231e-06
+1550/34001 PDE Loss: 1.3284525613375407e-07, BC Loss: 2.2513423979616422e-09,                   mse loss: 1.350965985317157e-07, nn loss: 1.7834709276891105e-06
+1560/34001 PDE Loss: 7.045872585220756e-08, BC Loss: 4.460501018498105e-09,                   mse loss: 7.491922687070566e-08, nn loss: 1.8543747957716258e-06
+1570/34001 PDE Loss: 7.600586105679427e-08, BC Loss: 6.527387748388814e-09,                   mse loss: 8.253324880518309e-08, nn loss: 2.1598983405923375e-06
+1580/34001 PDE Loss: 5.0489502206875844e-08, BC Loss: 4.296659693451975e-09,                   mse loss: 5.478616190032782e-08, nn loss: 2.016341845836588e-06
+1590/34001 PDE Loss: 5.3006350900769906e-08, BC Loss: 3.24321442560902e-09,                   mse loss: 5.624956532637893e-08, nn loss: 1.8111512637031786e-06
+1600/34001 PDE Loss: 5.1308599784040034e-08, BC Loss: 1.3431965979004448e-09,                   mse loss: 5.265179638194048e-08, nn loss: 1.8912148922481102e-06
+1610/34001 PDE Loss: 6.044004036805457e-08, BC Loss: 1.7856275401739898e-09,                   mse loss: 6.222566790822856e-08, nn loss: 1.950806840889022e-06
+1620/34001 PDE Loss: 5.42392599552745e-08, BC Loss: 2.3168955994408697e-09,                   mse loss: 5.655615555471537e-08, nn loss: 2.0450842561749197e-06
+1630/34001 PDE Loss: 3.96768400490337e-08, BC Loss: 1.1971091241374867e-09,                   mse loss: 4.087394917317119e-08, nn loss: 1.9374186126339513e-06
+1640/34001 PDE Loss: 2.996862133031078e-08, BC Loss: 1.1364290595631332e-09,                   mse loss: 3.110505038987391e-08, nn loss: 1.630257862550547e-06
+1650/34001 PDE Loss: 3.3011417231302716e-08, BC Loss: 1.6957108486736202e-09,                   mse loss: 3.470712807997634e-08, nn loss: 1.3787302708492538e-06
+1660/34001 PDE Loss: 3.3007809943512715e-08, BC Loss: 1.228843789886712e-09,                   mse loss: 3.423665373339943e-08, nn loss: 1.257183291913593e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 176
+  warnings.warn('CG iter num: %d' % (i + 1))
+1670/34001 PDE Loss: 3.754205013760298e-08, BC Loss: 6.737271030825493e-10,                   mse loss: 3.821577724068553e-08, nn loss: 1.1507382249981998e-06
+1680/34001 PDE Loss: 4.6354624657335326e-08, BC Loss: 5.313184711894278e-10,                   mse loss: 4.6885943128524755e-08, nn loss: 1.1339648061486292e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 161
+  warnings.warn('CG iter num: %d' % (i + 1))
+1690/34001 PDE Loss: 4.420139647173742e-08, BC Loss: 5.364609531259422e-10,                   mse loss: 4.473785742486336e-08, nn loss: 1.1922452352247116e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 144
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 164
+  warnings.warn('CG iter num: %d' % (i + 1))
+1700/34001 PDE Loss: 4.1946050229359085e-08, BC Loss: 5.779250492940776e-10,                   mse loss: 4.252397527865316e-08, nn loss: 1.3462943084354766e-06
+1710/34001 PDE Loss: 3.7823312585181064e-08, BC Loss: 5.851712066201297e-10,                   mse loss: 3.840848379180119e-08, nn loss: 1.313706086708139e-06
+1720/34001 PDE Loss: 3.945480376344031e-08, BC Loss: 1.3183067774739216e-09,                   mse loss: 4.0773110540914233e-08, nn loss: 1.1644831907731942e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 172
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 199
+  warnings.warn('CG iter num: %d' % (i + 1))
+1730/34001 PDE Loss: 4.201041246069859e-08, BC Loss: 6.412517536986509e-10,                   mse loss: 4.2651664214397237e-08, nn loss: 1.1948641835479481e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 174
+  warnings.warn('CG iter num: %d' % (i + 1))
+1740/34001 PDE Loss: 4.5607466056190553e-08, BC Loss: 6.850838306938334e-10,                   mse loss: 4.6292549886884386e-08, nn loss: 1.3087756491682848e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 163
+  warnings.warn('CG iter num: %d' % (i + 1))
+1750/34001 PDE Loss: 3.9063184485305134e-08, BC Loss: 5.081151143165828e-10,                   mse loss: 3.9571299599621714e-08, nn loss: 1.3150912808002916e-06
+1760/34001 PDE Loss: 3.133011289559862e-08, BC Loss: 6.261570819774309e-10,                   mse loss: 3.195626997757605e-08, nn loss: 1.2240106045689529e-06
+1770/34001 PDE Loss: 3.004837900436573e-08, BC Loss: 8.977327897460471e-10,                   mse loss: 3.0946111794111775e-08, nn loss: 1.263085609539244e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 162
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 160
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 177
+  warnings.warn('CG iter num: %d' % (i + 1))
+1780/34001 PDE Loss: 2.6747879851997924e-08, BC Loss: 5.360842142615386e-10,                   mse loss: 2.7283964066259463e-08, nn loss: 1.2221154600070167e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 157
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 158
+  warnings.warn('CG iter num: %d' % (i + 1))
+1790/34001 PDE Loss: 2.5992903688248103e-08, BC Loss: 4.420884422647059e-10,                   mse loss: 2.643499213051281e-08, nn loss: 1.1539794293972855e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 200
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 178
+  warnings.warn('CG iter num: %d' % (i + 1))
+1800/34001 PDE Loss: 2.7164570185877894e-08, BC Loss: 6.783188895401536e-10,                   mse loss: 2.7842889075418048e-08, nn loss: 1.121652468242086e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 193
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 192
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 173
+  warnings.warn('CG iter num: %d' % (i + 1))
+1810/34001 PDE Loss: 2.8635589534963646e-08, BC Loss: 5.147158599114363e-10,                   mse loss: 2.915030539487508e-08, nn loss: 1.0153195163656657e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 170
+  warnings.warn('CG iter num: %d' % (i + 1))
+1820/34001 PDE Loss: 2.2627656725931869e-07, BC Loss: 3.186516344439379e-08,                   mse loss: 2.5814173070371247e-07, nn loss: 3.5080999147728945e-06
+1830/34001 PDE Loss: 1.5788707370338882e-06, BC Loss: 8.658182156353447e-08,                   mse loss: 1.6654525585974225e-06, nn loss: -1.3721338714835562e-05
+1840/34001 PDE Loss: 1.9422900999724178e-06, BC Loss: 4.689690961018418e-08,                   mse loss: 1.989187009582602e-06, nn loss: -2.0334712497347637e-06
+1850/34001 PDE Loss: 9.379039137855965e-07, BC Loss: 6.172437183652898e-08,                   mse loss: 9.996282856221255e-07, nn loss: 2.9671647100997024e-06
+1860/34001 PDE Loss: 7.274747387177523e-07, BC Loss: 2.6566330609719475e-08,                   mse loss: 7.540410693274717e-07, nn loss: -8.286188612241225e-07
+1870/34001 PDE Loss: 1.4782981413873683e-07, BC Loss: 8.431618395107708e-09,                   mse loss: 1.5626143253384453e-07, nn loss: 6.85375696655865e-08
+1880/34001 PDE Loss: 1.726496371907039e-07, BC Loss: 4.906165080101487e-09,                   mse loss: 1.7755580227080538e-07, nn loss: 2.0369624463323453e-06
+1890/34001 PDE Loss: 2.5219488472545086e-07, BC Loss: 1.1236379670792614e-08,                   mse loss: 2.634312643962435e-07, nn loss: 7.987819994087285e-07
+1900/34001 PDE Loss: 1.3261995311005048e-07, BC Loss: 7.13547849157596e-09,                   mse loss: 1.3975543160162646e-07, nn loss: 6.99577377727083e-07
+1910/34001 PDE Loss: 6.948841049276662e-08, BC Loss: 1.5872907677782532e-08,                   mse loss: 8.536131817054915e-08, nn loss: 4.994891714474866e-07
+1920/34001 PDE Loss: 1.0645213492214342e-07, BC Loss: 3.235688793442155e-09,                   mse loss: 1.0968782371558557e-07, nn loss: 1.2731430668981703e-06
+1930/34001 PDE Loss: 7.590903166148151e-08, BC Loss: 4.2675472584195135e-09,                   mse loss: 8.017657891990103e-08, nn loss: 8.985587625240482e-07
+1940/34001 PDE Loss: 7.437105398930464e-08, BC Loss: 3.959636990613621e-09,                   mse loss: 7.833069097991826e-08, nn loss: 9.28995375716209e-07
+1950/34001 PDE Loss: 6.091899698804023e-08, BC Loss: 3.5634081372376756e-09,                   mse loss: 6.448240512527791e-08, nn loss: 8.183411247745419e-07
+1960/34001 PDE Loss: 4.098684614829235e-08, BC Loss: 2.5040860113790114e-09,                   mse loss: 4.349093215967136e-08, nn loss: 9.084670611947622e-07
+1970/34001 PDE Loss: 4.806893307398546e-08, BC Loss: 1.4544165848606755e-09,                   mse loss: 4.952334965884614e-08, nn loss: 9.883727441600297e-07
+1980/34001 PDE Loss: 4.44800341661299e-08, BC Loss: 2.18339227554604e-09,                   mse loss: 4.6663426441675936e-08, nn loss: 1.232259302748196e-06
+1990/34001 PDE Loss: 3.06064559926843e-08, BC Loss: 5.624246777112615e-10,                   mse loss: 3.116888067039556e-08, nn loss: 1.2384664804153642e-06
+2000/34001 PDE Loss: 2.9663560728671318e-08, BC Loss: 4.4341058926425305e-10,                   mse loss: 3.010697131793557e-08, nn loss: 1.1718563994885534e-06
+2010/34001 PDE Loss: 2.5052568724086486e-08, BC Loss: 6.046817644847567e-10,                   mse loss: 2.5657250488571244e-08, nn loss: 1.132699809897505e-06
+2020/34001 PDE Loss: 2.486353772634404e-08, BC Loss: 7.011774085525642e-10,                   mse loss: 2.5564715134896607e-08, nn loss: 8.846429423913867e-07
+2030/34001 PDE Loss: 2.106357722430742e-08, BC Loss: 9.518746714061473e-10,                   mse loss: 2.201545189571357e-08, nn loss: 7.81760061068686e-07
+2040/34001 PDE Loss: 2.1895536956947824e-08, BC Loss: 1.1696315836729955e-09,                   mse loss: 2.306516854062082e-08, nn loss: 6.761667385430879e-07
+2050/34001 PDE Loss: 2.391040225496453e-08, BC Loss: 1.7657791106897638e-09,                   mse loss: 2.5676181365654292e-08, nn loss: 8.041242786875504e-07
+2060/34001 PDE Loss: 2.7051815810280228e-08, BC Loss: 8.846855113525705e-10,                   mse loss: 2.7936501321632797e-08, nn loss: 8.396088497238747e-07
+2070/34001 PDE Loss: 2.0335761299078318e-08, BC Loss: 4.69407424697986e-10,                   mse loss: 2.0805168723776303e-08, nn loss: 7.630965981096804e-07
+2080/34001 PDE Loss: 2.4804327872055243e-08, BC Loss: 4.67936395957142e-10,                   mse loss: 2.5272264268012386e-08, nn loss: 7.591132588892638e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 167
+  warnings.warn('CG iter num: %d' % (i + 1))
+2090/34001 PDE Loss: 2.1308151413725196e-08, BC Loss: 5.537584611621694e-10,                   mse loss: 2.1861909874887366e-08, nn loss: 7.152977299751529e-07
+2100/34001 PDE Loss: 2.1087577740386457e-08, BC Loss: 3.5131441918905595e-10,                   mse loss: 2.1438892159575514e-08, nn loss: 6.664674724447925e-07
+2110/34001 PDE Loss: 8.801670835142596e-08, BC Loss: 6.604309878652458e-09,                   mse loss: 9.462101823007842e-08, nn loss: 1.5952096481192828e-06
+2120/34001 PDE Loss: 2.171304126161644e-06, BC Loss: 3.6654722115617174e-07,                   mse loss: 2.5378513473178158e-06, nn loss: -7.026810395347584e-06
+2130/34001 PDE Loss: 2.4805170330009116e-07, BC Loss: 2.7942325248179304e-08,                   mse loss: 2.759940285482705e-07, nn loss: 2.7841335916863795e-08
+2140/34001 PDE Loss: 6.451676519225437e-08, BC Loss: 7.823592087014727e-09,                   mse loss: 7.234035727926909e-08, nn loss: 6.48356002905099e-07
+2150/34001 PDE Loss: 6.037036786422966e-08, BC Loss: 1.9455541945713206e-09,                   mse loss: 6.231592205880098e-08, nn loss: 8.048956040818552e-07
+2160/34001 PDE Loss: 3.9987297482796695e-08, BC Loss: 1.559437711348673e-09,                   mse loss: 4.1546735194145364e-08, nn loss: 8.363635041220433e-07
+2170/34001 PDE Loss: 3.009227924034773e-08, BC Loss: 1.894778109157076e-09,                   mse loss: 3.198705734950481e-08, nn loss: 7.434778222946231e-07
+2180/34001 PDE Loss: 2.6531402599121316e-08, BC Loss: 1.0069613178785531e-09,                   mse loss: 2.753836391699987e-08, nn loss: 7.961224110145995e-07
+2190/34001 PDE Loss: 2.8295989931848243e-08, BC Loss: 1.2599381178208624e-09,                   mse loss: 2.9555928049669106e-08, nn loss: 7.838607947996598e-07
+2200/34001 PDE Loss: 2.447157768030285e-08, BC Loss: 9.057705139436142e-10,                   mse loss: 2.5377348194246464e-08, nn loss: 9.408758456903368e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 154
+  warnings.warn('CG iter num: %d' % (i + 1))
+2210/34001 PDE Loss: 2.2102496698283616e-08, BC Loss: 6.695920405898106e-10,                   mse loss: 2.2772088738873426e-08, nn loss: 1.091269699756892e-06
+2220/34001 PDE Loss: 2.245882014742792e-08, BC Loss: 7.681491731398242e-10,                   mse loss: 2.3226969320567742e-08, nn loss: 1.101726957450712e-06
+2230/34001 PDE Loss: 1.946456199280808e-08, BC Loss: 7.000232071400697e-10,                   mse loss: 2.016458519994815e-08, nn loss: 1.0470971093772906e-06
+2240/34001 PDE Loss: 1.769781438559565e-08, BC Loss: 3.8474804963069026e-10,                   mse loss: 1.808256243522634e-08, nn loss: 9.915112398552085e-07
+2250/34001 PDE Loss: 2.0645765920672803e-08, BC Loss: 9.30046312671996e-10,                   mse loss: 2.15758122333448e-08, nn loss: 1.0571875743646884e-06
+2260/34001 PDE Loss: 1.8456116122057098e-08, BC Loss: 4.742955811706308e-10,                   mse loss: 1.8930411703227727e-08, nn loss: 1.0045488613961636e-06
+2270/34001 PDE Loss: 2.076321988023265e-08, BC Loss: 5.26923620355839e-10,                   mse loss: 2.129014350058849e-08, nn loss: 9.615290152901227e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 180
+  warnings.warn('CG iter num: %d' % (i + 1))
+2280/34001 PDE Loss: 2.0515444234772686e-08, BC Loss: 5.722219460298367e-10,                   mse loss: 2.1087666180802524e-08, nn loss: 9.928210119059351e-07
+2290/34001 PDE Loss: 1.670668086224856e-08, BC Loss: 4.4668279318046414e-10,                   mse loss: 1.7153363655429024e-08, nn loss: 1.0131764084360067e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 191
+  warnings.warn('CG iter num: %d' % (i + 1))
+2300/34001 PDE Loss: 1.5302226781776652e-08, BC Loss: 5.513665360012673e-10,                   mse loss: 1.585359331777792e-08, nn loss: 8.924690066659967e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 187
+  warnings.warn('CG iter num: %d' % (i + 1))
+2310/34001 PDE Loss: 1.689380253916447e-08, BC Loss: 4.636186687187142e-10,                   mse loss: 1.7357421207883187e-08, nn loss: 9.437766641423944e-07
+2320/34001 PDE Loss: 1.784977253082462e-08, BC Loss: 6.941006261673585e-10,                   mse loss: 1.8543873156991978e-08, nn loss: 1.1177536697376237e-06
+2330/34001 PDE Loss: 1.502666240053078e-08, BC Loss: 5.379009033424461e-10,                   mse loss: 1.5564563303873226e-08, nn loss: 1.1943209650354103e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 183
+  warnings.warn('CG iter num: %d' % (i + 1))
+2340/34001 PDE Loss: 1.4859858668726518e-08, BC Loss: 3.498962718722698e-10,                   mse loss: 1.5209754940598787e-08, nn loss: 1.2265922602874122e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 195
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 227
+  warnings.warn('CG iter num: %d' % (i + 1))
+2350/34001 PDE Loss: 1.4602749600145949e-08, BC Loss: 4.2153538182844885e-10,                   mse loss: 1.50242849819744e-08, nn loss: 1.2974651556656612e-06
+2360/34001 PDE Loss: 1.30087269200622e-08, BC Loss: 3.741852976195054e-10,                   mse loss: 1.3382912217681705e-08, nn loss: 1.2750776806707487e-06
+2370/34001 PDE Loss: 1.1942800848012867e-08, BC Loss: 5.296645081159506e-10,                   mse loss: 1.2472465356128819e-08, nn loss: 1.2067982376070925e-06
+2380/34001 PDE Loss: 1.1483464371238527e-08, BC Loss: 5.829034932263159e-10,                   mse loss: 1.2066367864464842e-08, nn loss: 1.2037675515013024e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 182
+  warnings.warn('CG iter num: %d' % (i + 1))
+2390/34001 PDE Loss: 1.219535634466319e-08, BC Loss: 5.441975140803446e-10,                   mse loss: 1.2739553858743535e-08, nn loss: 1.2000342523111613e-06
+2400/34001 PDE Loss: 1.2373588386944096e-08, BC Loss: 7.978074402369065e-10,                   mse loss: 1.3171395827181002e-08, nn loss: 1.2254072645643419e-06
+2410/34001 PDE Loss: 1.3728276703770459e-08, BC Loss: 1.013636764585421e-09,                   mse loss: 1.474191346835588e-08, nn loss: 1.298023247002237e-06
+2420/34001 PDE Loss: 3.192714285627454e-08, BC Loss: 2.0115267880541936e-09,                   mse loss: 3.393866964432873e-08, nn loss: 1.4271157033594555e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 203
+  warnings.warn('CG iter num: %d' % (i + 1))
+2430/34001 PDE Loss: 1.2080574179343215e-08, BC Loss: 8.716989903180305e-10,                   mse loss: 1.2952273169661245e-08, nn loss: 1.3050425103996308e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 190
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 216
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 188
+  warnings.warn('CG iter num: %d' % (i + 1))
+2440/34001 PDE Loss: 1.0718264797114412e-08, BC Loss: 8.375616418282047e-10,                   mse loss: 1.1555826438942616e-08, nn loss: 1.2580947687225383e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 207
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 220
+  warnings.warn('CG iter num: %d' % (i + 1))
+2450/34001 PDE Loss: 1.0417979336724547e-08, BC Loss: 7.480377917287509e-10,                   mse loss: 1.1166017128453299e-08, nn loss: 1.199618439658987e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 184
+  warnings.warn('CG iter num: %d' % (i + 1))
+2460/34001 PDE Loss: 1.0832021805244548e-08, BC Loss: 4.390920832895512e-10,                   mse loss: 1.12711138885341e-08, nn loss: 1.1891289196383433e-06
+2470/34001 PDE Loss: 1.1300404157523359e-08, BC Loss: 3.5600022721166303e-10,                   mse loss: 1.1656404384735022e-08, nn loss: 1.1884605572267224e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 175
+  warnings.warn('CG iter num: %d' % (i + 1))
+2480/34001 PDE Loss: 1.0693926460861782e-08, BC Loss: 3.7270958973052863e-10,                   mse loss: 1.106663605059231e-08, nn loss: 1.1893800429006754e-06
+2490/34001 PDE Loss: 1.0419417404378678e-08, BC Loss: 3.9187024075784395e-10,                   mse loss: 1.0811287645136522e-08, nn loss: 1.1701373420407257e-06
+2500/34001 PDE Loss: 1.1826362404289882e-08, BC Loss: 7.112377131855328e-10,                   mse loss: 1.2537600117475414e-08, nn loss: 1.1861174589156703e-06
+2510/34001 PDE Loss: 4.403527337399198e-06, BC Loss: 6.791340707080793e-07,                   mse loss: 5.082661408107277e-06, nn loss: 2.755042740494617e-05
+2520/34001 PDE Loss: 1.2410933169233745e-06, BC Loss: 2.2295485834688137e-07,                   mse loss: 1.4640481752702558e-06, nn loss: -6.79124421663711e-06
+2530/34001 PDE Loss: 7.807339010556115e-07, BC Loss: 5.200582776871468e-08,                   mse loss: 8.327397288243261e-07, nn loss: -4.416911782019081e-06
+2540/34001 PDE Loss: 3.366597149169594e-07, BC Loss: 4.348770252118643e-08,                   mse loss: 3.801474174381458e-07, nn loss: -1.4914425022719395e-06
+2550/34001 PDE Loss: 1.78337470710281e-07, BC Loss: 1.2684120047078567e-08,                   mse loss: 1.9102159075735955e-07, nn loss: 1.0914880961389304e-06
+2560/34001 PDE Loss: 2.0513940397574585e-07, BC Loss: 2.218612362553227e-08,                   mse loss: 2.2732552760127813e-07, nn loss: 1.7642573006506887e-06
+2570/34001 PDE Loss: 1.2860827649799376e-07, BC Loss: 1.3681777622804686e-08,                   mse loss: 1.4229005412079844e-07, nn loss: 1.2315723662997244e-06
+2580/34001 PDE Loss: 1.056350676500264e-07, BC Loss: 1.1312422886212787e-08,                   mse loss: 1.1694749053623918e-07, nn loss: 4.078063090233634e-07
+2590/34001 PDE Loss: 5.756329222886033e-08, BC Loss: 9.315548265170722e-09,                   mse loss: 6.687884049403105e-08, nn loss: 5.972870455040014e-07
+2600/34001 PDE Loss: 4.1848866918210075e-08, BC Loss: 3.810772887956104e-09,                   mse loss: 4.5659639806166176e-08, nn loss: 5.970262648919104e-07
+2610/34001 PDE Loss: 4.0152464127621094e-08, BC Loss: 4.547706086517694e-09,                   mse loss: 4.470017021413879e-08, nn loss: 1.0351083229713064e-06
+2620/34001 PDE Loss: 3.9310984044116184e-08, BC Loss: 2.2692485887790995e-09,                   mse loss: 4.158023263289528e-08, nn loss: 6.883701998316952e-07
+2630/34001 PDE Loss: 5.001436930303512e-08, BC Loss: 1.738097163347733e-09,                   mse loss: 5.175246646638285e-08, nn loss: 9.81961647506207e-07
+2640/34001 PDE Loss: 3.2726356248117085e-08, BC Loss: 9.693452665008554e-10,                   mse loss: 3.369570151461794e-08, nn loss: 1.1656054458305927e-06
+2650/34001 PDE Loss: 2.6145636283339093e-08, BC Loss: 6.359268412341129e-10,                   mse loss: 2.6781563124573206e-08, nn loss: 1.147382122827515e-06
+2660/34001 PDE Loss: 2.838974908466074e-08, BC Loss: 1.9463757747997565e-09,                   mse loss: 3.0336124859460496e-08, nn loss: 9.612763390985873e-07
+2670/34001 PDE Loss: 2.5413605162612484e-08, BC Loss: 1.1731280046343688e-09,                   mse loss: 2.6586733167246853e-08, nn loss: 1.0429303659000917e-06
+2680/34001 PDE Loss: 2.209070289094695e-08, BC Loss: 5.488152682476954e-10,                   mse loss: 2.2639518159194646e-08, nn loss: 9.995630853801752e-07
+2690/34001 PDE Loss: 2.4469150450807965e-08, BC Loss: 1.5261116525793544e-09,                   mse loss: 2.599526210338732e-08, nn loss: 1.1543971017744226e-06
+2700/34001 PDE Loss: 1.7875608717727328e-08, BC Loss: 3.890113088047901e-10,                   mse loss: 1.826462002653212e-08, nn loss: 9.890348266807006e-07
+2710/34001 PDE Loss: 1.785271466116753e-08, BC Loss: 7.466308063106928e-10,                   mse loss: 1.8599345467478222e-08, nn loss: 9.205286183820737e-07
+2720/34001 PDE Loss: 1.3862917166848259e-08, BC Loss: 6.840436148440352e-10,                   mse loss: 1.4546960781692295e-08, nn loss: 1.0878583560920248e-06
+2730/34001 PDE Loss: 1.596661918110453e-08, BC Loss: 1.0144879079723103e-09,                   mse loss: 1.698110708907684e-08, nn loss: 1.0101373208603463e-06
+2740/34001 PDE Loss: 1.7029481356742548e-08, BC Loss: 9.130944057382113e-10,                   mse loss: 1.794257576248076e-08, nn loss: 1.155560614206886e-06
+2750/34001 PDE Loss: 1.4218578009104024e-08, BC Loss: 8.627240827610591e-10,                   mse loss: 1.5081302091865082e-08, nn loss: 1.2316352422221491e-06
+2760/34001 PDE Loss: 1.0913102430651834e-08, BC Loss: 5.439926036303317e-10,                   mse loss: 1.1457095034282165e-08, nn loss: 1.3352358909229765e-06
+2770/34001 PDE Loss: 8.743927908700414e-09, BC Loss: 5.856653234001831e-10,                   mse loss: 9.329593232100597e-09, nn loss: 1.2618210302237423e-06
+2780/34001 PDE Loss: 7.9190625015868e-09, BC Loss: 4.736025384945592e-10,                   mse loss: 8.39266504008136e-09, nn loss: 1.1234959243145393e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 194
+  warnings.warn('CG iter num: %d' % (i + 1))
+2790/34001 PDE Loss: 9.368736774308685e-09, BC Loss: 5.441356308878624e-10,                   mse loss: 9.912872405196547e-09, nn loss: 1.1766347191629955e-06
+2800/34001 PDE Loss: 9.797931500304567e-09, BC Loss: 6.884631537866996e-10,                   mse loss: 1.0486394654091266e-08, nn loss: 1.3468958513325662e-06
+2810/34001 PDE Loss: 7.70584477585996e-07, BC Loss: 1.7686884972108063e-07,                   mse loss: 9.474533273070767e-07, nn loss: 1.8547401274089094e-06
+2820/34001 PDE Loss: 4.921947196566687e-08, BC Loss: 1.2947793889764719e-09,                   mse loss: 5.051425135464335e-08, nn loss: 7.725921424929706e-07
+2830/34001 PDE Loss: 1.3720439818233383e-08, BC Loss: 9.815101315761112e-10,                   mse loss: 1.4701949949809493e-08, nn loss: 1.0652557354803236e-06
+2840/34001 PDE Loss: 1.3884062719585154e-08, BC Loss: 4.901121630304599e-10,                   mse loss: 1.4374174882615615e-08, nn loss: 1.0866066921508318e-06
+2850/34001 PDE Loss: 1.382491913596771e-08, BC Loss: 4.119219160058911e-10,                   mse loss: 1.42368410519736e-08, nn loss: 1.113093981476885e-06
+2860/34001 PDE Loss: 1.1674414649317223e-08, BC Loss: 4.868866353468053e-10,                   mse loss: 1.2161301284664029e-08, nn loss: 1.147803368653212e-06
+2870/34001 PDE Loss: 1.0968226640270071e-08, BC Loss: 3.487756722155467e-10,                   mse loss: 1.1317002312485618e-08, nn loss: 1.1807452974763833e-06
+2880/34001 PDE Loss: 1.0297637834464046e-08, BC Loss: 4.032360461463145e-10,                   mse loss: 1.0700873880610361e-08, nn loss: 1.2324855441507354e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 189
+  warnings.warn('CG iter num: %d' % (i + 1))
+2890/34001 PDE Loss: 9.198181337516031e-09, BC Loss: 3.380043769635752e-10,                   mse loss: 9.536185714479606e-09, nn loss: 1.2548785784954466e-06
+2900/34001 PDE Loss: 8.280098717405179e-09, BC Loss: 1.9725303974890076e-10,                   mse loss: 8.47735175715408e-09, nn loss: 1.2167499618464402e-06
+2910/34001 PDE Loss: 7.80451533503612e-09, BC Loss: 2.0689854072878902e-10,                   mse loss: 8.01141387576491e-09, nn loss: 1.1736359909331942e-06
+2920/34001 PDE Loss: 7.846170750123558e-09, BC Loss: 1.65954555667274e-10,                   mse loss: 8.012125305790831e-09, nn loss: 1.1593496133853358e-06
+2930/34001 PDE Loss: 7.667657606726617e-09, BC Loss: 1.772117879009485e-10,                   mse loss: 7.844869394627566e-09, nn loss: 1.175587824499963e-06
+2940/34001 PDE Loss: 7.050953526792846e-09, BC Loss: 1.7173781026471608e-10,                   mse loss: 7.222691337057563e-09, nn loss: 1.2010240807994675e-06
+2950/34001 PDE Loss: 6.5334639345007425e-09, BC Loss: 1.9763980534796716e-10,                   mse loss: 6.73110373984871e-09, nn loss: 1.2125102890922482e-06
+2960/34001 PDE Loss: 6.110926034346077e-09, BC Loss: 1.9615200714832213e-10,                   mse loss: 6.3070780414943994e-09, nn loss: 1.2242096123678467e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 223
+  warnings.warn('CG iter num: %d' % (i + 1))
+2970/34001 PDE Loss: 6.574101730704145e-09, BC Loss: 2.33992091222416e-10,                   mse loss: 6.808093821926561e-09, nn loss: 1.2235615629371138e-06
+2980/34001 PDE Loss: 7.45624423785083e-09, BC Loss: 3.6621479540074955e-10,                   mse loss: 7.822459033251578e-09, nn loss: 1.2290607479757384e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 210
+  warnings.warn('CG iter num: %d' % (i + 1))
+2990/34001 PDE Loss: 7.563428040965692e-09, BC Loss: 3.803908689281927e-10,                   mse loss: 7.943818909893884e-09, nn loss: 1.258107710476635e-06
+3000/34001 PDE Loss: 6.723246867081297e-09, BC Loss: 2.2657554327218262e-10,                   mse loss: 6.9498224103534796e-09, nn loss: 1.274690227947216e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 209
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 204
+  warnings.warn('CG iter num: %d' % (i + 1))
+3010/34001 PDE Loss: 5.88166435784177e-09, BC Loss: 1.5720449630506234e-10,                   mse loss: 6.038868854146832e-09, nn loss: 1.2892668832937806e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 241
+  warnings.warn('CG iter num: %d' % (i + 1))
+3020/34001 PDE Loss: 5.7644459388184515e-09, BC Loss: 1.3345927737049018e-10,                   mse loss: 5.897905216188942e-09, nn loss: 1.3246602607161973e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 222
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 198
+  warnings.warn('CG iter num: %d' % (i + 1))
+3030/34001 PDE Loss: 6.147279598770655e-09, BC Loss: 1.4322817836063669e-10,                   mse loss: 6.290507777131292e-09, nn loss: 1.353977062272235e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 244
+  warnings.warn('CG iter num: %d' % (i + 1))
+3040/34001 PDE Loss: 6.17534503209085e-09, BC Loss: 1.2572237051372046e-10,                   mse loss: 6.3010674026045705e-09, nn loss: 1.3733452277944558e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 211
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 243
+  warnings.warn('CG iter num: %d' % (i + 1))
+3050/34001 PDE Loss: 5.568700354362421e-09, BC Loss: 9.882859471801477e-11,                   mse loss: 5.667528949080436e-09, nn loss: 1.3694345104596755e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 226
+  warnings.warn('CG iter num: %d' % (i + 1))
+3060/34001 PDE Loss: 5.643010661494344e-09, BC Loss: 9.361609059943855e-11,                   mse loss: 5.736626752093783e-09, nn loss: 1.3596595121816798e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 221
+  warnings.warn('CG iter num: %d' % (i + 1))
+3070/34001 PDE Loss: 5.44005003966131e-09, BC Loss: 1.0814638088708011e-10,                   mse loss: 5.54819642054839e-09, nn loss: 1.3550315620662457e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 237
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 233
+  warnings.warn('CG iter num: %d' % (i + 1))
+3080/34001 PDE Loss: 5.124442889525445e-09, BC Loss: 1.0638729143702197e-10,                   mse loss: 5.230830180962467e-09, nn loss: 1.3457175895033386e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 249
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 212
+  warnings.warn('CG iter num: %d' % (i + 1))
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 206
+  warnings.warn('CG iter num: %d' % (i + 1))
+3090/34001 PDE Loss: 4.884765467649236e-09, BC Loss: 1.463876540577016e-10,                   mse loss: 5.031153121706938e-09, nn loss: 1.3398230717640299e-06
+3100/34001 PDE Loss: 1.1532702821180565e-07, BC Loss: 2.0355407038711652e-08,                   mse loss: 1.356824352505173e-07, nn loss: 5.490696003772054e-06
+3110/34001 PDE Loss: 2.7601675629772966e-06, BC Loss: 3.6167933461916776e-07,                   mse loss: 3.121846897596464e-06, nn loss: 1.4381588440538976e-05
+3120/34001 PDE Loss: 1.1054590705501505e-06, BC Loss: 2.856768840089738e-07,                   mse loss: 1.3911359545591242e-06, nn loss: 6.689168830143312e-07
+3130/34001 PDE Loss: 1.4529066894827259e-06, BC Loss: 9.467642346931744e-08,                   mse loss: 1.5475831129520434e-06, nn loss: -3.834857229025479e-06
+3140/34001 PDE Loss: 9.550505639439364e-07, BC Loss: 1.7760060901734582e-07,                   mse loss: 1.1326511729612821e-06, nn loss: 4.651476461534684e-06
+3150/34001 PDE Loss: 2.964340935420826e-07, BC Loss: 3.4865776622297515e-08,                   mse loss: 3.312998701643801e-07, nn loss: -1.68209347691646e-06
+3160/34001 PDE Loss: 5.28508636175668e-07, BC Loss: 1.0090903517055032e-07,                   mse loss: 6.294176713462183e-07, nn loss: -5.4840800203525644e-06
+3170/34001 PDE Loss: 3.769802850863609e-07, BC Loss: 1.9369801311371678e-07,                   mse loss: 5.706782982000777e-07, nn loss: 8.03308238019103e-06
+3180/34001 PDE Loss: 2.385209023429771e-07, BC Loss: 1.7287473814500122e-08,                   mse loss: 2.5580837615747724e-07, nn loss: -3.8109820999615107e-06
+3190/34001 PDE Loss: 2.3741574222634844e-07, BC Loss: 7.453663812114704e-08,                   mse loss: 3.1195238034749547e-07, nn loss: 1.0519775401141395e-07
+3200/34001 PDE Loss: 2.3016502862344308e-07, BC Loss: 1.1965148645927534e-08,                   mse loss: 2.4213017726937063e-07, nn loss: 2.2022779844776498e-07
+3210/34001 PDE Loss: 2.7072325053386085e-07, BC Loss: 1.5477680676290278e-08,                   mse loss: 2.8620093121015115e-07, nn loss: 2.877083752294054e-07
+3220/34001 PDE Loss: 1.1441534926183568e-07, BC Loss: 1.5778476691546994e-08,                   mse loss: 1.3019382595338268e-07, nn loss: 6.728515287786548e-07
+3230/34001 PDE Loss: 2.390813780987796e-07, BC Loss: 4.375729111267422e-09,                   mse loss: 2.4345710721004704e-07, nn loss: -2.2183692634804098e-06
+3240/34001 PDE Loss: 2.0706715734808403e-07, BC Loss: 8.770768031057229e-09,                   mse loss: 2.1583792537914126e-07, nn loss: -8.080168667408471e-08
+3250/34001 PDE Loss: 1.6034594619266698e-07, BC Loss: 1.4744453594114006e-08,                   mse loss: 1.7509039978678099e-07, nn loss: 9.578328997408197e-07
+3260/34001 PDE Loss: 9.9467115644359e-08, BC Loss: 8.270822982150405e-09,                   mse loss: 1.0773793862650941e-07, nn loss: -1.8727152150847054e-07
+3270/34001 PDE Loss: 9.450900659127712e-08, BC Loss: 1.613329215359205e-08,                   mse loss: 1.1064229874486917e-07, nn loss: -1.1341151118607883e-07
+3280/34001 PDE Loss: 1.2813534515006153e-07, BC Loss: 1.0151350118280478e-08,                   mse loss: 1.38286695268342e-07, nn loss: 1.4284917341278885e-06
+3290/34001 PDE Loss: 5.081195297361235e-08, BC Loss: 3.484310113754235e-09,                   mse loss: 5.4296263087366584e-08, nn loss: 6.741983998428138e-07
+3300/34001 PDE Loss: 3.231108589544055e-08, BC Loss: 2.253319704739693e-09,                   mse loss: 3.456440560018024e-08, nn loss: 3.169632406988073e-07
+3310/34001 PDE Loss: 4.461381463407011e-08, BC Loss: 3.6441718038210632e-09,                   mse loss: 4.8257986437891175e-08, nn loss: 6.529412294996934e-07
+3320/34001 PDE Loss: 3.734002137977902e-08, BC Loss: 1.8096651632894512e-09,                   mse loss: 3.914968654306847e-08, nn loss: 3.25096277894313e-07
+3330/34001 PDE Loss: 3.423554673420069e-08, BC Loss: 1.7777811248669902e-09,                   mse loss: 3.601332785906768e-08, nn loss: 1.0634510338751909e-06
+3340/34001 PDE Loss: 3.655137194780726e-08, BC Loss: 1.7129529415810048e-09,                   mse loss: 3.826432488938826e-08, nn loss: 5.337217650108206e-07
+3350/34001 PDE Loss: 2.692719865950633e-08, BC Loss: 2.6303673573443136e-09,                   mse loss: 2.9557566016850645e-08, nn loss: 3.9062380072368495e-07
+3360/34001 PDE Loss: 2.2631416510512292e-08, BC Loss: 2.5456281556929447e-09,                   mse loss: 2.517704466620524e-08, nn loss: 2.897322930816545e-07
+3370/34001 PDE Loss: 2.6184699437136352e-08, BC Loss: 2.4147450560188435e-09,                   mse loss: 2.8599444493155194e-08, nn loss: 7.179918533266063e-07
+3380/34001 PDE Loss: 2.771061382727921e-08, BC Loss: 1.990378853960125e-09,                   mse loss: 2.9700992681239337e-08, nn loss: 6.08413170534744e-07
+3390/34001 PDE Loss: 2.363304212171749e-08, BC Loss: 1.958298677648375e-09,                   mse loss: 2.5591340799365867e-08, nn loss: 6.014425183340314e-07
+3400/34001 PDE Loss: 1.7238081204300666e-08, BC Loss: 5.747623299290481e-10,                   mse loss: 1.7812843534229713e-08, nn loss: 7.576149537889294e-07
+3410/34001 PDE Loss: 1.8614977838003722e-08, BC Loss: 1.043647222198849e-09,                   mse loss: 1.9658625060202573e-08, nn loss: 7.040604162322718e-07
+3420/34001 PDE Loss: 1.9709746878951608e-08, BC Loss: 2.630689660459052e-09,                   mse loss: 2.234043653941066e-08, nn loss: 9.221522029877485e-07
+3430/34001 PDE Loss: 1.525619795562367e-08, BC Loss: 1.0997851726321772e-09,                   mse loss: 1.635598312825585e-08, nn loss: 9.65236553380795e-07
+3440/34001 PDE Loss: 1.5660289326566613e-08, BC Loss: 1.3277172046944222e-09,                   mse loss: 1.6988006531261035e-08, nn loss: 8.951725284644167e-07
+3450/34001 PDE Loss: 1.6295739522429704e-08, BC Loss: 1.344479180557388e-09,                   mse loss: 1.764021870298709e-08, nn loss: 9.83542497560658e-07
+3460/34001 PDE Loss: 1.5095275255219642e-08, BC Loss: 7.488681448052657e-10,                   mse loss: 1.5844143400024907e-08, nn loss: 9.952460144476026e-07
+3470/34001 PDE Loss: 1.6816924469029986e-08, BC Loss: 1.0941113962823537e-09,                   mse loss: 1.791103586531234e-08, nn loss: 8.72768325499833e-07
+3480/34001 PDE Loss: 1.9087706472331625e-08, BC Loss: 7.979480738415191e-10,                   mse loss: 1.9885654546173143e-08, nn loss: 9.623183230757167e-07
+3490/34001 PDE Loss: 1.5479095029762544e-08, BC Loss: 5.248682145067997e-10,                   mse loss: 1.6003963244269344e-08, nn loss: 1.038266582843161e-06
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 186
+  warnings.warn('CG iter num: %d' % (i + 1))
+3500/34001 PDE Loss: 1.4462620741915341e-08, BC Loss: 2.4287474318264056e-10,                   mse loss: 1.4705495485097981e-08, nn loss: 1.038620915758545e-06
+3510/34001 PDE Loss: 6.053835240642981e-08, BC Loss: 7.430056682301357e-09,                   mse loss: 6.796840908873117e-08, nn loss: 1.3919222937127158e-06
+3520/34001 PDE Loss: 8.182869891674883e-07, BC Loss: 2.464207945404227e-07,                   mse loss: 1.0647077837079109e-06, nn loss: 5.754149262043681e-06
+3530/34001 PDE Loss: 1.35033605840926e-06, BC Loss: 1.3836610711024078e-07,                   mse loss: 1.4887021655195007e-06, nn loss: -1.1672071879810754e-06
+3540/34001 PDE Loss: 2.728202340739896e-07, BC Loss: 3.141026537915555e-08,                   mse loss: 3.0423049945314513e-07, nn loss: -6.696505446502334e-08
+3550/34001 PDE Loss: 7.143358464425586e-08, BC Loss: 1.1217831381284912e-08,                   mse loss: 8.265141602554077e-08, nn loss: 5.325060170889522e-07
+3560/34001 PDE Loss: 6.25292980607336e-08, BC Loss: 8.976984385170088e-09,                   mse loss: 7.150628244590368e-08, nn loss: 1.0025386560000904e-06
+3570/34001 PDE Loss: 5.823429173335887e-08, BC Loss: 6.946437493102052e-09,                   mse loss: 6.518072922646092e-08, nn loss: -7.204842943858956e-08
+3580/34001 PDE Loss: 4.858109995588985e-08, BC Loss: 4.346485646865673e-09,                   mse loss: 5.292758560275552e-08, nn loss: 6.925274410973328e-07
+3590/34001 PDE Loss: 3.424105750296956e-08, BC Loss: 3.1292948846394392e-09,                   mse loss: 3.7370352387608996e-08, nn loss: 9.272386003909356e-07
+3600/34001 PDE Loss: 4.7179419236728285e-08, BC Loss: 2.1141001383023075e-09,                   mse loss: 4.9293519375030594e-08, nn loss: 4.996424491765962e-07
+3610/34001 PDE Loss: 3.2331466068475927e-08, BC Loss: 2.7988459949017088e-09,                   mse loss: 3.5130312063377637e-08, nn loss: 8.384358688333871e-07
+3620/34001 PDE Loss: 2.4225679376243616e-08, BC Loss: 6.436094700938332e-10,                   mse loss: 2.486928884633745e-08, nn loss: 4.791454669384385e-07
+3630/34001 PDE Loss: 2.8520713355731328e-08, BC Loss: 3.635811446887007e-09,                   mse loss: 3.215652480261833e-08, nn loss: 4.466633846066923e-07
+3640/34001 PDE Loss: 2.509484666290003e-08, BC Loss: 1.2358816115532756e-09,                   mse loss: 2.6330728274453305e-08, nn loss: 5.406072920174763e-07
+3650/34001 PDE Loss: 3.654134562686239e-08, BC Loss: 8.467255462358607e-10,                   mse loss: 3.7388071173098253e-08, nn loss: 5.877681097679982e-07
+3660/34001 PDE Loss: 3.3576341989202427e-08, BC Loss: 2.683253238649662e-09,                   mse loss: 3.625959522785209e-08, nn loss: 7.906818027427915e-07
+3670/34001 PDE Loss: 1.956928470787932e-08, BC Loss: 1.5432474224003283e-09,                   mse loss: 2.1112532130279648e-08, nn loss: 7.46416655253773e-07
+3680/34001 PDE Loss: 2.2749524887365095e-08, BC Loss: 8.354991591812237e-10,                   mse loss: 2.358502404654632e-08, nn loss: 6.007583540251959e-07
+3690/34001 PDE Loss: 2.203707870450686e-08, BC Loss: 1.1044842590367435e-09,                   mse loss: 2.3141562963543605e-08, nn loss: 6.286680858502637e-07
+3700/34001 PDE Loss: 2.2624237596453266e-08, BC Loss: 6.377672790430587e-10,                   mse loss: 2.3262004875496323e-08, nn loss: 7.387630801540402e-07
+3710/34001 PDE Loss: 2.07983632237894e-08, BC Loss: 1.0222637918028636e-09,                   mse loss: 2.1820627015592263e-08, nn loss: 8.672404098182326e-07
+3720/34001 PDE Loss: 1.773464833227734e-08, BC Loss: 4.829402208378038e-10,                   mse loss: 1.8217588553115144e-08, nn loss: 8.821663975358147e-07
+3730/34001 PDE Loss: 1.936992616559146e-08, BC Loss: 3.7102319749729176e-10,                   mse loss: 1.974094936308875e-08, nn loss: 8.919550889344509e-07
+3740/34001 PDE Loss: 1.2872339386880955e-08, BC Loss: 4.11792102296787e-10,                   mse loss: 1.3284131489177742e-08, nn loss: 7.453639306445491e-07
+3750/34001 PDE Loss: 1.584528662116209e-08, BC Loss: 3.9948142237770856e-10,                   mse loss: 1.6244768043539796e-08, nn loss: 5.966605759352396e-07
+3760/34001 PDE Loss: 1.6208547483497488e-08, BC Loss: 4.836850420005422e-10,                   mse loss: 1.669223252549803e-08, nn loss: 6.503952269832088e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 179
+  warnings.warn('CG iter num: %d' % (i + 1))
+3770/34001 PDE Loss: 1.651027894515055e-08, BC Loss: 8.727012371577926e-10,                   mse loss: 1.738298018230834e-08, nn loss: 6.93979778625407e-07
+3780/34001 PDE Loss: 1.544328554893513e-08, BC Loss: 7.843942141067998e-10,                   mse loss: 1.622767976304193e-08, nn loss: 8.147569794341065e-07
+3790/34001 PDE Loss: 1.5360728551584285e-08, BC Loss: 2.962251760064496e-10,                   mse loss: 1.5656953727590734e-08, nn loss: 8.490017577893147e-07
+3800/34001 PDE Loss: 1.1770330852504978e-08, BC Loss: 3.811413922898074e-10,                   mse loss: 1.2151472244794786e-08, nn loss: 7.471345679694027e-07
+3810/34001 PDE Loss: 1.2304064350120999e-08, BC Loss: 3.7429336128448336e-10,                   mse loss: 1.2678357711405482e-08, nn loss: 6.712320623079622e-07
+3820/34001 PDE Loss: 1.2089871094938814e-08, BC Loss: 6.3914082319659e-10,                   mse loss: 1.2729011918135404e-08, nn loss: 7.459952567577145e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 245
+  warnings.warn('CG iter num: %d' % (i + 1))
+3830/34001 PDE Loss: 1.1065149845574917e-08, BC Loss: 2.39623437147055e-10,                   mse loss: 1.1304773282721972e-08, nn loss: 7.478735285143792e-07
+3840/34001 PDE Loss: 8.970760066236235e-09, BC Loss: 2.9848838265346837e-10,                   mse loss: 9.269248448889704e-09, nn loss: 6.780005428074904e-07
+3850/34001 PDE Loss: 8.91906956019756e-09, BC Loss: 5.279411612793705e-10,                   mse loss: 9.447010721476931e-09, nn loss: 6.610136678300085e-07
+3860/34001 PDE Loss: 1.097867210439437e-08, BC Loss: 1.1793937088054714e-09,                   mse loss: 1.2158065813199842e-08, nn loss: 7.176701574172499e-07
+3870/34001 PDE Loss: 1.2204896585351138e-08, BC Loss: 1.0971492972793846e-09,                   mse loss: 1.3302045882630523e-08, nn loss: 7.401265454342562e-07
+3880/34001 PDE Loss: 8.417655537583423e-06, BC Loss: 6.304827438606615e-07,                   mse loss: 9.048138281444084e-06, nn loss: 7.216443934828459e-06
+3890/34001 PDE Loss: 7.025434548502406e-07, BC Loss: 1.1479168501402494e-07,                   mse loss: 8.173351398642655e-07, nn loss: -1.5789687247371542e-06
+3900/34001 PDE Loss: 4.431885661092235e-07, BC Loss: 7.757242826090018e-08,                   mse loss: 5.207609943701237e-07, nn loss: 1.663528151344531e-06
+3910/34001 PDE Loss: 2.338636990793431e-07, BC Loss: 5.544061483992068e-08,                   mse loss: 2.893043139192638e-07, nn loss: -1.1339769155062863e-06
+3920/34001 PDE Loss: 1.7000914293031316e-07, BC Loss: 5.394312925787785e-08,                   mse loss: 2.23952272188191e-07, nn loss: 2.959485124087656e-07
+3930/34001 PDE Loss: 2.543841542460849e-07, BC Loss: 3.226402112466695e-08,                   mse loss: 2.8664817537075187e-07, nn loss: 8.959087047331181e-07
+3940/34001 PDE Loss: 1.08417147484976e-07, BC Loss: 2.0451805585153522e-08,                   mse loss: 1.288689530701295e-07, nn loss: 1.4460397879817724e-06
+3950/34001 PDE Loss: 9.463449791938797e-08, BC Loss: 8.062278102923818e-09,                   mse loss: 1.0269677602231179e-07, nn loss: 8.61329112608052e-07
+3960/34001 PDE Loss: 8.219112303142783e-08, BC Loss: 1.6376623188883663e-08,                   mse loss: 9.856774622031149e-08, nn loss: 7.847644452141573e-07
+3970/34001 PDE Loss: 5.584913979999204e-08, BC Loss: 8.775168335902522e-09,                   mse loss: 6.462430813589457e-08, nn loss: 5.421774513443671e-07
+3980/34001 PDE Loss: 6.267503782669588e-08, BC Loss: 1.1233407325902107e-08,                   mse loss: 7.390844515259799e-08, nn loss: 8.173525400123572e-07
+3990/34001 PDE Loss: 3.372203045906616e-08, BC Loss: 8.2169689235151e-09,                   mse loss: 4.193899938258126e-08, nn loss: 1.0154115622345598e-06
+4000/34001 PDE Loss: 4.991430955000978e-08, BC Loss: 4.483385990541632e-09,                   mse loss: 5.4397695540551414e-08, nn loss: 2.875626412010894e-07
+4010/34001 PDE Loss: 4.8002548121230364e-08, BC Loss: 4.7851621487481555e-09,                   mse loss: 5.278771026997852e-08, nn loss: 4.346577992903744e-07
+4020/34001 PDE Loss: 5.721767657482758e-08, BC Loss: 9.840861335317772e-09,                   mse loss: 6.705853791014535e-08, nn loss: 4.6615845148672645e-07
+4030/34001 PDE Loss: 5.303527608234547e-08, BC Loss: 1.2051383143919098e-08,                   mse loss: 6.508665922626458e-08, nn loss: 6.626898519650482e-07
+4040/34001 PDE Loss: 4.345860760696141e-08, BC Loss: 4.525374765347424e-09,                   mse loss: 4.7983982372308834e-08, nn loss: 8.284166611739057e-07
+4050/34001 PDE Loss: 2.941781014565002e-08, BC Loss: 1.0775795471510357e-09,                   mse loss: 3.0495389692801057e-08, nn loss: 6.484507910712281e-07
+4060/34001 PDE Loss: 3.9959905108790286e-08, BC Loss: 2.2176829075454558e-09,                   mse loss: 4.217758801633574e-08, nn loss: 4.0946342542075186e-07
+4070/34001 PDE Loss: 3.367975731615048e-08, BC Loss: 1.1196294585680954e-09,                   mse loss: 3.479938677471858e-08, nn loss: 7.606606042666945e-07
+4080/34001 PDE Loss: 3.312584119286498e-08, BC Loss: 1.5663246340967313e-09,                   mse loss: 3.4692165826961714e-08, nn loss: 7.015735249070971e-07
+4090/34001 PDE Loss: 2.6959260984841254e-08, BC Loss: 1.59056694493427e-09,                   mse loss: 2.8549827929775525e-08, nn loss: 9.052728600618288e-07
+4100/34001 PDE Loss: 1.2964308243980925e-08, BC Loss: 3.5312132287481726e-10,                   mse loss: 1.3317429566855742e-08, nn loss: 5.418200330334923e-07
+4110/34001 PDE Loss: 1.9688466706623092e-08, BC Loss: 1.2460603466506043e-09,                   mse loss: 2.0934527053273697e-08, nn loss: 4.015942231830013e-07
+4120/34001 PDE Loss: 2.1593326761425734e-08, BC Loss: 2.0223490874270543e-09,                   mse loss: 2.3615675848852788e-08, nn loss: 5.595441517798586e-07
+4130/34001 PDE Loss: 1.722375234978626e-08, BC Loss: 6.601118364856385e-10,                   mse loss: 1.78838641862719e-08, nn loss: 7.256832068680005e-07
+4140/34001 PDE Loss: 1.495801361411174e-08, BC Loss: 2.337395119808704e-09,                   mse loss: 1.7295408733920443e-08, nn loss: 5.072820563662672e-07
+4150/34001 PDE Loss: 1.6268585541119006e-08, BC Loss: 1.1471313603082156e-09,                   mse loss: 1.7415716901427223e-08, nn loss: 6.381518228038651e-07
+4160/34001 PDE Loss: 2.2777041351784065e-08, BC Loss: 1.4673077816587246e-09,                   mse loss: 2.424434913344279e-08, nn loss: 8.406710346070601e-07
+4170/34001 PDE Loss: 1.3198805386086801e-08, BC Loss: 1.7776955433023616e-09,                   mse loss: 1.4976500929389162e-08, nn loss: 6.779575623584466e-07
+4180/34001 PDE Loss: 1.837633208062884e-08, BC Loss: 6.240917359836859e-10,                   mse loss: 1.9000423816612527e-08, nn loss: 6.106800765521903e-07
+4190/34001 PDE Loss: 1.793034361565273e-08, BC Loss: 6.229105891161165e-10,                   mse loss: 1.8553254204768848e-08, nn loss: 7.150337533501102e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 197
+  warnings.warn('CG iter num: %d' % (i + 1))
+4200/34001 PDE Loss: 1.1673543603125294e-08, BC Loss: 6.796601981670235e-10,                   mse loss: 1.2353203801292318e-08, nn loss: 7.448841714439079e-07
+4210/34001 PDE Loss: 1.1665299302551528e-08, BC Loss: 1.006375519920684e-09,                   mse loss: 1.2671674822472212e-08, nn loss: 7.05801949752578e-07
+4220/34001 PDE Loss: 1.1859722699828836e-08, BC Loss: 8.790657126002322e-10,                   mse loss: 1.2738788412429068e-08, nn loss: 8.632722223969776e-07
+4230/34001 PDE Loss: 2.2270331162218562e-08, BC Loss: 3.8526369193529714e-09,                   mse loss: 2.6122968081571534e-08, nn loss: 7.969143679107888e-07
+4240/34001 PDE Loss: 6.889831729379608e-06, BC Loss: 7.343422927777346e-07,                   mse loss: 7.624174022157343e-06, nn loss: -8.579349491299521e-06
+4250/34001 PDE Loss: 2.4256509186760136e-07, BC Loss: 2.926931481832858e-08,                   mse loss: 2.7183440668592994e-07, nn loss: 1.5040564401768508e-06
+4260/34001 PDE Loss: 1.0281093065655468e-07, BC Loss: 9.906071627425566e-09,                   mse loss: 1.1271700228398025e-07, nn loss: 3.133044805972208e-07
+4270/34001 PDE Loss: 9.62595605674554e-08, BC Loss: 1.4029142368253447e-08,                   mse loss: 1.1028870293570885e-07, nn loss: 2.6298961138894257e-07
+4280/34001 PDE Loss: 5.98146777294531e-08, BC Loss: 2.3614028157756183e-09,                   mse loss: 6.217608054522873e-08, nn loss: 7.450756922417594e-07
+4290/34001 PDE Loss: 4.429222790876556e-08, BC Loss: 2.3369282332518785e-09,                   mse loss: 4.662915614201744e-08, nn loss: 9.372148588916864e-07
+4300/34001 PDE Loss: 3.9639327783964856e-08, BC Loss: 1.7338145808267037e-09,                   mse loss: 4.137314236479156e-08, nn loss: 6.666577188043521e-07
+4310/34001 PDE Loss: 2.9444375551224292e-08, BC Loss: 3.92411938856746e-09,                   mse loss: 3.3368494939791754e-08, nn loss: 6.958248580693154e-07
+4320/34001 PDE Loss: 2.8027223349114312e-08, BC Loss: 2.782181220665281e-09,                   mse loss: 3.080940456977959e-08, nn loss: 6.147389816555584e-07
+4330/34001 PDE Loss: 4.585618145170488e-08, BC Loss: 5.219960557163832e-09,                   mse loss: 5.107614200886871e-08, nn loss: 5.574881626764925e-07
+4340/34001 PDE Loss: 2.9365826609471834e-08, BC Loss: 3.915340678432608e-09,                   mse loss: 3.328116728790444e-08, nn loss: 5.685704100802246e-07
+4350/34001 PDE Loss: 2.6201373939538147e-08, BC Loss: 1.4668353920140518e-09,                   mse loss: 2.7668209331552198e-08, nn loss: 8.761383529388918e-07
+4360/34001 PDE Loss: 2.672223095205609e-08, BC Loss: 1.6113137562334942e-09,                   mse loss: 2.8333544708289583e-08, nn loss: 5.66804832431587e-07
+4370/34001 PDE Loss: 2.4478236647366342e-08, BC Loss: 3.0048170149919458e-09,                   mse loss: 2.7483053662358287e-08, nn loss: 7.533256350945322e-07
+4380/34001 PDE Loss: 1.721558831568014e-08, BC Loss: 1.1953469483601203e-09,                   mse loss: 1.841093526404026e-08, nn loss: 9.080500673356426e-07
+4390/34001 PDE Loss: 1.8211839322070695e-08, BC Loss: 2.374543384774265e-09,                   mse loss: 2.058638270684496e-08, nn loss: 7.665488844787757e-07
+4400/34001 PDE Loss: 1.577655594252522e-08, BC Loss: 1.1537320371879e-09,                   mse loss: 1.693028797971312e-08, nn loss: 6.417787146116779e-07
+4410/34001 PDE Loss: 1.6325512497649303e-08, BC Loss: 7.492954272254759e-10,                   mse loss: 1.707480792487478e-08, nn loss: 6.561190204257504e-07
+4420/34001 PDE Loss: 1.4744088633251681e-08, BC Loss: 2.089863849465751e-09,                   mse loss: 1.683395248271743e-08, nn loss: 6.304649276091078e-07
+4430/34001 PDE Loss: 1.1782194011817986e-08, BC Loss: 1.0704324529297825e-09,                   mse loss: 1.2852626464747769e-08, nn loss: 7.0079344923813e-07
+4440/34001 PDE Loss: 1.0780964300108062e-08, BC Loss: 3.04993576386568e-10,                   mse loss: 1.108595787649463e-08, nn loss: 6.543673847038404e-07
+4450/34001 PDE Loss: 1.572556247996108e-08, BC Loss: 2.3228901033748125e-10,                   mse loss: 1.595785149029856e-08, nn loss: 5.465026429650652e-07
+4460/34001 PDE Loss: 1.6962963550653567e-08, BC Loss: 4.031127979711039e-10,                   mse loss: 1.7366076348624672e-08, nn loss: 6.844229455969935e-07
+4470/34001 PDE Loss: 1.3263170531662772e-08, BC Loss: 1.8760802061022583e-10,                   mse loss: 1.3450778552272999e-08, nn loss: 6.642876299844457e-07
+4480/34001 PDE Loss: 1.0907952608878661e-08, BC Loss: 7.168960269790695e-10,                   mse loss: 1.162484863585773e-08, nn loss: 6.924309014116041e-07
+4490/34001 PDE Loss: 9.685935883446826e-09, BC Loss: 5.747748759367398e-10,                   mse loss: 1.0260710759383566e-08, nn loss: 6.147387985216508e-07
+4500/34001 PDE Loss: 1.253539803546496e-07, BC Loss: 2.8692680119422945e-08,                   mse loss: 1.5404666047407255e-07, nn loss: 1.450389633179411e-06
+4510/34001 PDE Loss: 2.2805051682460187e-06, BC Loss: 3.375705975537133e-07,                   mse loss: 2.618075765799732e-06, nn loss: 1.6506718619230936e-05
+4520/34001 PDE Loss: 2.1150786785506814e-06, BC Loss: 5.209825430254889e-07,                   mse loss: 2.6360612215761703e-06, nn loss: 3.2193468222839132e-06
+4530/34001 PDE Loss: 8.880483409708873e-07, BC Loss: 9.464171914818313e-08,                   mse loss: 9.826900601190705e-07, nn loss: -7.272886273891517e-06
+4540/34001 PDE Loss: 1.384432906246985e-07, BC Loss: 1.0756808690416709e-08,                   mse loss: 1.492000993151152e-07, nn loss: 1.1018048203604414e-06
+4550/34001 PDE Loss: 3.4133045592974657e-07, BC Loss: 6.536706294458264e-08,                   mse loss: 4.066975188743292e-07, nn loss: 3.4907413142334313e-06
+4560/34001 PDE Loss: 3.123529323474552e-07, BC Loss: 6.963399528361549e-08,                   mse loss: 3.819869276310707e-07, nn loss: 1.0692644253924478e-06
+4570/34001 PDE Loss: 1.0885408542053478e-07, BC Loss: 3.261149693257089e-08,                   mse loss: 1.4146558235310567e-07, nn loss: -6.616234667803679e-08
+4580/34001 PDE Loss: 8.354445934923803e-08, BC Loss: 3.802891561882578e-09,                   mse loss: 8.73473509111206e-08, nn loss: 9.040985115020506e-07
+4590/34001 PDE Loss: 6.146392802375993e-08, BC Loss: 3.22187452501002e-09,                   mse loss: 6.468580254876995e-08, nn loss: 2.6159870671997793e-07
+4600/34001 PDE Loss: 4.400325221827495e-08, BC Loss: 5.600011550582461e-09,                   mse loss: 4.9603263768857416e-08, nn loss: 9.816147982907864e-07
+4610/34001 PDE Loss: 2.81609780000249e-08, BC Loss: 1.5494845807612678e-09,                   mse loss: 2.9710462580786167e-08, nn loss: 6.367248590303247e-07
+4620/34001 PDE Loss: 3.8896275030358565e-08, BC Loss: 3.6330734968540986e-09,                   mse loss: 4.2529348527212664e-08, nn loss: 7.308191872390167e-07
+4630/34001 PDE Loss: 3.02009535242113e-08, BC Loss: 4.485950020731869e-09,                   mse loss: 3.468690354494317e-08, nn loss: 6.646400903221174e-07
+4640/34001 PDE Loss: 2.6240433733456507e-08, BC Loss: 2.338072720195037e-09,                   mse loss: 2.8578506453651545e-08, nn loss: 8.08067499254453e-07
+4650/34001 PDE Loss: 2.434899974883794e-08, BC Loss: 2.9739273713452136e-09,                   mse loss: 2.7322927120183155e-08, nn loss: 6.490547481242778e-07
+4660/34001 PDE Loss: 2.5889533866557188e-08, BC Loss: 2.775855818351341e-09,                   mse loss: 2.866538968490853e-08, nn loss: 6.57616027745546e-07
+4670/34001 PDE Loss: 2.9673523954665164e-08, BC Loss: 1.3559976751230511e-09,                   mse loss: 3.102952162978822e-08, nn loss: 8.576918955402771e-07
+4680/34001 PDE Loss: 1.9137827892679414e-08, BC Loss: 8.975198128486664e-10,                   mse loss: 2.003534770552808e-08, nn loss: 7.507524053699009e-07
+4690/34001 PDE Loss: 1.2255072431158719e-08, BC Loss: 6.813844899673751e-10,                   mse loss: 1.2936456921126093e-08, nn loss: 6.315285471954525e-07
+4700/34001 PDE Loss: 1.3097442912805044e-08, BC Loss: 1.5534118693719492e-09,                   mse loss: 1.4650854782176994e-08, nn loss: 6.533219257431338e-07
+4710/34001 PDE Loss: 1.3224792279674777e-08, BC Loss: 2.1240254427340008e-09,                   mse loss: 1.5348817722408777e-08, nn loss: 7.189926803797648e-07
+4720/34001 PDE Loss: 1.1303360162859405e-08, BC Loss: 1.03220797856843e-09,                   mse loss: 1.2335568141427834e-08, nn loss: 6.70562312678141e-07
+4730/34001 PDE Loss: 1.0565004480111194e-08, BC Loss: 6.860713192874462e-10,                   mse loss: 1.125107579939864e-08, nn loss: 6.196264092119203e-07
+4740/34001 PDE Loss: 9.863708514449684e-09, BC Loss: 9.958386108879897e-10,                   mse loss: 1.0859547125337673e-08, nn loss: 6.099721647696215e-07
+4750/34001 PDE Loss: 8.91642086460393e-09, BC Loss: 7.286749985576985e-10,                   mse loss: 9.645095863161628e-09, nn loss: 6.030439436033611e-07
+4760/34001 PDE Loss: 1.1965445444077806e-08, BC Loss: 7.90447373319461e-10,                   mse loss: 1.2755892817397267e-08, nn loss: 6.697956398726333e-07
+4770/34001 PDE Loss: 1.4665584808206793e-08, BC Loss: 5.39267918206336e-10,                   mse loss: 1.5204852726413128e-08, nn loss: 6.825645261299062e-07
+4780/34001 PDE Loss: 1.3197993739622624e-08, BC Loss: 6.577358140263963e-10,                   mse loss: 1.385572955364902e-08, nn loss: 7.770881664740875e-07
+4790/34001 PDE Loss: 1.3038305077023403e-08, BC Loss: 8.674972853281451e-10,                   mse loss: 1.3905802362351548e-08, nn loss: 8.173977084477469e-07
+4800/34001 PDE Loss: 9.445272446243906e-09, BC Loss: 4.67979673731045e-10,                   mse loss: 9.913252119974951e-09, nn loss: 6.797308527358887e-07
+4810/34001 PDE Loss: 1.0216615420122323e-08, BC Loss: 4.2143192349033e-10,                   mse loss: 1.0638047343612652e-08, nn loss: 6.741844474173185e-07
+4820/34001 PDE Loss: 7.638418976443934e-09, BC Loss: 3.520559770433987e-10,                   mse loss: 7.990474953487333e-09, nn loss: 6.632069260886878e-07
+4830/34001 PDE Loss: 7.438273968355747e-09, BC Loss: 4.624462821708372e-10,                   mse loss: 7.900720250526585e-09, nn loss: 5.887561269752094e-07
+4840/34001 PDE Loss: 9.122453350359053e-09, BC Loss: 4.794885297766996e-10,                   mse loss: 9.601941880135752e-09, nn loss: 5.854682635759615e-07
+4850/34001 PDE Loss: 7.286132249060751e-09, BC Loss: 6.697558528793322e-10,                   mse loss: 7.955888101940084e-09, nn loss: 7.839173171465445e-07
+4860/34001 PDE Loss: 6.850406279869316e-09, BC Loss: 5.350742672808769e-10,                   mse loss: 7.385480547150193e-09, nn loss: 7.172204275908066e-07
+C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py:200: UserWarning: CG iter num: 248
+  warnings.warn('CG iter num: %d' % (i + 1))
+4870/34001 PDE Loss: 6.331104290448168e-09, BC Loss: 3.324814159740708e-10,                   mse loss: 6.663585706422239e-09, nn loss: 7.363092982855862e-07
+4880/34001 PDE Loss: 7.325181372770773e-09, BC Loss: 4.467037878189177e-10,                   mse loss: 7.771885160589691e-09, nn loss: 8.235213612269083e-07
+4890/34001 PDE Loss: 7.552434129157716e-09, BC Loss: 5.160884573170857e-10,                   mse loss: 8.068522586474802e-09, nn loss: 7.713285215260332e-07
+4900/34001 PDE Loss: 2.0797171625049667e-06, BC Loss: 1.6951047647152047e-07,                   mse loss: 2.249227638976487e-06, nn loss: 1.40585744960756e-05
+4910/34001 PDE Loss: 2.82585073863397e-06, BC Loss: 2.231224578073189e-07,                   mse loss: 3.048973196441289e-06, nn loss: 3.292598182456905e-07
+4920/34001 PDE Loss: 6.940034352607768e-07, BC Loss: 1.1120675438118558e-07,                   mse loss: 8.052101896419624e-07, nn loss: 1.5376416323496625e-06
+4930/34001 PDE Loss: 3.3839293211869345e-07, BC Loss: 3.6647509631641254e-08,                   mse loss: 3.7504044175033473e-07, nn loss: -4.137829297846466e-07
+4940/34001 PDE Loss: 1.1673560037439232e-07, BC Loss: 4.747680664765718e-09,                   mse loss: 1.2148328103915803e-07, nn loss: 2.297690733187175e-06
+4950/34001 PDE Loss: 1.4711560642152516e-07, BC Loss: 1.5510648967988107e-08,                   mse loss: 1.6262625538951328e-07, nn loss: -1.0339175561123576e-06
+4960/34001 PDE Loss: 1.474088647793969e-07, BC Loss: 1.964107661638043e-08,                   mse loss: 1.670499413957773e-07, nn loss: 7.019089027715819e-07
+4970/34001 PDE Loss: 9.241334624923739e-08, BC Loss: 9.095950995986867e-09,                   mse loss: 1.0150929724522425e-07, nn loss: 7.232227598168184e-07
+4980/34001 PDE Loss: 7.663083431786881e-08, BC Loss: 1.3991576996481319e-08,                   mse loss: 9.062241131435012e-08, nn loss: 1.552007642239483e-07
+4990/34001 PDE Loss: 1.2598150769970383e-07, BC Loss: 8.55427438165307e-09,                   mse loss: 1.345357820813569e-07, nn loss: 8.272732221653003e-07
+5000/34001 PDE Loss: 6.952205570431428e-08, BC Loss: 3.2213326932012695e-09,                   mse loss: 7.274338839751555e-08, nn loss: 1.109533543350735e-06
+5010/34001 PDE Loss: 5.941188442448652e-08, BC Loss: 2.0828612307155293e-09,                   mse loss: 6.149474565520204e-08, nn loss: 5.287925589091341e-07
+5020/34001 PDE Loss: 4.398342462556874e-08, BC Loss: 2.574453978253956e-09,                   mse loss: 4.6557878603822696e-08, nn loss: 2.4946061455837917e-07
+5030/34001 PDE Loss: 4.6461100067515415e-08, BC Loss: 2.471224395795832e-09,                   mse loss: 4.893232446331125e-08, nn loss: 3.348434802796642e-07
+5040/34001 PDE Loss: 2.999292102056971e-08, BC Loss: 1.5010329353900966e-09,                   mse loss: 3.149395395595981e-08, nn loss: 4.5895038260075544e-07
+5050/34001 PDE Loss: 3.0351009900105283e-08, BC Loss: 3.4384429561312592e-09,                   mse loss: 3.378945285623654e-08, nn loss: 3.551234715925345e-07
+5060/34001 PDE Loss: 4.239041680986313e-08, BC Loss: 2.5298806265810856e-09,                   mse loss: 4.4920297436444215e-08, nn loss: 3.724143301601248e-07
+5070/34001 PDE Loss: 4.2476668576752255e-08, BC Loss: 4.8694294207307385e-09,                   mse loss: 4.734609799748299e-08, nn loss: 8.756085412003269e-07
+5080/34001 PDE Loss: 2.9647557580087638e-08, BC Loss: 1.5954303434248526e-09,                   mse loss: 3.124298792351249e-08, nn loss: 8.746145416811526e-07
+5090/34001 PDE Loss: 3.0472959518613936e-08, BC Loss: 2.2076024664413984e-09,                   mse loss: 3.2680561985055334e-08, nn loss: 3.2343638334202343e-07
+5100/34001 PDE Loss: 3.3732028142201145e-08, BC Loss: 1.7647473470666282e-09,                   mse loss: 3.549677548926777e-08, nn loss: 6.162048010651692e-07
+5110/34001 PDE Loss: 1.8689160298970758e-08, BC Loss: 1.9190561230678262e-09,                   mse loss: 2.0608216422038584e-08, nn loss: 7.176700310200441e-07
+5120/34001 PDE Loss: 3.007053645081244e-08, BC Loss: 1.763418050281208e-09,                   mse loss: 3.1833954501093645e-08, nn loss: 6.788766177113366e-07
+5130/34001 PDE Loss: 2.3609739050132767e-08, BC Loss: 1.1383889899600328e-09,                   mse loss: 2.47481280400928e-08, nn loss: 6.30829868738071e-07
+5140/34001 PDE Loss: 1.9813836411667537e-08, BC Loss: 2.8431077117518367e-09,                   mse loss: 2.2656944123419375e-08, nn loss: 7.896654525040461e-07
+5150/34001 PDE Loss: 1.4286792954226476e-08, BC Loss: 5.979023924844585e-10,                   mse loss: 1.4884695346710935e-08, nn loss: 5.299752141113536e-07
+5160/34001 PDE Loss: 1.894455330624354e-08, BC Loss: 5.079777786319457e-10,                   mse loss: 1.9452531084875486e-08, nn loss: 6.904951536702803e-07
+5170/34001 PDE Loss: 1.543507559851322e-08, BC Loss: 1.4907197985668053e-09,                   mse loss: 1.6925795397080026e-08, nn loss: 7.343567723773922e-07
+5180/34001 PDE Loss: 1.0976951817972761e-08, BC Loss: 5.710175540204862e-10,                   mse loss: 1.1547969371993248e-08, nn loss: 5.751338648717387e-07
+5190/34001 PDE Loss: 1.4831670707404743e-08, BC Loss: 1.06378087854559e-09,                   mse loss: 1.5895451585950333e-08, nn loss: 6.240375877370264e-07
+5200/34001 PDE Loss: 1.0626178696708352e-08, BC Loss: 5.670387514155493e-10,                   mse loss: 1.11932174481239e-08, nn loss: 6.043825147505236e-07
+5210/34001 PDE Loss: 6.888059631646655e-07, BC Loss: 1.8653397835154786e-07,                   mse loss: 8.753399415162134e-07, nn loss: 1.0732589283216057e-05
+5220/34001 PDE Loss: 2.1696030644983235e-06, BC Loss: 2.696899094179889e-07,                   mse loss: 2.4392929739163125e-06, nn loss: 7.2086456757760496e-06
+5230/34001 PDE Loss: 9.005330237668218e-07, BC Loss: 6.931522266174038e-08,                   mse loss: 9.698482464285622e-07, nn loss: -4.761301118146431e-06
+5240/34001 PDE Loss: 4.699824653673458e-07, BC Loss: 4.0509849852041465e-08,                   mse loss: 5.104923152193872e-07, nn loss: 2.101152733380285e-06
+5250/34001 PDE Loss: 2.680162276513339e-07, BC Loss: 3.515739856041302e-08,                   mse loss: 3.031736262117469e-07, nn loss: 1.190845745222771e-06
+5260/34001 PDE Loss: 1.235975158877363e-07, BC Loss: 9.126466087535321e-09,                   mse loss: 1.3272398197527162e-07, nn loss: 3.841519807916902e-07
+5270/34001 PDE Loss: 8.609890797334175e-08, BC Loss: 6.1064019198757366e-09,                   mse loss: 9.220530989321748e-08, nn loss: 2.702407036334962e-07
+5280/34001 PDE Loss: 6.356508979555758e-08, BC Loss: 5.576344079481071e-09,                   mse loss: 6.914143387503865e-08, nn loss: 5.469270639628918e-07
+5290/34001 PDE Loss: 3.788969809351837e-08, BC Loss: 6.9598592901905385e-09,                   mse loss: 4.4849557383708905e-08, nn loss: 5.511812580075609e-07
+5300/34001 PDE Loss: 4.834117577840374e-08, BC Loss: 2.332819497880458e-09,                   mse loss: 5.06739952762842e-08, nn loss: 4.3282467054322344e-07
+5310/34001 PDE Loss: 3.876814192388897e-08, BC Loss: 3.1864809692522832e-09,                   mse loss: 4.195462289314125e-08, nn loss: 2.652813765956283e-07
+5320/34001 PDE Loss: 3.352362130710979e-08, BC Loss: 6.630235487658704e-09,                   mse loss: 4.01538567947685e-08, nn loss: 3.115578280574166e-07
+5330/34001 PDE Loss: 5.743189477112853e-08, BC Loss: 5.0772754717064425e-09,                   mse loss: 6.250917024283498e-08, nn loss: 5.065711578365191e-08
+5340/34001 PDE Loss: 4.709044673781251e-08, BC Loss: 4.353782633688458e-09,                   mse loss: 5.144422937150097e-08, nn loss: 4.788025238119569e-07
+5350/34001 PDE Loss: 3.0186746905080495e-08, BC Loss: 3.3721630783394677e-09,                   mse loss: 3.355890998341996e-08, nn loss: 6.476460343181698e-07
+5360/34001 PDE Loss: 2.511561351545994e-08, BC Loss: 1.7184640557597894e-09,                   mse loss: 2.683407757121973e-08, nn loss: 7.141924285771927e-07
+5370/34001 PDE Loss: 2.3991506749322375e-08, BC Loss: 3.602959734381477e-09,                   mse loss: 2.759446648370385e-08, nn loss: 6.256934458006112e-07
+5380/34001 PDE Loss: 1.9117506030082445e-08, BC Loss: 6.125355634229266e-10,                   mse loss: 1.9730041593505374e-08, nn loss: 4.09527948853246e-07
+5390/34001 PDE Loss: 1.755723424622338e-08, BC Loss: 2.1275032836866977e-09,                   mse loss: 1.9684737529910078e-08, nn loss: 3.874638646355891e-07
+5400/34001 PDE Loss: 2.6826392347727543e-08, BC Loss: 1.3981770476612084e-09,                   mse loss: 2.822456939538875e-08, nn loss: 3.19567708622995e-07
+5410/34001 PDE Loss: 1.7098582163158963e-08, BC Loss: 7.838977705721458e-10,                   mse loss: 1.788247993373111e-08, nn loss: 4.6816237259758445e-07
+5420/34001 PDE Loss: 1.367442105965754e-08, BC Loss: 6.628751368942304e-10,                   mse loss: 1.4337296196551772e-08, nn loss: 3.266406624291256e-07
+5430/34001 PDE Loss: 1.4476027231201635e-08, BC Loss: 9.346683623145092e-10,                   mse loss: 1.5410695593516145e-08, nn loss: 2.856884617444861e-07
+5440/34001 PDE Loss: 1.5469558587928497e-08, BC Loss: 2.8072497079621583e-10,                   mse loss: 1.5750283558724713e-08, nn loss: 4.3941420646467185e-07
+5450/34001 PDE Loss: 1.3140254632063809e-08, BC Loss: 1.1685042396781716e-09,                   mse loss: 1.430875887174198e-08, nn loss: 3.5759208319135517e-07
+5460/34001 PDE Loss: 1.6174952962622027e-08, BC Loss: 1.990165489462618e-09,                   mse loss: 1.8165118452084644e-08, nn loss: 3.542842128197252e-07
+5470/34001 PDE Loss: 1.0559739017977541e-08, BC Loss: 1.4126365200546884e-09,                   mse loss: 1.197237553803223e-08, nn loss: 3.53650980584562e-07
+5480/34001 PDE Loss: 1.564695785982101e-08, BC Loss: 6.335215391223436e-10,                   mse loss: 1.6280479398943354e-08, nn loss: 3.2726614861263066e-07
+5490/34001 PDE Loss: 1.543783052794996e-08, BC Loss: 6.586496006054885e-10,                   mse loss: 1.609648012855545e-08, nn loss: 4.932393903091176e-07
+5500/34001 PDE Loss: 1.235937253235737e-08, BC Loss: 7.067115735017076e-10,                   mse loss: 1.3066084105859077e-08, nn loss: 4.89283175133555e-07
+5510/34001 PDE Loss: 1.1869764086038689e-08, BC Loss: 6.475102681535671e-10,                   mse loss: 1.2517274354192257e-08, nn loss: 5.286466717281082e-07
+5520/34001 PDE Loss: 3.810747678583036e-08, BC Loss: 6.377499443718112e-09,                   mse loss: 4.448497622954847e-08, nn loss: 8.479544991250496e-07
+5530/34001 PDE Loss: 2.307009248582575e-06, BC Loss: 4.283725789579093e-07,                   mse loss: 2.7353818275404845e-06, nn loss: 6.39319147647673e-06
+5540/34001 PDE Loss: 4.4812801340336325e-07, BC Loss: 8.445787366787016e-08,                   mse loss: 5.325858870712334e-07, nn loss: -2.930868237697674e-06
+5550/34001 PDE Loss: 1.5215248201850947e-07, BC Loss: 1.2677178056282506e-08,                   mse loss: 1.6482966007479196e-07, nn loss: 7.707591738698918e-07
+5560/34001 PDE Loss: 6.38025093569093e-08, BC Loss: 7.207992628100045e-09,                   mse loss: 7.101050198500934e-08, nn loss: 4.286661569279219e-07
+5570/34001 PDE Loss: 4.1819431475932494e-08, BC Loss: 2.846728403022832e-09,                   mse loss: 4.466615987895533e-08, nn loss: 2.596234694983137e-07
+5580/34001 PDE Loss: 4.6647700542871766e-08, BC Loss: 6.470084204142083e-09,                   mse loss: 5.311778474701385e-08, nn loss: 1.895665009123922e-07
+5590/34001 PDE Loss: 5.7040112332062706e-08, BC Loss: 4.5825982658926895e-09,                   mse loss: 6.16227105979554e-08, nn loss: 4.0107190885258526e-07
+5600/34001 PDE Loss: 4.2101935198763194e-08, BC Loss: 4.6618629241758894e-09,                   mse loss: 4.6763798122939086e-08, nn loss: 7.768045523407648e-07
+5610/34001 PDE Loss: 2.806335716160744e-08, BC Loss: 1.6931928554922478e-09,                   mse loss: 2.9756550017099688e-08, nn loss: 3.2509189144792795e-07
+5620/34001 PDE Loss: 2.685447257113944e-08, BC Loss: 1.109926025295852e-09,                   mse loss: 2.796439859643529e-08, nn loss: 3.7525915359500685e-07
+5630/34001 PDE Loss: 1.8121091569265687e-08, BC Loss: 3.1794087719911734e-09,                   mse loss: 2.1300500341256862e-08, nn loss: 3.8594894096720485e-07
+5640/34001 PDE Loss: 2.4736185525089902e-08, BC Loss: 2.182805203556524e-09,                   mse loss: 2.6918990728646426e-08, nn loss: 3.6217546002448166e-07
+5650/34001 PDE Loss: 1.9605432107406902e-08, BC Loss: 1.394251953887508e-09,                   mse loss: 2.099968406129441e-08, nn loss: 5.675398596024794e-07
+5660/34001 PDE Loss: 1.4507749049319047e-08, BC Loss: 9.99631665214108e-10,                   mse loss: 1.5507380714533155e-08, nn loss: 6.376541587343239e-07
+5670/34001 PDE Loss: 1.505798512670865e-08, BC Loss: 1.7126801799111568e-09,                   mse loss: 1.6770665306619807e-08, nn loss: 6.345256595820687e-07
+5680/34001 PDE Loss: 1.522466695298719e-07, BC Loss: 1.8807698572398715e-08,                   mse loss: 1.7105436810227063e-07, nn loss: 1.6323612993822812e-06
+5690/34001 PDE Loss: 5.360666286370028e-06, BC Loss: 1.9331962206949232e-07,                   mse loss: 5.55398590843952e-06, nn loss: 7.144721700206362e-07
+5700/34001 PDE Loss: 2.6251609264785056e-07, BC Loss: 1.5848324374245346e-08,                   mse loss: 2.783644170220959e-07, nn loss: -4.994059025716141e-07
+5710/34001 PDE Loss: 6.190790502596092e-08, BC Loss: 5.367812149042825e-09,                   mse loss: 6.727571717500375e-08, nn loss: 1.7077820017171267e-07
+5720/34001 PDE Loss: 4.8684377056592685e-08, BC Loss: 3.743097683693689e-09,                   mse loss: 5.242747474028638e-08, nn loss: -6.944717005086187e-08
+5730/34001 PDE Loss: 4.1254089999139946e-08, BC Loss: 6.110111980475928e-09,                   mse loss: 4.736420197961587e-08, nn loss: 4.4716664298804746e-07
+5740/34001 PDE Loss: 3.222733906820685e-08, BC Loss: 4.604392970974408e-09,                   mse loss: 3.683173203918126e-08, nn loss: 3.43101973730125e-07
+5750/34001 PDE Loss: 5.518109032893046e-08, BC Loss: 2.3126733015128077e-09,                   mse loss: 5.7493763630443267e-08, nn loss: 6.693978328418248e-07
+5760/34001 PDE Loss: 2.121772576139068e-08, BC Loss: 5.57444636471493e-09,                   mse loss: 2.679217212610561e-08, nn loss: 3.4465213177816854e-07
+5770/34001 PDE Loss: 3.062619945415394e-08, BC Loss: 4.995672583434415e-09,                   mse loss: 3.5621872037588356e-08, nn loss: 5.960297991379264e-07
+5780/34001 PDE Loss: 3.137994920474252e-08, BC Loss: 1.4170714146371518e-09,                   mse loss: 3.279702061937967e-08, nn loss: 5.012399048838821e-07
+5790/34001 PDE Loss: 1.9638704000307238e-08, BC Loss: 8.984992120695126e-10,                   mse loss: 2.0537203212376752e-08, nn loss: 4.564094783668215e-07
+5800/34001 PDE Loss: 2.3212682532734466e-08, BC Loss: 7.87365252482386e-10,                   mse loss: 2.400004778521685e-08, nn loss: 3.9537691186726587e-07
+5810/34001 PDE Loss: 2.6048827512941314e-08, BC Loss: 1.6461425610163615e-09,                   mse loss: 2.7694970073957674e-08, nn loss: 3.060993882724945e-07
+5820/34001 PDE Loss: 2.1116500841887572e-08, BC Loss: 5.709931260263007e-10,                   mse loss: 2.1687493967913872e-08, nn loss: 3.1497790698335565e-07
+5830/34001 PDE Loss: 1.9405598973641486e-08, BC Loss: 1.620116817561705e-09,                   mse loss: 2.102571579120319e-08, nn loss: 3.8792866142198707e-07
+5840/34001 PDE Loss: 2.1985009971178673e-08, BC Loss: 1.55888358844681e-09,                   mse loss: 2.354389355962548e-08, nn loss: 5.619057021473181e-07
+5850/34001 PDE Loss: 2.0386021570606774e-08, BC Loss: 1.3758606299907885e-09,                   mse loss: 2.176188220059756e-08, nn loss: 5.011680091712602e-07
+5860/34001 PDE Loss: 1.866829092484068e-08, BC Loss: 7.108908189306417e-10,                   mse loss: 1.9379181743771322e-08, nn loss: 5.906391244147145e-07
+5870/34001 PDE Loss: 1.429800988423283e-08, BC Loss: 1.807156582687406e-09,                   mse loss: 1.6105166466920236e-08, nn loss: 5.873434719992208e-07
+5880/34001 PDE Loss: 1.0892238996145708e-08, BC Loss: 1.3871815728507526e-09,                   mse loss: 1.227942056899646e-08, nn loss: 5.115249472875691e-07
+5890/34001 PDE Loss: 1.653375145895029e-08, BC Loss: 1.3267692550171068e-09,                   mse loss: 1.78605207139674e-08, nn loss: 4.5177844943743865e-07
+5900/34001 PDE Loss: 1.351936967199197e-08, BC Loss: 5.663383983373302e-10,                   mse loss: 1.40857080703293e-08, nn loss: 3.612795705177786e-07
+5910/34001 PDE Loss: 1.5894597443709234e-08, BC Loss: 5.829878321151316e-10,                   mse loss: 1.6477585275824365e-08, nn loss: 4.2861792131787337e-07
+5920/34001 PDE Loss: 1.059064376047727e-08, BC Loss: 6.266875150663966e-10,                   mse loss: 1.1217331275543666e-08, nn loss: 5.391832484823924e-07
+5930/34001 PDE Loss: 7.819584014615254e-09, BC Loss: 8.55279079625301e-10,                   mse loss: 8.674863094240554e-09, nn loss: 5.09565330881289e-07
+5940/34001 PDE Loss: 9.073672014138937e-09, BC Loss: 4.5773105774774254e-10,                   mse loss: 9.53140307188668e-09, nn loss: 4.203902473147755e-07
+5950/34001 PDE Loss: 1.0999371901470333e-08, BC Loss: 5.717796271430472e-10,                   mse loss: 1.157115152861338e-08, nn loss: 4.288316065450402e-07
+5960/34001 PDE Loss: 1.0683908736663765e-08, BC Loss: 9.365943752335076e-10,                   mse loss: 1.1620503111897273e-08, nn loss: 3.847595933145881e-07
+5970/34001 PDE Loss: 3.6719828655807794e-08, BC Loss: 2.352048949574267e-09,                   mse loss: 3.907187760538206e-08, nn loss: 4.989103144171895e-07
+5980/34001 PDE Loss: 1.1793210749443517e-05, BC Loss: 1.6815682792871276e-06,                   mse loss: 1.3474779028730644e-05, nn loss: -1.1524132556764697e-05
+5990/34001 PDE Loss: 1.965935059959893e-06, BC Loss: 1.5426294414838338e-07,                   mse loss: 2.1201980041082762e-06, nn loss: 6.29505248996454e-06
+6000/34001 PDE Loss: 8.27328891870046e-07, BC Loss: 5.364366432119238e-08,                   mse loss: 8.809725561912383e-07, nn loss: -4.418687587327293e-06
+6010/34001 PDE Loss: 2.8633059118050216e-07, BC Loss: 2.9016657618800804e-08,                   mse loss: 3.1534724879930296e-07, nn loss: -1.8327767061401188e-06
+6020/34001 PDE Loss: 2.9860602259701764e-07, BC Loss: 1.915470864015075e-08,                   mse loss: 3.177607312371684e-07, nn loss: 9.504469545007655e-07
+6030/34001 PDE Loss: 1.7870575159422115e-07, BC Loss: 2.7943953029591377e-08,                   mse loss: 2.0664970462381253e-07, nn loss: 4.206233211116892e-07
+6040/34001 PDE Loss: 2.0045406437173923e-07, BC Loss: 1.4577413422461811e-08,                   mse loss: 2.1503147779420104e-07, nn loss: -3.419181889031188e-08
+6050/34001 PDE Loss: 1.6942551385026174e-07, BC Loss: 1.1915211515820042e-08,                   mse loss: 1.8134072536608178e-07, nn loss: 3.652359369973052e-07
+6060/34001 PDE Loss: 9.073714013145375e-08, BC Loss: 8.655560141626233e-09,                   mse loss: 9.939270027307999e-08, nn loss: 1.5413082033740455e-06
+6070/34001 PDE Loss: 1.0865976943467554e-07, BC Loss: 1.204293810679472e-08,                   mse loss: 1.2070270754147027e-07, nn loss: 8.277996623132625e-07
+6080/34001 PDE Loss: 5.5618586957941116e-08, BC Loss: 7.217633352241579e-09,                   mse loss: 6.28362203101827e-08, nn loss: 2.320094179198149e-08
+6090/34001 PDE Loss: 1.0196360360639605e-07, BC Loss: 4.355339379907003e-09,                   mse loss: 1.0631894298630305e-07, nn loss: 1.3972380530625762e-07
+6100/34001 PDE Loss: 7.942934353416166e-08, BC Loss: 3.5706684242976657e-09,                   mse loss: 8.300001195845933e-08, nn loss: 2.2086808294411274e-07
+6110/34001 PDE Loss: 8.992597156337185e-08, BC Loss: 5.755637666968724e-09,                   mse loss: 9.568160923034057e-08, nn loss: 5.887088205430978e-07
+6120/34001 PDE Loss: 4.805973230164649e-08, BC Loss: 3.121474046203052e-09,                   mse loss: 5.118120634784954e-08, nn loss: 1.0914545280245399e-06
+6130/34001 PDE Loss: 4.1163898242585714e-08, BC Loss: 2.4483323675860942e-09,                   mse loss: 4.361223061017181e-08, nn loss: 6.252516595915007e-07
+6140/34001 PDE Loss: 4.1281188666486853e-08, BC Loss: 4.013231582920986e-09,                   mse loss: 4.529442024940784e-08, nn loss: 1.4496399387792162e-07
+6150/34001 PDE Loss: 5.4041209993230494e-08, BC Loss: 1.734682052746704e-09,                   mse loss: 5.57758920459772e-08, nn loss: 2.002552325453279e-07
+6160/34001 PDE Loss: 3.983706207122123e-08, BC Loss: 4.016025491297513e-10,                   mse loss: 4.023866462035098e-08, nn loss: 4.0534897759717904e-07
+6170/34001 PDE Loss: 4.9331935663847643e-08, BC Loss: 1.3606553009239236e-09,                   mse loss: 5.069259096477157e-08, nn loss: -4.5374402470424783e-08
+6180/34001 PDE Loss: 4.4440322702154754e-08, BC Loss: 3.267258265306423e-09,                   mse loss: 4.770758096746118e-08, nn loss: 2.0448069671214136e-07
+6190/34001 PDE Loss: 3.915160985905333e-08, BC Loss: 3.1005472672800557e-09,                   mse loss: 4.225215712633338e-08, nn loss: 8.261460939115907e-07
+6200/34001 PDE Loss: 3.377088011655635e-08, BC Loss: 2.2840959079296697e-09,                   mse loss: 3.605497602448602e-08, nn loss: 6.120175865251328e-08
+6210/34001 PDE Loss: 4.238699863852683e-08, BC Loss: 1.707142903364811e-09,                   mse loss: 4.409414154189164e-08, nn loss: 2.941579522042787e-07
+6220/34001 PDE Loss: 2.96649297011057e-08, BC Loss: 2.112831252720174e-09,                   mse loss: 3.177776095382587e-08, nn loss: 1.4448073060743245e-07
+6230/34001 PDE Loss: 2.58945318388014e-08, BC Loss: 1.1036031815683263e-09,                   mse loss: 2.6998135020369724e-08, nn loss: 1.0697507803053614e-07
+6240/34001 PDE Loss: 2.8014555221084367e-08, BC Loss: 2.4672665669963593e-09,                   mse loss: 3.0481821788080725e-08, nn loss: 8.01777784610199e-07
+6250/34001 PDE Loss: 1.920821693718903e-08, BC Loss: 1.3374994080860367e-09,                   mse loss: 2.0545716345275067e-08, nn loss: 6.848688632919013e-07
+6260/34001 PDE Loss: 1.2327510572456713e-08, BC Loss: 5.854472089632819e-10,                   mse loss: 1.2912957781419994e-08, nn loss: 3.5777814349256015e-07
+6270/34001 PDE Loss: 1.3735303068209944e-08, BC Loss: 1.2929168841431166e-09,                   mse loss: 1.502821995235306e-08, nn loss: 3.3280195834649664e-07
+6280/34001 PDE Loss: 1.1562184351902742e-08, BC Loss: 1.7553884533421627e-09,                   mse loss: 1.3317572805244904e-08, nn loss: 5.578556128189621e-07
+6290/34001 PDE Loss: 1.679245349276661e-07, BC Loss: 1.6766821355153678e-08,                   mse loss: 1.846913562828198e-07, nn loss: 2.5022533502633063e-06
+6300/34001 PDE Loss: 2.374438277328264e-06, BC Loss: 1.5280352243271746e-07,                   mse loss: 2.5272417997609814e-06, nn loss: -1.1278430720737012e-05
+6310/34001 PDE Loss: 1.0265062482909374e-06, BC Loss: 4.279192078890351e-08,                   mse loss: 1.069298169079841e-06, nn loss: -4.105869341062546e-06
+6320/34001 PDE Loss: 4.046469531966202e-07, BC Loss: 1.74735067881487e-08,                   mse loss: 4.221204599847689e-07, nn loss: -3.4943681292730797e-07
+6330/34001 PDE Loss: 1.9360651354595488e-07, BC Loss: 1.3063917316970438e-08,                   mse loss: 2.066704308629253e-07, nn loss: 2.943740872332471e-08
+6340/34001 PDE Loss: 5.005626086621004e-08, BC Loss: 3.0444737347257563e-09,                   mse loss: 5.31007346009358e-08, nn loss: 4.4846325606189417e-08
+6350/34001 PDE Loss: 1.0260433364134377e-07, BC Loss: 2.4091122111996512e-09,                   mse loss: 1.0501344585254341e-07, nn loss: -5.494876413570294e-07
+6360/34001 PDE Loss: 5.5876879909031745e-08, BC Loss: 3.1287215247956624e-09,                   mse loss: 5.9005601433827407e-08, nn loss: -4.901641571746296e-07
+6370/34001 PDE Loss: 3.99075296623814e-08, BC Loss: 3.932925591107568e-09,                   mse loss: 4.3840455253488966e-08, nn loss: -2.2427873548033561e-07
+6380/34001 PDE Loss: 4.6737886448548456e-08, BC Loss: 2.243819010616175e-09,                   mse loss: 4.898170545916463e-08, nn loss: -5.239304521026612e-07
+6390/34001 PDE Loss: 5.254730018790385e-08, BC Loss: 2.1008709313489937e-09,                   mse loss: 5.464817111925284e-08, nn loss: -1.515462657399993e-07
+6400/34001 PDE Loss: 3.73463832966475e-08, BC Loss: 2.6767158790722815e-09,                   mse loss: 4.002309917571978e-08, nn loss: -1.1119764625395261e-07
+6410/34001 PDE Loss: 4.412743944152354e-08, BC Loss: 3.9483008429282484e-09,                   mse loss: 4.807574028445179e-08, nn loss: -1.597710320759959e-07
+6420/34001 PDE Loss: 4.333018695104611e-08, BC Loss: 2.395118648561113e-09,                   mse loss: 4.572530559960722e-08, nn loss: 1.8844694735959462e-07
+6430/34001 PDE Loss: 3.124816648125209e-08, BC Loss: 1.8992226692299454e-09,                   mse loss: 3.3147389150482034e-08, nn loss: 2.0119806445023257e-09
+6440/34001 PDE Loss: 3.3070396240368606e-08, BC Loss: 9.835303999814752e-10,                   mse loss: 3.4053926640350084e-08, nn loss: 1.480544836482832e-07
+6450/34001 PDE Loss: 3.005654024658749e-08, BC Loss: 1.4128798555638175e-09,                   mse loss: 3.146942010215131e-08, nn loss: 1.3137411580765684e-07
+6460/34001 PDE Loss: 4.998413755205589e-08, BC Loss: 9.739927611139322e-10,                   mse loss: 5.095813031316982e-08, nn loss: 1.0059649235604693e-07
+6470/34001 PDE Loss: 2.9544205250135575e-08, BC Loss: 3.3823152263922736e-10,                   mse loss: 2.98824367727748e-08, nn loss: 3.416961577137414e-07
+6480/34001 PDE Loss: 1.8185199611980273e-08, BC Loss: 6.203288142121086e-10,                   mse loss: 1.880552842619238e-08, nn loss: 2.8044875442468158e-08
+6490/34001 PDE Loss: 1.8030337466593954e-08, BC Loss: 2.2569078492255388e-10,                   mse loss: 1.8256028251516508e-08, nn loss: 1.2917850111679701e-07
+6500/34001 PDE Loss: 2.5722497011353587e-08, BC Loss: 1.2764409631966708e-09,                   mse loss: 2.6998937974550256e-08, nn loss: -2.5776663983681677e-08
+6510/34001 PDE Loss: 1.5829742924102272e-08, BC Loss: 6.405541936212588e-10,                   mse loss: 1.647029711772353e-08, nn loss: -8.522126636239897e-08
+6520/34001 PDE Loss: 2.427534194769091e-08, BC Loss: 1.261521885572862e-09,                   mse loss: 2.553686383326377e-08, nn loss: 2.054923509989058e-08
+6530/34001 PDE Loss: 2.5251771086404057e-08, BC Loss: 1.32295124415485e-09,                   mse loss: 2.6574722330558908e-08, nn loss: -3.745801461138144e-08
+6540/34001 PDE Loss: 2.7180692291262147e-08, BC Loss: 1.7867211328028005e-09,                   mse loss: 2.8967413424064947e-08, nn loss: 2.4447302683255984e-07
+6550/34001 PDE Loss: 2.665790457282462e-08, BC Loss: 6.935496035850267e-10,                   mse loss: 2.7351454176409646e-08, nn loss: 1.7069300071530337e-07
+6560/34001 PDE Loss: 2.246937150935474e-08, BC Loss: 6.036707178475878e-10,                   mse loss: 2.307304222720233e-08, nn loss: 2.657009365731133e-07
+6570/34001 PDE Loss: 1.9799979474644685e-08, BC Loss: 9.058413502482849e-10,                   mse loss: 2.070582082489297e-08, nn loss: 3.5777029205407576e-07
+6580/34001 PDE Loss: 1.556361711662922e-08, BC Loss: 7.453251622893318e-10,                   mse loss: 1.630894227891855e-08, nn loss: 2.700049422705887e-07
+6590/34001 PDE Loss: 1.1296394101817656e-08, BC Loss: 5.952108913925855e-10,                   mse loss: 1.1891604993210241e-08, nn loss: 1.4106929287412498e-07
+6600/34001 PDE Loss: 1.535460755015325e-08, BC Loss: 4.424121924939424e-10,                   mse loss: 1.5797019742647193e-08, nn loss: 1.316174633928016e-08
+6610/34001 PDE Loss: 2.476722558916879e-08, BC Loss: 1.3466588502181743e-09,                   mse loss: 2.6113884439386964e-08, nn loss: 1.6289975188057088e-07
+6620/34001 PDE Loss: 3.837447135536577e-07, BC Loss: 2.840037414019001e-08,                   mse loss: 4.121450876938477e-07, nn loss: 3.1323157595172523e-06
+6630/34001 PDE Loss: 1.3880774332673635e-06, BC Loss: 1.8231094573114612e-07,                   mse loss: 1.5703883789985096e-06, nn loss: -1.6802201232359864e-06
+6640/34001 PDE Loss: 6.257753064594602e-07, BC Loss: 9.300977046277092e-08,                   mse loss: 7.187850769222311e-07, nn loss: 1.795195721714347e-07
+6650/34001 PDE Loss: 9.134691633952272e-08, BC Loss: 3.5941380806036e-09,                   mse loss: 9.494105442012632e-08, nn loss: -1.2320905836033682e-07
+6660/34001 PDE Loss: 8.383068709821426e-08, BC Loss: 5.183394820497308e-09,                   mse loss: 8.901408191871157e-08, nn loss: -5.895190344145052e-08
+6670/34001 PDE Loss: 3.71093744135234e-08, BC Loss: 2.124295720006144e-09,                   mse loss: 3.923367013352955e-08, nn loss: 5.27532317544598e-08
+6680/34001 PDE Loss: 4.2369304216117536e-08, BC Loss: 3.3909909366954694e-09,                   mse loss: 4.576029515281301e-08, nn loss: 7.961416064672858e-08
+6690/34001 PDE Loss: 2.9184405945688402e-08, BC Loss: 1.3177402374313915e-09,                   mse loss: 3.050214618311979e-08, nn loss: 1.5598979580951445e-07
+6700/34001 PDE Loss: 2.4800841917629418e-08, BC Loss: 1.9645253537068372e-09,                   mse loss: 2.6765367271336254e-08, nn loss: 1.6462191763458832e-07
+6710/34001 PDE Loss: 2.0979443369623987e-08, BC Loss: 1.4150189743228156e-09,                   mse loss: 2.23944623439468e-08, nn loss: 4.6099080687904395e-08
+6720/34001 PDE Loss: 2.0986898875534466e-08, BC Loss: 1.5103849359099906e-09,                   mse loss: 2.2497283811444458e-08, nn loss: 1.532985205001357e-08
+6730/34001 PDE Loss: 1.976238318279021e-08, BC Loss: 1.5014579730880242e-09,                   mse loss: 2.1263841155878236e-08, nn loss: 1.397685166294661e-07
+6740/34001 PDE Loss: 1.2906826129866585e-08, BC Loss: 4.3686684815358314e-10,                   mse loss: 1.3343692978020168e-08, nn loss: 9.950723312256017e-08
+6750/34001 PDE Loss: 1.2788306138012655e-08, BC Loss: 1.0643500332396912e-09,                   mse loss: 1.3852656171252347e-08, nn loss: -4.7390855519585264e-08
+6760/34001 PDE Loss: 1.9113290215457558e-08, BC Loss: 9.595865846460703e-10,                   mse loss: 2.0072876800103627e-08, nn loss: -7.697333903260556e-08
+6770/34001 PDE Loss: 1.791825831533409e-08, BC Loss: 1.1255119001696154e-09,                   mse loss: 1.9043770215503705e-08, nn loss: -9.302862777720363e-08
+6780/34001 PDE Loss: 1.9440371705809083e-08, BC Loss: 6.041226370375412e-10,                   mse loss: 2.0044494342846623e-08, nn loss: -4.3040119973502313e-08
+6790/34001 PDE Loss: 1.669130994892832e-08, BC Loss: 9.002592244916506e-10,                   mse loss: 1.7591569173419972e-08, nn loss: 4.681761730561166e-08
+6800/34001 PDE Loss: 1.4769746252222492e-08, BC Loss: 1.2099765498425217e-09,                   mse loss: 1.5979722802065013e-08, nn loss: 6.953259506697506e-08
+6810/34001 PDE Loss: 2.6278083510246188e-08, BC Loss: 3.881159453362877e-09,                   mse loss: 3.015924296360906e-08, nn loss: 2.289917136724757e-07
+6820/34001 PDE Loss: 2.4313753733148134e-06, BC Loss: 2.2702760265040918e-07,                   mse loss: 2.6584029759652226e-06, nn loss: -2.0895162469941926e-06
+6830/34001 PDE Loss: 3.4575363912290368e-06, BC Loss: 4.37667402170947e-07,                   mse loss: 3.8952037933999835e-06, nn loss: -8.357799430321122e-06
+6840/34001 PDE Loss: 1.3104002940106097e-06, BC Loss: 7.669118521300088e-08,                   mse loss: 1.3870914792236107e-06, nn loss: -3.6286534177734094e-07
+6850/34001 PDE Loss: 3.1568801106003206e-07, BC Loss: 1.611181906259512e-08,                   mse loss: 3.317998301226272e-07, nn loss: 2.199202017424533e-07
+6860/34001 PDE Loss: 2.54079411023251e-07, BC Loss: 1.5969561135973556e-08,                   mse loss: 2.7004897215922455e-07, nn loss: 2.2753942315863626e-07
+6870/34001 PDE Loss: 1.3626191567045052e-07, BC Loss: 4.938903347369523e-09,                   mse loss: 1.4120081901782004e-07, nn loss: 3.348741610957968e-07
+6880/34001 PDE Loss: 6.985286555440314e-08, BC Loss: 8.108491942775786e-09,                   mse loss: 7.796135749717892e-08, nn loss: -3.440065932853121e-07
+6890/34001 PDE Loss: 1.514374957609019e-07, BC Loss: 7.797866222196053e-09,                   mse loss: 1.5923536198309796e-07, nn loss: -3.378932439823716e-07
+6900/34001 PDE Loss: 1.366302569004477e-07, BC Loss: 9.384804014317773e-09,                   mse loss: 1.4601506091476547e-07, nn loss: -1.9512162649628305e-07
+6910/34001 PDE Loss: 8.717608010693952e-08, BC Loss: 4.930782868501225e-09,                   mse loss: 9.210686297544075e-08, nn loss: 2.2839848362082402e-07
+6920/34001 PDE Loss: 5.920914772634292e-08, BC Loss: 5.084295752224941e-09,                   mse loss: 6.429344347856787e-08, nn loss: 3.5426592931366076e-07
+6930/34001 PDE Loss: 3.426249627725091e-08, BC Loss: 3.51794592838769e-09,                   mse loss: 3.7780442205638596e-08, nn loss: 3.701102181713378e-08
+6940/34001 PDE Loss: 6.611290619723946e-08, BC Loss: 7.63828894620104e-09,                   mse loss: 7.37511951434405e-08, nn loss: -5.4584255141927953e-08
+6950/34001 PDE Loss: 3.9537536368982716e-08, BC Loss: 3.6082008681266844e-09,                   mse loss: 4.3145737237109404e-08, nn loss: 2.1222106870790468e-07
+6960/34001 PDE Loss: 4.5457654780272025e-08, BC Loss: 1.7683136141485995e-09,                   mse loss: 4.7225968394420626e-08, nn loss: 7.578888438415842e-08
+6970/34001 PDE Loss: 4.581457065050421e-08, BC Loss: 1.505821320852197e-09,                   mse loss: 4.7320391971356405e-08, nn loss: 3.1794115806901916e-08
+6980/34001 PDE Loss: 3.693719856269541e-08, BC Loss: 1.1158861381105066e-09,                   mse loss: 3.8053084700805914e-08, nn loss: 2.0491420925557495e-07
+6990/34001 PDE Loss: 2.8175732620837435e-08, BC Loss: 1.0635671254867666e-09,                   mse loss: 2.92392997463242e-08, nn loss: 1.1457899412361919e-07
+7000/34001 PDE Loss: 4.3153185962646286e-08, BC Loss: 1.6014006516851045e-09,                   mse loss: 4.475458661433139e-08, nn loss: -3.002293750873887e-08
+7010/34001 PDE Loss: 4.3846332448247315e-08, BC Loss: 1.4114872199672034e-09,                   mse loss: 4.525781966821452e-08, nn loss: 1.9807420646757543e-07
+7020/34001 PDE Loss: 4.3885543967464624e-08, BC Loss: 1.2683135278422977e-09,                   mse loss: 4.515385749530692e-08, nn loss: -1.8699353459855005e-08
+7030/34001 PDE Loss: 3.711296653034831e-08, BC Loss: 1.530490506885e-09,                   mse loss: 3.864345703723331e-08, nn loss: 2.414663432522391e-07
+7040/34001 PDE Loss: 2.59876762761671e-08, BC Loss: 1.1023227246189924e-09,                   mse loss: 2.7089999000786092e-08, nn loss: 1.5678700037052584e-07
+7050/34001 PDE Loss: 3.558594777201445e-08, BC Loss: 2.0208153115495964e-09,                   mse loss: 3.760676308356404e-08, nn loss: 1.2142599901527723e-07
+7060/34001 PDE Loss: 4.7382440281874594e-08, BC Loss: 1.548888506842124e-09,                   mse loss: 4.8931328788716716e-08, nn loss: 3.986487175940587e-08
+7070/34001 PDE Loss: 1.5099206207415584e-05, BC Loss: 9.650770239478248e-07,                   mse loss: 1.606428323136341e-05, nn loss: 1.7054255305833145e-05
+7080/34001 PDE Loss: 1.7528173627604942e-06, BC Loss: 1.73782390352872e-07,                   mse loss: 1.9265997531133662e-06, nn loss: 1.5906559240578088e-06
+7090/34001 PDE Loss: 9.864565278427465e-07, BC Loss: 1.0598397181941636e-07,                   mse loss: 1.0924404996621629e-06, nn loss: 7.688637344736608e-07
+7100/34001 PDE Loss: 4.4105349808983703e-07, BC Loss: 3.6079356387270785e-08,                   mse loss: 4.771328544771078e-07, nn loss: 7.683143129871952e-07
+7110/34001 PDE Loss: 3.238972174845466e-07, BC Loss: 1.4260791112799969e-08,                   mse loss: 3.381580085973466e-07, nn loss: -3.5281668537890965e-07
+7120/34001 PDE Loss: 1.1327014832621329e-07, BC Loss: 1.1230510161910201e-08,                   mse loss: 1.2450065848812348e-07, nn loss: 2.926965713147983e-07
+7130/34001 PDE Loss: 1.9293918185481506e-07, BC Loss: 1.1459727051059165e-08,                   mse loss: 2.0439890890587422e-07, nn loss: -2.099932021817864e-07
+7140/34001 PDE Loss: 1.8076902674554406e-07, BC Loss: 1.485130811931114e-08,                   mse loss: 1.956203348648552e-07, nn loss: 5.497975821182542e-07
+7150/34001 PDE Loss: 1.4921668909761056e-07, BC Loss: 1.4662419369269142e-08,                   mse loss: 1.638791084668797e-07, nn loss: 1.808600115213565e-07
+7160/34001 PDE Loss: 9.269200600144053e-08, BC Loss: 7.336733078831781e-09,                   mse loss: 1.0002873908027231e-07, nn loss: 7.045664582161771e-07
+7170/34001 PDE Loss: 1.0218414049818451e-07, BC Loss: 6.123130392616521e-09,                   mse loss: 1.0830727089080102e-07, nn loss: 4.760265850155569e-08
+7180/34001 PDE Loss: 7.868422753568745e-08, BC Loss: 7.962430601286263e-09,                   mse loss: 8.664665813697372e-08, nn loss: 1.6120201748771437e-08
+7190/34001 PDE Loss: 6.175175806951154e-08, BC Loss: 8.024066219626193e-09,                   mse loss: 6.977582428913773e-08, nn loss: 1.5343071301031145e-07
+7200/34001 PDE Loss: 5.8023198006124266e-08, BC Loss: 5.801746295938795e-09,                   mse loss: 6.382494430206307e-08, nn loss: 7.133710372767882e-08
+7210/34001 PDE Loss: 8.846110193215977e-08, BC Loss: 2.342507865810911e-09,                   mse loss: 9.080360979797068e-08, nn loss: -5.820384258900436e-09
+7220/34001 PDE Loss: 5.410281983125217e-08, BC Loss: 3.4113296775014206e-09,                   mse loss: 5.751414950875359e-08, nn loss: -7.005135489050667e-08
+7230/34001 PDE Loss: 5.742418396434959e-08, BC Loss: 4.509557822517706e-09,                   mse loss: 6.19337417868673e-08, nn loss: 6.230404265454693e-09
+7240/34001 PDE Loss: 6.689763834203486e-08, BC Loss: 2.5570393037622584e-09,                   mse loss: 6.945467764579712e-08, nn loss: 3.5673559980649445e-07
+7250/34001 PDE Loss: 5.632978695168927e-08, BC Loss: 9.023570086027881e-10,                   mse loss: 5.7232143960292054e-08, nn loss: 8.821106367172782e-08
+7260/34001 PDE Loss: 4.707056778629048e-08, BC Loss: 2.27869787725019e-09,                   mse loss: 4.9349265663540666e-08, nn loss: -7.328599699856018e-08
+7270/34001 PDE Loss: 4.0111576466949914e-08, BC Loss: 3.673615074317511e-09,                   mse loss: 4.378519154126742e-08, nn loss: -2.5574525121049194e-09
+7280/34001 PDE Loss: 3.4280437560248916e-08, BC Loss: 2.1085115983145495e-09,                   mse loss: 3.6388949158563465e-08, nn loss: 9.118204126459211e-08
+7290/34001 PDE Loss: 3.893224573107903e-08, BC Loss: 2.2363012405670273e-09,                   mse loss: 4.1168546971646056e-08, nn loss: 2.8457818590648572e-08
+7300/34001 PDE Loss: 4.195472746409945e-08, BC Loss: 3.7110313770371343e-09,                   mse loss: 4.566575884113659e-08, nn loss: -1.25812048465601e-07
+7310/34001 PDE Loss: 8.176064056023544e-08, BC Loss: 6.455409009477731e-09,                   mse loss: 8.821604956971318e-08, nn loss: 1.2867511823687532e-07
+7320/34001 PDE Loss: 4.4859530762238565e-08, BC Loss: 1.8686394172237488e-09,                   mse loss: 4.6728170179462314e-08, nn loss: 2.8548346561954865e-07
+7330/34001 PDE Loss: 2.8223171040902727e-08, BC Loss: 1.2660907991229544e-09,                   mse loss: 2.9489261840025683e-08, nn loss: -6.045182284502838e-08
+7340/34001 PDE Loss: 5.656517920965905e-08, BC Loss: 2.7451217057384193e-09,                   mse loss: 5.931030091539747e-08, nn loss: 1.5048506398223587e-07
+7350/34001 PDE Loss: 2.498081278284616e-08, BC Loss: 1.0878948254646792e-09,                   mse loss: 2.606870760831084e-08, nn loss: 1.094258839454584e-07
+7360/34001 PDE Loss: 4.250733849532816e-08, BC Loss: 2.899281321592486e-09,                   mse loss: 4.5406619816920647e-08, nn loss: -2.0392390772967468e-07
+Traceback (most recent call last):
+  File "C:\Users\hengr\Programs\Projects\CPINN\Poisson\train_1Dis_GACGD.py", line 129, in <module>
+    optimizer2.step(loss_y)
+  File "C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\acgd.py", line 135, in step
+    cg_x, iter_num = general_conjugate_gradient(grad_x=grad_x_vec,
+  File "C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py", line 183, in general_conjugate_gradient
+    h_2 = Hvp_vec(grad_vec=grad_y, params=x_params,
+  File "C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py", line 112, in Hvp_vec
+    hvp = vectorize_grad(params)
+  File "C:\Users\hengr\miniconda3\envs\honor\lib\site-packages\CGDs\cgd_utils.py", line 21, in vectorize_grad
+    return torch.cat(grad_list)
+KeyboardInterrupt
