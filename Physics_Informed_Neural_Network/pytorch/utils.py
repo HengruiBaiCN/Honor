@@ -53,9 +53,9 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     
 
     # final condition (t = T, S is randomized)
-    f_st = np.concatenate([np.ones((num_fc, 1)),
+    f_st_train = np.concatenate([np.ones((num_fc, 1)),
                     np.random.uniform(*S_range, (num_fc, 1))], axis=1)
-    f_v = gs(f_st[:, 1]).reshape(-1, 1)
+    f_v_train = gs(f_st_train[:, 1]).reshape(-1, 1)
     
     # lower boundary condition (S = 0, t is randomized)
     lb_st = np.concatenate([np.random.uniform(*t_range, (num_bc, 1)),
@@ -68,11 +68,11 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     ub_v = (Smax - K*np.exp(-r*(T-ub_st[:, 0].reshape(-1)))).reshape(-1, 1)
     
     # append boundary condition training points (edge points)
-    bc_st_train = np.vstack([f_st, lb_st, ub_st])
-    bc_v_train = np.vstack([f_v, lb_v, ub_v])
+    bc_st_train = np.vstack([lb_st, ub_st])
+    bc_v_train = np.vstack([lb_v, ub_v])
     
     
-    return bc_st_train, bc_v_train, n_st_train, n_v_train
+    return f_st_train, f_v_train, bc_st_train, bc_v_train, n_st_train, n_v_train
 
 
 
