@@ -23,19 +23,15 @@ from timeit import default_timer as timer
 
 
 
-
-
 def printMemory():
   t = torch.cuda.get_device_properties(0).total_memory
   r = torch.cuda.memory_reserved(0)
   a = torch.cuda.memory_allocated(0)
   f = r-a  # free inside reserved
   print(f"total: {t}, reserved: {r}, free: {f}")
-
-
-
-# This file generates training data
-def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key=None):
+  
+  
+def trainingData3(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key=None):
     '''
     @param num_bc: number of points on the boundary condition
     '''
@@ -73,6 +69,48 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     
     
     return f_st_train, f_v_train, bc_st_train, bc_v_train, n_st_train, n_v_train
+
+
+
+# This file generates training data
+def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key=None):
+    '''
+    @param num_bc: number of points on the boundary condition
+    '''
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    if RNG_key != None:
+        np.random.seed(RNG_key)
+        pass
+    
+    
+    # normal condition / interior points
+    n_st_train = np.concatenate([np.random.uniform(*t_range, (num_nc, 1)), 
+                      np.random.uniform(*S_range, (num_nc, 1))], axis=1)
+    n_v_train = np.zeros((num_nc, 1))
+    
+
+    # final condition (t = T, S is randomized)
+    f_st_train = np.concatenate([np.ones((num_fc, 1)),
+                    np.random.uniform(*S_range, (num_fc, 1))], axis=1)
+    f_v_train = gs(f_st_train[:, 1]).reshape(-1, 1)
+    
+    # lower boundary condition (S = 0, t is randomized)
+    lb_st = np.concatenate([np.random.uniform(*t_range, (num_bc, 1)),
+                        0 * np.ones((num_bc, 1))], axis=1)
+    lb_v = np.zeros((num_bc, 1))
+    
+    # upper boundary condition (S = Smax, t is randomized)
+    ub_st = np.concatenate([np.random.uniform(*t_range, (num_bc, 1)), 
+                        Smax * np.ones((num_bc, 1))], axis=1)
+    ub_v = (Smax - K*np.exp(-r*(T-ub_st[:, 0].reshape(-1)))).reshape(-1, 1)
+    
+    # append boundary condition training points (edge points)
+    bc_st_train = np.vstack([lb_st, ub_st, f_st_train])
+    bc_v_train = np.vstack([lb_v, ub_v, f_v_train])
+    
+    
+    return bc_st_train, bc_v_train, n_st_train, n_v_train
 
 
 
