@@ -1,0 +1,1580 @@
+0/30000 mse loss: 11225.989258, 
+              PDE Loss: 0.004900, BC Loss: 11225.984375, 
+              nn loss: 212.39794922, 
+              minloss: 11225.989258
+              
+50/30000 mse loss: 197.758575, 
+              PDE Loss: 0.298880, BC Loss: 197.459702, 
+              nn loss: -5298.79492188, 
+              minloss: 197.758575
+              
+100/30000 mse loss: 224.673538, 
+              PDE Loss: 1.429964, BC Loss: 223.243576, 
+              nn loss: 26210.33398438, 
+              minloss: 36.882404
+              
+150/30000 mse loss: 801.483154, 
+              PDE Loss: 1.092911, BC Loss: 800.390259, 
+              nn loss: 3664.98168945, 
+              minloss: 36.882404
+              
+200/30000 mse loss: 683.856445, 
+              PDE Loss: 1.641989, BC Loss: 682.214478, 
+              nn loss: -2907.01953125, 
+              minloss: 36.882404
+              
+250/30000 mse loss: 189.057678, 
+              PDE Loss: 0.868498, BC Loss: 188.189178, 
+              nn loss: 8654.70703125, 
+              minloss: 19.793091
+              
+300/30000 mse loss: 279.508606, 
+              PDE Loss: 0.304872, BC Loss: 279.203735, 
+              nn loss: 942.05865479, 
+              minloss: 19.793091
+              
+350/30000 mse loss: 76.242500, 
+              PDE Loss: 1.150201, BC Loss: 75.092300, 
+              nn loss: -2695.19580078, 
+              minloss: 19.793091
+              
+400/30000 mse loss: 104.832413, 
+              PDE Loss: 8.293562, BC Loss: 96.538849, 
+              nn loss: 1532.79614258, 
+              minloss: 19.793091
+              
+450/30000 mse loss: 213.286133, 
+              PDE Loss: 18.483004, BC Loss: 194.803131, 
+              nn loss: 379.45166016, 
+              minloss: 19.793091
+              
+500/30000 mse loss: 28.147547, 
+              PDE Loss: 0.776888, BC Loss: 27.370659, 
+              nn loss: 2437.20776367, 
+              minloss: 18.551405
+              
+550/30000 mse loss: 52.487915, 
+              PDE Loss: 4.068503, BC Loss: 48.419411, 
+              nn loss: -489.98257446, 
+              minloss: 18.551405
+              
+600/30000 mse loss: 25.623463, 
+              PDE Loss: 0.284303, BC Loss: 25.339161, 
+              nn loss: 96.51607513, 
+              minloss: 18.551405
+              
+650/30000 mse loss: 24.099081, 
+              PDE Loss: 2.149352, BC Loss: 21.949730, 
+              nn loss: 334.95733643, 
+              minloss: 18.551405
+              
+700/30000 mse loss: 30.846165, 
+              PDE Loss: 1.857912, BC Loss: 28.988253, 
+              nn loss: -405.86389160, 
+              minloss: 18.551405
+              
+750/30000 mse loss: 42.699551, 
+              PDE Loss: 0.162552, BC Loss: 42.536999, 
+              nn loss: 161.19007874, 
+              minloss: 18.551405
+              
+800/30000 mse loss: 21.254307, 
+              PDE Loss: 1.408554, BC Loss: 19.845753, 
+              nn loss: 17.78467178, 
+              minloss: 17.135275
+              
+850/30000 mse loss: 18.860058, 
+              PDE Loss: 0.047993, BC Loss: 18.812065, 
+              nn loss: -32.46939468, 
+              minloss: 16.753502
+              
+900/30000 mse loss: 13.495446, 
+              PDE Loss: 0.998077, BC Loss: 12.497370, 
+              nn loss: -74.63305664, 
+              minloss: 11.877557
+              
+950/30000 mse loss: 11.102475, 
+              PDE Loss: 0.639712, BC Loss: 10.462764, 
+              nn loss: -92.93583679, 
+              minloss: 10.346257
+              
+1000/30000 mse loss: 8.857117, 
+              PDE Loss: 0.204523, BC Loss: 8.652595, 
+              nn loss: -5.58627129, 
+              minloss: 7.293347
+              
+1050/30000 mse loss: 16.640089, 
+              PDE Loss: 0.132586, BC Loss: 16.507504, 
+              nn loss: 13.78856754, 
+              minloss: 7.293347
+              
+1100/30000 mse loss: 28.344046, 
+              PDE Loss: 0.229446, BC Loss: 28.114599, 
+              nn loss: 21.63548470, 
+              minloss: 7.293347
+              
+1150/30000 mse loss: 32.682911, 
+              PDE Loss: 0.251103, BC Loss: 32.431808, 
+              nn loss: 18.05780983, 
+              minloss: 7.293347
+              
+1200/30000 mse loss: 41.485523, 
+              PDE Loss: 0.176234, BC Loss: 41.309288, 
+              nn loss: 12.61198997, 
+              minloss: 7.293347
+              
+1250/30000 mse loss: 41.792343, 
+              PDE Loss: 0.138204, BC Loss: 41.654140, 
+              nn loss: 2.17047977, 
+              minloss: 7.293347
+              
+1300/30000 mse loss: 3.171497, 
+              PDE Loss: 0.297373, BC Loss: 2.874125, 
+              nn loss: -1.04216039, 
+              minloss: 3.123865
+              
+1350/30000 mse loss: 5.006837, 
+              PDE Loss: 0.387948, BC Loss: 4.618889, 
+              nn loss: 0.45959952, 
+              minloss: 3.123865
+              
+1400/30000 mse loss: 4.400820, 
+              PDE Loss: 0.370801, BC Loss: 4.030019, 
+              nn loss: 1.23692238, 
+              minloss: 3.123865
+              
+1450/30000 mse loss: 4.449813, 
+              PDE Loss: 0.346292, BC Loss: 4.103521, 
+              nn loss: 0.90181977, 
+              minloss: 3.123865
+              
+1500/30000 mse loss: 3.921414, 
+              PDE Loss: 0.355306, BC Loss: 3.566108, 
+              nn loss: 0.41278312, 
+              minloss: 3.123865
+              
+1550/30000 mse loss: 4.223980, 
+              PDE Loss: 0.347093, BC Loss: 3.876887, 
+              nn loss: 0.07799556, 
+              minloss: 3.123865
+              
+1600/30000 mse loss: 3.026451, 
+              PDE Loss: 0.318355, BC Loss: 2.708096, 
+              nn loss: -0.29114932, 
+              minloss: 2.705003
+              
+1650/30000 mse loss: 1.979000, 
+              PDE Loss: 0.278445, BC Loss: 1.700555, 
+              nn loss: -0.26526192, 
+              minloss: 1.979000
+              
+1700/30000 mse loss: 3.881819, 
+              PDE Loss: 0.779028, BC Loss: 3.102790, 
+              nn loss: 0.47430453, 
+              minloss: 0.939406
+              
+1750/30000 mse loss: 4.309510, 
+              PDE Loss: 0.914819, BC Loss: 3.394690, 
+              nn loss: -0.25567341, 
+              minloss: 0.939406
+              
+1800/30000 mse loss: 0.699910, 
+              PDE Loss: 0.288032, BC Loss: 0.411878, 
+              nn loss: 0.04967913, 
+              minloss: 0.694080
+              
+1850/30000 mse loss: 0.630948, 
+              PDE Loss: 0.206227, BC Loss: 0.424721, 
+              nn loss: -0.06059471, 
+              minloss: 0.545684
+              
+1900/30000 mse loss: 2.644849, 
+              PDE Loss: 0.218663, BC Loss: 2.426186, 
+              nn loss: -0.03126459, 
+              minloss: 0.545684
+              
+1950/30000 mse loss: 1.645099, 
+              PDE Loss: 0.239633, BC Loss: 1.405466, 
+              nn loss: -0.03334599, 
+              minloss: 0.545684
+              
+2000/30000 mse loss: 0.651630, 
+              PDE Loss: 0.284212, BC Loss: 0.367418, 
+              nn loss: 0.04355763, 
+              minloss: 0.545684
+              
+2050/30000 mse loss: 0.647576, 
+              PDE Loss: 0.288600, BC Loss: 0.358976, 
+              nn loss: -0.02354503, 
+              minloss: 0.545684
+              
+2100/30000 mse loss: 0.631227, 
+              PDE Loss: 0.241945, BC Loss: 0.389282, 
+              nn loss: -0.01813468, 
+              minloss: 0.545684
+              
+2150/30000 mse loss: 0.622358, 
+              PDE Loss: 0.206936, BC Loss: 0.415422, 
+              nn loss: -0.03997899, 
+              minloss: 0.545684
+              
+2200/30000 mse loss: 0.396977, 
+              PDE Loss: 0.200288, BC Loss: 0.196689, 
+              nn loss: -0.04695831, 
+              minloss: 0.389146
+              
+2250/30000 mse loss: 0.791297, 
+              PDE Loss: 0.113359, BC Loss: 0.677938, 
+              nn loss: -0.05555299, 
+              minloss: 0.321732
+              
+2300/30000 mse loss: 1.184602, 
+              PDE Loss: 0.062901, BC Loss: 1.121701, 
+              nn loss: -0.03449238, 
+              minloss: 0.321732
+              
+2350/30000 mse loss: 1.030454, 
+              PDE Loss: 0.021755, BC Loss: 1.008699, 
+              nn loss: -0.00775480, 
+              minloss: 0.321732
+              
+2400/30000 mse loss: 1.859165, 
+              PDE Loss: 0.055581, BC Loss: 1.803583, 
+              nn loss: 0.00529443, 
+              minloss: 0.321732
+              
+2450/30000 mse loss: 1.372714, 
+              PDE Loss: 0.251025, BC Loss: 1.121689, 
+              nn loss: 0.05487860, 
+              minloss: 0.321732
+              
+2500/30000 mse loss: 2.253152, 
+              PDE Loss: 1.524156, BC Loss: 0.728996, 
+              nn loss: 0.18756965, 
+              minloss: 0.321732
+              
+2550/30000 mse loss: 2.133420, 
+              PDE Loss: 1.420031, BC Loss: 0.713390, 
+              nn loss: 0.21159567, 
+              minloss: 0.321732
+              
+2600/30000 mse loss: 18.357071, 
+              PDE Loss: 13.052739, BC Loss: 5.304332, 
+              nn loss: -0.00550958, 
+              minloss: 0.321732
+              
+2650/30000 mse loss: 8.817456, 
+              PDE Loss: 3.942331, BC Loss: 4.875125, 
+              nn loss: -0.31418672, 
+              minloss: 0.321732
+              
+2700/30000 mse loss: 3.451352, 
+              PDE Loss: 1.388111, BC Loss: 2.063241, 
+              nn loss: -0.62591040, 
+              minloss: 0.321732
+              
+2750/30000 mse loss: 1.396309, 
+              PDE Loss: 1.070500, BC Loss: 0.325809, 
+              nn loss: -0.86268276, 
+              minloss: 0.321732
+              
+2800/30000 mse loss: 1.343320, 
+              PDE Loss: 0.958095, BC Loss: 0.385225, 
+              nn loss: -1.35655403, 
+              minloss: 0.321732
+              
+2850/30000 mse loss: 0.649719, 
+              PDE Loss: 0.539568, BC Loss: 0.110151, 
+              nn loss: -1.21837592, 
+              minloss: 0.321732
+              
+2900/30000 mse loss: 0.309718, 
+              PDE Loss: 0.211515, BC Loss: 0.098203, 
+              nn loss: -0.93138278, 
+              minloss: 0.294391
+              
+2950/30000 mse loss: 0.121114, 
+              PDE Loss: 0.047639, BC Loss: 0.073475, 
+              nn loss: -0.36176002, 
+              minloss: 0.121114
+              
+3000/30000 mse loss: 0.055048, 
+              PDE Loss: 0.025904, BC Loss: 0.029143, 
+              nn loss: -0.04942561, 
+              minloss: 0.055048
+              
+3050/30000 mse loss: 0.170864, 
+              PDE Loss: 0.077139, BC Loss: 0.093725, 
+              nn loss: -0.15838315, 
+              minloss: 0.055048
+              
+3100/30000 mse loss: 0.118891, 
+              PDE Loss: 0.046384, BC Loss: 0.072507, 
+              nn loss: -0.07324034, 
+              minloss: 0.055048
+              
+3150/30000 mse loss: 0.076170, 
+              PDE Loss: 0.032343, BC Loss: 0.043827, 
+              nn loss: -0.04366214, 
+              minloss: 0.055048
+              
+3200/30000 mse loss: 0.061538, 
+              PDE Loss: 0.033313, BC Loss: 0.028225, 
+              nn loss: -0.03728720, 
+              minloss: 0.055048
+              
+3250/30000 mse loss: 0.052544, 
+              PDE Loss: 0.030855, BC Loss: 0.021690, 
+              nn loss: -0.05055065, 
+              minloss: 0.051092
+              
+3300/30000 mse loss: 0.029480, 
+              PDE Loss: 0.024069, BC Loss: 0.005411, 
+              nn loss: -0.05253319, 
+              minloss: 0.028020
+              
+3350/30000 mse loss: 0.036626, 
+              PDE Loss: 0.028432, BC Loss: 0.008194, 
+              nn loss: -0.03184651, 
+              minloss: 0.027699
+              
+3400/30000 mse loss: 0.067219, 
+              PDE Loss: 0.032893, BC Loss: 0.034325, 
+              nn loss: -0.01113637, 
+              minloss: 0.027699
+              
+3450/30000 mse loss: 0.088086, 
+              PDE Loss: 0.039869, BC Loss: 0.048217, 
+              nn loss: -0.00012786, 
+              minloss: 0.027699
+              
+3500/30000 mse loss: 0.078349, 
+              PDE Loss: 0.054249, BC Loss: 0.024100, 
+              nn loss: -0.01425303, 
+              minloss: 0.027699
+              
+3550/30000 mse loss: 0.069882, 
+              PDE Loss: 0.061457, BC Loss: 0.008425, 
+              nn loss: -0.05826688, 
+              minloss: 0.027699
+              
+3600/30000 mse loss: 0.041411, 
+              PDE Loss: 0.023318, BC Loss: 0.018093, 
+              nn loss: -0.01945510, 
+              minloss: 0.027699
+              
+3650/30000 mse loss: 0.035009, 
+              PDE Loss: 0.026998, BC Loss: 0.008010, 
+              nn loss: -0.05967220, 
+              minloss: 0.027699
+              
+3700/30000 mse loss: 0.029066, 
+              PDE Loss: 0.020669, BC Loss: 0.008397, 
+              nn loss: -0.09279195, 
+              minloss: 0.026988
+              
+3750/30000 mse loss: 0.049663, 
+              PDE Loss: 0.041214, BC Loss: 0.008449, 
+              nn loss: -0.08382764, 
+              minloss: 0.025582
+              
+3800/30000 mse loss: 0.057307, 
+              PDE Loss: 0.045550, BC Loss: 0.011757, 
+              nn loss: -0.11963925, 
+              minloss: 0.025582
+              
+3850/30000 mse loss: 0.040149, 
+              PDE Loss: 0.028816, BC Loss: 0.011333, 
+              nn loss: -0.11100005, 
+              minloss: 0.025582
+              
+3900/30000 mse loss: 0.025052, 
+              PDE Loss: 0.014872, BC Loss: 0.010181, 
+              nn loss: -0.20033404, 
+              minloss: 0.020567
+              
+3950/30000 mse loss: 0.131857, 
+              PDE Loss: 0.068507, BC Loss: 0.063350, 
+              nn loss: -0.15659782, 
+              minloss: 0.019387
+              
+4000/30000 mse loss: 0.039963, 
+              PDE Loss: 0.029420, BC Loss: 0.010543, 
+              nn loss: -0.16485205, 
+              minloss: 0.019387
+              
+4050/30000 mse loss: 0.087092, 
+              PDE Loss: 0.016545, BC Loss: 0.070547, 
+              nn loss: -0.32440120, 
+              minloss: 0.016476
+              
+4100/30000 mse loss: 0.020520, 
+              PDE Loss: 0.004820, BC Loss: 0.015701, 
+              nn loss: -0.04967990, 
+              minloss: 0.014956
+              
+4150/30000 mse loss: 0.019338, 
+              PDE Loss: 0.008069, BC Loss: 0.011269, 
+              nn loss: -0.08992461, 
+              minloss: 0.014956
+              
+4200/30000 mse loss: 0.020513, 
+              PDE Loss: 0.008641, BC Loss: 0.011871, 
+              nn loss: -0.11495793, 
+              minloss: 0.014956
+              
+4250/30000 mse loss: 0.008977, 
+              PDE Loss: 0.003295, BC Loss: 0.005682, 
+              nn loss: -0.14602309, 
+              minloss: 0.008977
+              
+4300/30000 mse loss: 0.009429, 
+              PDE Loss: 0.005554, BC Loss: 0.003876, 
+              nn loss: -0.04826132, 
+              minloss: 0.007181
+              
+4350/30000 mse loss: 0.017029, 
+              PDE Loss: 0.013508, BC Loss: 0.003520, 
+              nn loss: -0.14306068, 
+              minloss: 0.007181
+              
+4400/30000 mse loss: 0.012659, 
+              PDE Loss: 0.009382, BC Loss: 0.003277, 
+              nn loss: -0.15816499, 
+              minloss: 0.007181
+              
+4450/30000 mse loss: 0.015420, 
+              PDE Loss: 0.008366, BC Loss: 0.007053, 
+              nn loss: -0.20072177, 
+              minloss: 0.007181
+              
+4500/30000 mse loss: 0.013764, 
+              PDE Loss: 0.007802, BC Loss: 0.005962, 
+              nn loss: -0.24037872, 
+              minloss: 0.007181
+              
+4550/30000 mse loss: 0.017551, 
+              PDE Loss: 0.008987, BC Loss: 0.008565, 
+              nn loss: -0.27474427, 
+              minloss: 0.007181
+              
+4600/30000 mse loss: 0.042556, 
+              PDE Loss: 0.018960, BC Loss: 0.023597, 
+              nn loss: -0.11702310, 
+              minloss: 0.007181
+              
+4650/30000 mse loss: 0.051175, 
+              PDE Loss: 0.022540, BC Loss: 0.028635, 
+              nn loss: -0.49499348, 
+              minloss: 0.007181
+              
+4700/30000 mse loss: 0.019814, 
+              PDE Loss: 0.009532, BC Loss: 0.010282, 
+              nn loss: -0.32473144, 
+              minloss: 0.007181
+              
+4750/30000 mse loss: 0.013107, 
+              PDE Loss: 0.009515, BC Loss: 0.003593, 
+              nn loss: -0.88104653, 
+              minloss: 0.007181
+              
+4800/30000 mse loss: 0.033307, 
+              PDE Loss: 0.006562, BC Loss: 0.026745, 
+              nn loss: -0.65112221, 
+              minloss: 0.007181
+              
+4850/30000 mse loss: 0.035080, 
+              PDE Loss: 0.009847, BC Loss: 0.025233, 
+              nn loss: -0.06393155, 
+              minloss: 0.007181
+              
+4900/30000 mse loss: 0.078375, 
+              PDE Loss: 0.027791, BC Loss: 0.050584, 
+              nn loss: -0.27032340, 
+              minloss: 0.007181
+              
+4950/30000 mse loss: 0.082463, 
+              PDE Loss: 0.020234, BC Loss: 0.062228, 
+              nn loss: -0.37223402, 
+              minloss: 0.007181
+              
+5000/30000 mse loss: 0.035027, 
+              PDE Loss: 0.023866, BC Loss: 0.011161, 
+              nn loss: -0.30999404, 
+              minloss: 0.007181
+              
+5050/30000 mse loss: 0.056733, 
+              PDE Loss: 0.046009, BC Loss: 0.010725, 
+              nn loss: -0.31255910, 
+              minloss: 0.007181
+              
+5100/30000 mse loss: 0.071965, 
+              PDE Loss: 0.057343, BC Loss: 0.014622, 
+              nn loss: -0.43308643, 
+              minloss: 0.007181
+              
+5150/30000 mse loss: 0.075872, 
+              PDE Loss: 0.057251, BC Loss: 0.018621, 
+              nn loss: -0.51012981, 
+              minloss: 0.007181
+              
+5200/30000 mse loss: 0.058071, 
+              PDE Loss: 0.035013, BC Loss: 0.023058, 
+              nn loss: -1.80650103, 
+              minloss: 0.007181
+              
+5250/30000 mse loss: 0.032483, 
+              PDE Loss: 0.008762, BC Loss: 0.023721, 
+              nn loss: -2.97875547, 
+              minloss: 0.007181
+              
+5300/30000 mse loss: 0.030372, 
+              PDE Loss: 0.009168, BC Loss: 0.021205, 
+              nn loss: -4.46321774, 
+              minloss: 0.007181
+              
+5350/30000 mse loss: 0.024923, 
+              PDE Loss: 0.005081, BC Loss: 0.019842, 
+              nn loss: -5.56596756, 
+              minloss: 0.007181
+              
+5400/30000 mse loss: 0.013554, 
+              PDE Loss: 0.004759, BC Loss: 0.008795, 
+              nn loss: -8.04049683, 
+              minloss: 0.007181
+              
+5450/30000 mse loss: 0.042140, 
+              PDE Loss: 0.006798, BC Loss: 0.035341, 
+              nn loss: -9.35383606, 
+              minloss: 0.007181
+              
+5500/30000 mse loss: 0.040820, 
+              PDE Loss: 0.010920, BC Loss: 0.029900, 
+              nn loss: -11.48363400, 
+              minloss: 0.007181
+              
+5550/30000 mse loss: 0.153074, 
+              PDE Loss: 0.013571, BC Loss: 0.139503, 
+              nn loss: -2.18314099, 
+              minloss: 0.007181
+              
+5600/30000 mse loss: 0.470446, 
+              PDE Loss: 0.026757, BC Loss: 0.443689, 
+              nn loss: -2.32721472, 
+              minloss: 0.007181
+              
+5650/30000 mse loss: 0.402488, 
+              PDE Loss: 0.047619, BC Loss: 0.354869, 
+              nn loss: -2.21702552, 
+              minloss: 0.007181
+              
+5700/30000 mse loss: 0.136944, 
+              PDE Loss: 0.064689, BC Loss: 0.072255, 
+              nn loss: -4.39137506, 
+              minloss: 0.007181
+              
+5750/30000 mse loss: 0.131294, 
+              PDE Loss: 0.014650, BC Loss: 0.116643, 
+              nn loss: -15.14173317, 
+              minloss: 0.007181
+              
+5800/30000 mse loss: 0.060741, 
+              PDE Loss: 0.015546, BC Loss: 0.045195, 
+              nn loss: -24.31697845, 
+              minloss: 0.007181
+              
+5850/30000 mse loss: 0.025666, 
+              PDE Loss: 0.006327, BC Loss: 0.019339, 
+              nn loss: -31.14748192, 
+              minloss: 0.007181
+              
+5900/30000 mse loss: 0.042128, 
+              PDE Loss: 0.021643, BC Loss: 0.020485, 
+              nn loss: -33.10562134, 
+              minloss: 0.007181
+              
+5950/30000 mse loss: 0.052177, 
+              PDE Loss: 0.018485, BC Loss: 0.033692, 
+              nn loss: -44.45067596, 
+              minloss: 0.007181
+              
+6000/30000 mse loss: 0.189820, 
+              PDE Loss: 0.034080, BC Loss: 0.155740, 
+              nn loss: -62.42525482, 
+              minloss: 0.007181
+              
+6050/30000 mse loss: 1.055736, 
+              PDE Loss: 0.042970, BC Loss: 1.012766, 
+              nn loss: -32.30075073, 
+              minloss: 0.007181
+              
+6100/30000 mse loss: 0.355820, 
+              PDE Loss: 0.020172, BC Loss: 0.335649, 
+              nn loss: -26.93181229, 
+              minloss: 0.007181
+              
+6150/30000 mse loss: 0.078226, 
+              PDE Loss: 0.028428, BC Loss: 0.049798, 
+              nn loss: -19.55940056, 
+              minloss: 0.007181
+              
+6200/30000 mse loss: 0.246874, 
+              PDE Loss: 0.027632, BC Loss: 0.219242, 
+              nn loss: -36.78817749, 
+              minloss: 0.007181
+              
+6250/30000 mse loss: 0.215086, 
+              PDE Loss: 0.025389, BC Loss: 0.189696, 
+              nn loss: -0.84269565, 
+              minloss: 0.007181
+              
+6300/30000 mse loss: 0.270022, 
+              PDE Loss: 0.022994, BC Loss: 0.247028, 
+              nn loss: -50.48092270, 
+              minloss: 0.007181
+              
+6350/30000 mse loss: 0.177739, 
+              PDE Loss: 0.042706, BC Loss: 0.135033, 
+              nn loss: -40.22331238, 
+              minloss: 0.007181
+              
+6400/30000 mse loss: 0.653992, 
+              PDE Loss: 0.156176, BC Loss: 0.497816, 
+              nn loss: -85.78388214, 
+              minloss: 0.007181
+              
+6450/30000 mse loss: 0.363014, 
+              PDE Loss: 0.100141, BC Loss: 0.262873, 
+              nn loss: 13.04590607, 
+              minloss: 0.007181
+              
+6500/30000 mse loss: 0.485588, 
+              PDE Loss: 0.051682, BC Loss: 0.433906, 
+              nn loss: -4.03294039, 
+              minloss: 0.007181
+              
+6550/30000 mse loss: 0.609168, 
+              PDE Loss: 0.137096, BC Loss: 0.472072, 
+              nn loss: 5.80070448, 
+              minloss: 0.007181
+              
+6600/30000 mse loss: 0.768639, 
+              PDE Loss: 0.149121, BC Loss: 0.619518, 
+              nn loss: 6.81580734, 
+              minloss: 0.007181
+              
+6650/30000 mse loss: 0.442045, 
+              PDE Loss: 0.247131, BC Loss: 0.194914, 
+              nn loss: 92.61096191, 
+              minloss: 0.007181
+              
+6700/30000 mse loss: 0.234756, 
+              PDE Loss: 0.124900, BC Loss: 0.109856, 
+              nn loss: -4.72067690, 
+              minloss: 0.007181
+              
+6750/30000 mse loss: 0.193989, 
+              PDE Loss: 0.112313, BC Loss: 0.081676, 
+              nn loss: -29.10291672, 
+              minloss: 0.007181
+              
+6800/30000 mse loss: 0.195036, 
+              PDE Loss: 0.154353, BC Loss: 0.040684, 
+              nn loss: -57.20595932, 
+              minloss: 0.007181
+              
+6850/30000 mse loss: 0.198384, 
+              PDE Loss: 0.070809, BC Loss: 0.127575, 
+              nn loss: -31.97460938, 
+              minloss: 0.007181
+              
+6900/30000 mse loss: 0.153226, 
+              PDE Loss: 0.089793, BC Loss: 0.063433, 
+              nn loss: -11.04892254, 
+              minloss: 0.007181
+              
+6950/30000 mse loss: 0.136811, 
+              PDE Loss: 0.033229, BC Loss: 0.103582, 
+              nn loss: -2.63232207, 
+              minloss: 0.007181
+              
+7000/30000 mse loss: 0.212550, 
+              PDE Loss: 0.034340, BC Loss: 0.178210, 
+              nn loss: 5.73416471, 
+              minloss: 0.007181
+              
+7050/30000 mse loss: 0.255794, 
+              PDE Loss: 0.038201, BC Loss: 0.217593, 
+              nn loss: 6.98939705, 
+              minloss: 0.007181
+              
+7100/30000 mse loss: 0.264414, 
+              PDE Loss: 0.044477, BC Loss: 0.219937, 
+              nn loss: -40.95329666, 
+              minloss: 0.007181
+              
+7150/30000 mse loss: 0.232466, 
+              PDE Loss: 0.091569, BC Loss: 0.140898, 
+              nn loss: -58.73414612, 
+              minloss: 0.007181
+              
+7200/30000 mse loss: 0.355167, 
+              PDE Loss: 0.084177, BC Loss: 0.270991, 
+              nn loss: -102.07770538, 
+              minloss: 0.007181
+              
+7250/30000 mse loss: 0.710447, 
+              PDE Loss: 0.238567, BC Loss: 0.471880, 
+              nn loss: -34.00200272, 
+              minloss: 0.007181
+              
+7300/30000 mse loss: 0.273817, 
+              PDE Loss: 0.087842, BC Loss: 0.185975, 
+              nn loss: -5.58747196, 
+              minloss: 0.007181
+              
+7350/30000 mse loss: 0.313280, 
+              PDE Loss: 0.105656, BC Loss: 0.207624, 
+              nn loss: 15.10168457, 
+              minloss: 0.007181
+              
+7400/30000 mse loss: 0.483199, 
+              PDE Loss: 0.118850, BC Loss: 0.364350, 
+              nn loss: -32.26992416, 
+              minloss: 0.007181
+              
+7450/30000 mse loss: 0.285614, 
+              PDE Loss: 0.131610, BC Loss: 0.154004, 
+              nn loss: -25.62264633, 
+              minloss: 0.007181
+              
+7500/30000 mse loss: 2.528526, 
+              PDE Loss: 0.219233, BC Loss: 2.309294, 
+              nn loss: -16.87985420, 
+              minloss: 0.007181
+              
+7550/30000 mse loss: 0.783449, 
+              PDE Loss: 0.083156, BC Loss: 0.700293, 
+              nn loss: -3.98772955, 
+              minloss: 0.007181
+              
+7600/30000 mse loss: 0.480004, 
+              PDE Loss: 0.110946, BC Loss: 0.369058, 
+              nn loss: -9.06238461, 
+              minloss: 0.007181
+              
+7650/30000 mse loss: 0.522370, 
+              PDE Loss: 0.082149, BC Loss: 0.440221, 
+              nn loss: -65.65985870, 
+              minloss: 0.007181
+              
+7700/30000 mse loss: 0.889824, 
+              PDE Loss: 0.251080, BC Loss: 0.638744, 
+              nn loss: -28.72683334, 
+              minloss: 0.007181
+              
+7750/30000 mse loss: 0.163461, 
+              PDE Loss: 0.095703, BC Loss: 0.067757, 
+              nn loss: -70.82868195, 
+              minloss: 0.007181
+              
+7800/30000 mse loss: 0.104031, 
+              PDE Loss: 0.074618, BC Loss: 0.029413, 
+              nn loss: -94.49964905, 
+              minloss: 0.007181
+              
+7850/30000 mse loss: 0.172392, 
+              PDE Loss: 0.138171, BC Loss: 0.034221, 
+              nn loss: -71.34174347, 
+              minloss: 0.007181
+              
+7900/30000 mse loss: 0.075871, 
+              PDE Loss: 0.054072, BC Loss: 0.021799, 
+              nn loss: -98.88286591, 
+              minloss: 0.007181
+              
+7950/30000 mse loss: 0.083191, 
+              PDE Loss: 0.050130, BC Loss: 0.033060, 
+              nn loss: -125.79557037, 
+              minloss: 0.007181
+              
+8000/30000 mse loss: 0.113171, 
+              PDE Loss: 0.090042, BC Loss: 0.023129, 
+              nn loss: -100.73951721, 
+              minloss: 0.007181
+              
+8050/30000 mse loss: 0.143364, 
+              PDE Loss: 0.101583, BC Loss: 0.041781, 
+              nn loss: -22.05558968, 
+              minloss: 0.007181
+              
+8100/30000 mse loss: 0.138229, 
+              PDE Loss: 0.085538, BC Loss: 0.052692, 
+              nn loss: -2.09198809, 
+              minloss: 0.007181
+              
+8150/30000 mse loss: 0.127572, 
+              PDE Loss: 0.102548, BC Loss: 0.025024, 
+              nn loss: -5.71469879, 
+              minloss: 0.007181
+              
+8200/30000 mse loss: 0.144696, 
+              PDE Loss: 0.107290, BC Loss: 0.037406, 
+              nn loss: -33.28103638, 
+              minloss: 0.007181
+              
+8250/30000 mse loss: 0.092094, 
+              PDE Loss: 0.072520, BC Loss: 0.019574, 
+              nn loss: -36.81233215, 
+              minloss: 0.007181
+              
+8300/30000 mse loss: 0.064478, 
+              PDE Loss: 0.045272, BC Loss: 0.019207, 
+              nn loss: -41.44472885, 
+              minloss: 0.007181
+              
+8350/30000 mse loss: 0.065935, 
+              PDE Loss: 0.050990, BC Loss: 0.014945, 
+              nn loss: -44.23079681, 
+              minloss: 0.007181
+              
+8400/30000 mse loss: 0.077795, 
+              PDE Loss: 0.070936, BC Loss: 0.006859, 
+              nn loss: -47.30042648, 
+              minloss: 0.007181
+              
+8450/30000 mse loss: 0.101240, 
+              PDE Loss: 0.089859, BC Loss: 0.011381, 
+              nn loss: -54.52545929, 
+              minloss: 0.007181
+              
+8500/30000 mse loss: 0.147562, 
+              PDE Loss: 0.136370, BC Loss: 0.011193, 
+              nn loss: -62.02285767, 
+              minloss: 0.007181
+              
+8550/30000 mse loss: 0.195868, 
+              PDE Loss: 0.178283, BC Loss: 0.017585, 
+              nn loss: -83.50507355, 
+              minloss: 0.007181
+              
+8600/30000 mse loss: 0.234934, 
+              PDE Loss: 0.218504, BC Loss: 0.016431, 
+              nn loss: -98.79486084, 
+              minloss: 0.007181
+              
+8650/30000 mse loss: 0.295205, 
+              PDE Loss: 0.274088, BC Loss: 0.021118, 
+              nn loss: -138.16624451, 
+              minloss: 0.007181
+              
+8700/30000 mse loss: 0.298550, 
+              PDE Loss: 0.271406, BC Loss: 0.027145, 
+              nn loss: -217.15769958, 
+              minloss: 0.007181
+              
+8750/30000 mse loss: 0.247527, 
+              PDE Loss: 0.210020, BC Loss: 0.037507, 
+              nn loss: -295.95596313, 
+              minloss: 0.007181
+              
+8800/30000 mse loss: 0.167104, 
+              PDE Loss: 0.115047, BC Loss: 0.052057, 
+              nn loss: -389.01931763, 
+              minloss: 0.007181
+              
+8850/30000 mse loss: 0.266162, 
+              PDE Loss: 0.222157, BC Loss: 0.044004, 
+              nn loss: -321.68365479, 
+              minloss: 0.007181
+              
+8900/30000 mse loss: 0.249881, 
+              PDE Loss: 0.185404, BC Loss: 0.064477, 
+              nn loss: -724.28515625, 
+              minloss: 0.007181
+              
+8950/30000 mse loss: 0.192328, 
+              PDE Loss: 0.147710, BC Loss: 0.044618, 
+              nn loss: -589.85089111, 
+              minloss: 0.007181
+              
+9000/30000 mse loss: 0.236025, 
+              PDE Loss: 0.202585, BC Loss: 0.033440, 
+              nn loss: -620.06872559, 
+              minloss: 0.007181
+              
+9050/30000 mse loss: 0.152987, 
+              PDE Loss: 0.110030, BC Loss: 0.042956, 
+              nn loss: -800.92126465, 
+              minloss: 0.007181
+              
+9100/30000 mse loss: 0.088694, 
+              PDE Loss: 0.031099, BC Loss: 0.057595, 
+              nn loss: -986.39056396, 
+              minloss: 0.007181
+              
+9150/30000 mse loss: 0.123887, 
+              PDE Loss: 0.061763, BC Loss: 0.062124, 
+              nn loss: -1006.51873779, 
+              minloss: 0.007181
+              
+9200/30000 mse loss: 0.291292, 
+              PDE Loss: 0.207879, BC Loss: 0.083413, 
+              nn loss: -313.38510132, 
+              minloss: 0.007181
+              
+9250/30000 mse loss: 0.235170, 
+              PDE Loss: 0.185406, BC Loss: 0.049764, 
+              nn loss: -886.97332764, 
+              minloss: 0.007181
+              
+9300/30000 mse loss: 0.294677, 
+              PDE Loss: 0.248339, BC Loss: 0.046338, 
+              nn loss: -611.59051514, 
+              minloss: 0.007181
+              
+9350/30000 mse loss: 0.891104, 
+              PDE Loss: 0.223671, BC Loss: 0.667434, 
+              nn loss: -1214.43725586, 
+              minloss: 0.007181
+              
+9400/30000 mse loss: 0.652130, 
+              PDE Loss: 0.199215, BC Loss: 0.452915, 
+              nn loss: -562.33477783, 
+              minloss: 0.007181
+              
+9450/30000 mse loss: 0.183838, 
+              PDE Loss: 0.104011, BC Loss: 0.079826, 
+              nn loss: -219.16886902, 
+              minloss: 0.007181
+              
+9500/30000 mse loss: 0.336766, 
+              PDE Loss: 0.179407, BC Loss: 0.157358, 
+              nn loss: -571.00482178, 
+              minloss: 0.007181
+              
+9550/30000 mse loss: 0.395085, 
+              PDE Loss: 0.229521, BC Loss: 0.165564, 
+              nn loss: -602.94769287, 
+              minloss: 0.007181
+              
+9600/30000 mse loss: 0.351073, 
+              PDE Loss: 0.102155, BC Loss: 0.248918, 
+              nn loss: -492.53326416, 
+              minloss: 0.007181
+              
+9650/30000 mse loss: 0.437543, 
+              PDE Loss: 0.110047, BC Loss: 0.327496, 
+              nn loss: -447.48870850, 
+              minloss: 0.007181
+              
+9700/30000 mse loss: 0.308040, 
+              PDE Loss: 0.283285, BC Loss: 0.024755, 
+              nn loss: -705.16839600, 
+              minloss: 0.007181
+              
+9750/30000 mse loss: 0.439315, 
+              PDE Loss: 0.246872, BC Loss: 0.192443, 
+              nn loss: -1383.68664551, 
+              minloss: 0.007181
+              
+9800/30000 mse loss: 0.177841, 
+              PDE Loss: 0.051919, BC Loss: 0.125922, 
+              nn loss: -974.21301270, 
+              minloss: 0.007181
+              
+9850/30000 mse loss: 2.111741, 
+              PDE Loss: 0.065604, BC Loss: 2.046137, 
+              nn loss: -2762.60742188, 
+              minloss: 0.007181
+              
+9900/30000 mse loss: 0.140839, 
+              PDE Loss: 0.056242, BC Loss: 0.084597, 
+              nn loss: -2723.59106445, 
+              minloss: 0.007181
+              
+9950/30000 mse loss: 0.122472, 
+              PDE Loss: 0.042150, BC Loss: 0.080322, 
+              nn loss: -3145.68408203, 
+              minloss: 0.007181
+              
+10000/30000 mse loss: 0.100014, 
+              PDE Loss: 0.036499, BC Loss: 0.063515, 
+              nn loss: -3299.64819336, 
+              minloss: 0.007181
+              
+10050/30000 mse loss: 0.104787, 
+              PDE Loss: 0.052561, BC Loss: 0.052225, 
+              nn loss: -3796.26782227, 
+              minloss: 0.007181
+              
+10100/30000 mse loss: 0.063718, 
+              PDE Loss: 0.023283, BC Loss: 0.040435, 
+              nn loss: -4420.74218750, 
+              minloss: 0.007181
+              
+10150/30000 mse loss: 0.060729, 
+              PDE Loss: 0.035046, BC Loss: 0.025683, 
+              nn loss: -4829.66650391, 
+              minloss: 0.007181
+              
+10200/30000 mse loss: 0.085634, 
+              PDE Loss: 0.047235, BC Loss: 0.038399, 
+              nn loss: -5849.88720703, 
+              minloss: 0.007181
+              
+10250/30000 mse loss: 0.157331, 
+              PDE Loss: 0.106391, BC Loss: 0.050940, 
+              nn loss: -6984.70654297, 
+              minloss: 0.007181
+              
+10300/30000 mse loss: 0.108890, 
+              PDE Loss: 0.056505, BC Loss: 0.052385, 
+              nn loss: -8566.13476562, 
+              minloss: 0.007181
+              
+10350/30000 mse loss: 0.160709, 
+              PDE Loss: 0.125193, BC Loss: 0.035515, 
+              nn loss: -10475.37402344, 
+              minloss: 0.007181
+              
+10400/30000 mse loss: 0.158566, 
+              PDE Loss: 0.129489, BC Loss: 0.029078, 
+              nn loss: -12767.13671875, 
+              minloss: 0.007181
+              
+10450/30000 mse loss: 0.243822, 
+              PDE Loss: 0.220416, BC Loss: 0.023407, 
+              nn loss: -14981.84082031, 
+              minloss: 0.007181
+              
+10500/30000 mse loss: 4.709581, 
+              PDE Loss: 3.781934, BC Loss: 0.927648, 
+              nn loss: 257681.04687500, 
+              minloss: 0.007181
+              
+10550/30000 mse loss: 25.773697, 
+              PDE Loss: 4.778213, BC Loss: 20.995483, 
+              nn loss: 7345.91845703, 
+              minloss: 0.007181
+              
+10600/30000 mse loss: 5.066380, 
+              PDE Loss: 2.058820, BC Loss: 3.007559, 
+              nn loss: -12725.03320312, 
+              minloss: 0.007181
+              
+10650/30000 mse loss: 22.659216, 
+              PDE Loss: 0.459207, BC Loss: 22.200008, 
+              nn loss: -17920.87695312, 
+              minloss: 0.007181
+              
+10700/30000 mse loss: 53.947556, 
+              PDE Loss: 2.683511, BC Loss: 51.264046, 
+              nn loss: -51168.49218750, 
+              minloss: 0.007181
+              
+10750/30000 mse loss: 57.663448, 
+              PDE Loss: 4.992634, BC Loss: 52.670815, 
+              nn loss: 61256.61328125, 
+              minloss: 0.007181
+              
+10800/30000 mse loss: 19.590403, 
+              PDE Loss: 0.678169, BC Loss: 18.912233, 
+              nn loss: 1419.48168945, 
+              minloss: 0.007181
+              
+10850/30000 mse loss: 18.536064, 
+              PDE Loss: 1.171274, BC Loss: 17.364790, 
+              nn loss: 5500.45312500, 
+              minloss: 0.007181
+              
+10900/30000 mse loss: 19.316984, 
+              PDE Loss: 1.979998, BC Loss: 17.336987, 
+              nn loss: 10847.18359375, 
+              minloss: 0.007181
+              
+10950/30000 mse loss: 13.012823, 
+              PDE Loss: 2.140484, BC Loss: 10.872339, 
+              nn loss: 14776.20605469, 
+              minloss: 0.007181
+              
+11000/30000 mse loss: 17.761892, 
+              PDE Loss: 1.197149, BC Loss: 16.564743, 
+              nn loss: -5116.09667969, 
+              minloss: 0.007181
+              
+11050/30000 mse loss: 7.215105, 
+              PDE Loss: 2.544125, BC Loss: 4.670980, 
+              nn loss: -947.36547852, 
+              minloss: 0.007181
+              
+11100/30000 mse loss: 5.875655, 
+              PDE Loss: 2.177282, BC Loss: 3.698372, 
+              nn loss: -4331.62304688, 
+              minloss: 0.007181
+              
+11150/30000 mse loss: 4.006593, 
+              PDE Loss: 0.607675, BC Loss: 3.398918, 
+              nn loss: 157.15306091, 
+              minloss: 0.007181
+              
+11200/30000 mse loss: 8.935987, 
+              PDE Loss: 1.273229, BC Loss: 7.662759, 
+              nn loss: 6236.18017578, 
+              minloss: 0.007181
+              
+11250/30000 mse loss: 6.623816, 
+              PDE Loss: 1.206727, BC Loss: 5.417089, 
+              nn loss: -2715.36059570, 
+              minloss: 0.007181
+              
+11300/30000 mse loss: 5.606467, 
+              PDE Loss: 0.753324, BC Loss: 4.853143, 
+              nn loss: -615.66046143, 
+              minloss: 0.007181
+              
+11350/30000 mse loss: 2.408723, 
+              PDE Loss: 0.564086, BC Loss: 1.844637, 
+              nn loss: -3411.65161133, 
+              minloss: 0.007181
+              
+11400/30000 mse loss: 1.079457, 
+              PDE Loss: 0.462584, BC Loss: 0.616873, 
+              nn loss: -247.05897522, 
+              minloss: 0.007181
+              
+11450/30000 mse loss: 0.553464, 
+              PDE Loss: 0.377432, BC Loss: 0.176033, 
+              nn loss: -143.47807312, 
+              minloss: 0.007181
+              
+11500/30000 mse loss: 2.595607, 
+              PDE Loss: 0.536688, BC Loss: 2.058919, 
+              nn loss: -454.57427979, 
+              minloss: 0.007181
+              
+11550/30000 mse loss: 6.439344, 
+              PDE Loss: 0.417287, BC Loss: 6.022058, 
+              nn loss: -1245.79809570, 
+              minloss: 0.007181
+              
+11600/30000 mse loss: 2.805199, 
+              PDE Loss: 0.672962, BC Loss: 2.132237, 
+              nn loss: 22625.42187500, 
+              minloss: 0.007181
+              
+11650/30000 mse loss: 3.592371, 
+              PDE Loss: 0.954571, BC Loss: 2.637800, 
+              nn loss: 7609.28320312, 
+              minloss: 0.007181
+              
+11700/30000 mse loss: 1.118541, 
+              PDE Loss: 0.249604, BC Loss: 0.868937, 
+              nn loss: -8870.02734375, 
+              minloss: 0.007181
+              
+11750/30000 mse loss: 7.033646, 
+              PDE Loss: 4.639048, BC Loss: 2.394597, 
+              nn loss: 148085.34375000, 
+              minloss: 0.007181
+              
+11800/30000 mse loss: 29.829739, 
+              PDE Loss: 19.694384, BC Loss: 10.135354, 
+              nn loss: -16340.67871094, 
+              minloss: 0.007181
+              
+11850/30000 mse loss: 11.721569, 
+              PDE Loss: 7.656684, BC Loss: 4.064885, 
+              nn loss: -73449.99218750, 
+              minloss: 0.007181
+              
+11900/30000 mse loss: 8.435167, 
+              PDE Loss: 5.346747, BC Loss: 3.088421, 
+              nn loss: 14534.48535156, 
+              minloss: 0.007181
+              
+11950/30000 mse loss: 9.845007, 
+              PDE Loss: 2.080790, BC Loss: 7.764217, 
+              nn loss: -11078.94921875, 
+              minloss: 0.007181
+              
+12000/30000 mse loss: 7.238837, 
+              PDE Loss: 4.066711, BC Loss: 3.172125, 
+              nn loss: 7692.22167969, 
+              minloss: 0.007181
+              
+12050/30000 mse loss: 9.408104, 
+              PDE Loss: 3.455838, BC Loss: 5.952266, 
+              nn loss: -8611.92187500, 
+              minloss: 0.007181
+              
+12100/30000 mse loss: 3.109899, 
+              PDE Loss: 1.136110, BC Loss: 1.973788, 
+              nn loss: -3434.28417969, 
+              minloss: 0.007181
+              
+12150/30000 mse loss: 4.837151, 
+              PDE Loss: 1.474719, BC Loss: 3.362432, 
+              nn loss: -4852.35937500, 
+              minloss: 0.007181
+              
+12200/30000 mse loss: 2.970839, 
+              PDE Loss: 1.498051, BC Loss: 1.472789, 
+              nn loss: -552.84045410, 
+              minloss: 0.007181
+              
+12250/30000 mse loss: 4.990692, 
+              PDE Loss: 4.058059, BC Loss: 0.932633, 
+              nn loss: -28600.25976562, 
+              minloss: 0.007181
+              
+12300/30000 mse loss: 7.420026, 
+              PDE Loss: 3.719157, BC Loss: 3.700869, 
+              nn loss: 4792.76806641, 
+              minloss: 0.007181
+              
+12350/30000 mse loss: 6.395113, 
+              PDE Loss: 5.166273, BC Loss: 1.228840, 
+              nn loss: 7161.68896484, 
+              minloss: 0.007181
+              
+12400/30000 mse loss: 10.305126, 
+              PDE Loss: 8.451804, BC Loss: 1.853322, 
+              nn loss: 1378.32055664, 
+              minloss: 0.007181
+              
+12450/30000 mse loss: 9.007273, 
+              PDE Loss: 7.055873, BC Loss: 1.951399, 
+              nn loss: 83.83737946, 
+              minloss: 0.007181
+              
+12500/30000 mse loss: 7.984044, 
+              PDE Loss: 5.499853, BC Loss: 2.484190, 
+              nn loss: -5332.53125000, 
+              minloss: 0.007181
+              
+12550/30000 mse loss: 4.211469, 
+              PDE Loss: 2.492901, BC Loss: 1.718568, 
+              nn loss: -3398.48754883, 
+              minloss: 0.007181
+              
+12600/30000 mse loss: 2.859391, 
+              PDE Loss: 1.331695, BC Loss: 1.527696, 
+              nn loss: -1321.20214844, 
+              minloss: 0.007181
+              
+12650/30000 mse loss: 3.431477, 
+              PDE Loss: 0.864653, BC Loss: 2.566823, 
+              nn loss: -3493.75219727, 
+              minloss: 0.007181
+              
+12700/30000 mse loss: 3.572626, 
+              PDE Loss: 1.087710, BC Loss: 2.484915, 
+              nn loss: -455.87817383, 
+              minloss: 0.007181
+              
+12750/30000 mse loss: 5.276939, 
+              PDE Loss: 3.465462, BC Loss: 1.811478, 
+              nn loss: -4792.92773438, 
+              minloss: 0.007181
+              
+12800/30000 mse loss: 9.807581, 
+              PDE Loss: 2.331763, BC Loss: 7.475819, 
+              nn loss: -1336.52941895, 
+              minloss: 0.007181
+              
+12850/30000 mse loss: 2.844597, 
+              PDE Loss: 0.929805, BC Loss: 1.914792, 
+              nn loss: -3736.97924805, 
+              minloss: 0.007181
+              
+12900/30000 mse loss: 3.814971, 
+              PDE Loss: 3.124127, BC Loss: 0.690844, 
+              nn loss: -5603.44628906, 
+              minloss: 0.007181
+              
+12950/30000 mse loss: 3.188068, 
+              PDE Loss: 2.664419, BC Loss: 0.523648, 
+              nn loss: -2715.64013672, 
+              minloss: 0.007181
+              
+13000/30000 mse loss: 8.489538, 
+              PDE Loss: 2.305964, BC Loss: 6.183574, 
+              nn loss: -1700.34289551, 
+              minloss: 0.007181
+              
+13050/30000 mse loss: 9.306782, 
+              PDE Loss: 2.268028, BC Loss: 7.038754, 
+              nn loss: 3037.50122070, 
+              minloss: 0.007181
+              
+13100/30000 mse loss: 19.549063, 
+              PDE Loss: 3.919951, BC Loss: 15.629112, 
+              nn loss: 3499.40820312, 
+              minloss: 0.007181
+              
+13150/30000 mse loss: 15.883131, 
+              PDE Loss: 3.710405, BC Loss: 12.172726, 
+              nn loss: 2058.57324219, 
+              minloss: 0.007181
+              
+13200/30000 mse loss: 9.991698, 
+              PDE Loss: 2.379597, BC Loss: 7.612101, 
+              nn loss: -408.29360962, 
+              minloss: 0.007181
+              
+13250/30000 mse loss: 8.707609, 
+              PDE Loss: 1.694104, BC Loss: 7.013505, 
+              nn loss: -339.49047852, 
+              minloss: 0.007181
+              
+13300/30000 mse loss: 5.669073, 
+              PDE Loss: 1.439418, BC Loss: 4.229655, 
+              nn loss: -8954.44628906, 
+              minloss: 0.007181
+              
+13350/30000 mse loss: 1.534192, 
+              PDE Loss: 0.698090, BC Loss: 0.836102, 
+              nn loss: -1915.44006348, 
+              minloss: 0.007181
+              
+13400/30000 mse loss: 5.057121, 
+              PDE Loss: 0.920268, BC Loss: 4.136853, 
+              nn loss: 2748.60009766, 
+              minloss: 0.007181
+              
+13450/30000 mse loss: 1.156471, 
+              PDE Loss: 0.598166, BC Loss: 0.558305, 
+              nn loss: 20.13515472, 
+              minloss: 0.007181
+              
+13500/30000 mse loss: 1.043098, 
+              PDE Loss: 0.347436, BC Loss: 0.695662, 
+              nn loss: -490.56112671, 
+              minloss: 0.007181
+              
+13550/30000 mse loss: 0.965339, 
+              PDE Loss: 0.325058, BC Loss: 0.640281, 
+              nn loss: -1974.84521484, 
+              minloss: 0.007181
+              
+13600/30000 mse loss: 1.022269, 
+              PDE Loss: 0.313952, BC Loss: 0.708316, 
+              nn loss: -3230.32324219, 
+              minloss: 0.007181
+              
+13650/30000 mse loss: 5.343203, 
+              PDE Loss: 0.633793, BC Loss: 4.709410, 
+              nn loss: -1882.93737793, 
+              minloss: 0.007181
+              
+13700/30000 mse loss: 9.614364, 
+              PDE Loss: 0.875768, BC Loss: 8.738596, 
+              nn loss: -628.64343262, 
+              minloss: 0.007181
+              
+13750/30000 mse loss: 14.065797, 
+              PDE Loss: 1.564605, BC Loss: 12.501192, 
+              nn loss: -1944.73864746, 
+              minloss: 0.007181
+              
+13800/30000 mse loss: 9.121234, 
+              PDE Loss: 1.276708, BC Loss: 7.844525, 
+              nn loss: 2022.20947266, 
+              minloss: 0.007181
+              
+13850/30000 mse loss: 4.668790, 
+              PDE Loss: 0.357670, BC Loss: 4.311120, 
+              nn loss: -4305.73925781, 
+              minloss: 0.007181
+              
+13900/30000 mse loss: 5.265457, 
+              PDE Loss: 0.309419, BC Loss: 4.956037, 
+              nn loss: -5615.84472656, 
+              minloss: 0.007181
+              
+13950/30000 mse loss: 3.447327, 
+              PDE Loss: 0.350067, BC Loss: 3.097260, 
+              nn loss: -3078.88696289, 
+              minloss: 0.007181
+              
+14000/30000 mse loss: 3.614245, 
+              PDE Loss: 0.333052, BC Loss: 3.281192, 
+              nn loss: -3158.10913086, 
+              minloss: 0.007181
+              
+14050/30000 mse loss: 2.208835, 
+              PDE Loss: 0.234366, BC Loss: 1.974468, 
+              nn loss: -4750.98730469, 
+              minloss: 0.007181
+              
+14100/30000 mse loss: 1.803144, 
+              PDE Loss: 0.252353, BC Loss: 1.550790, 
+              nn loss: -4330.65869141, 
+              minloss: 0.007181
+              
+14150/30000 mse loss: 1.707591, 
+              PDE Loss: 0.429756, BC Loss: 1.277835, 
+              nn loss: -2595.93798828, 
+              minloss: 0.007181
+              
+14200/30000 mse loss: 4.243797, 
+              PDE Loss: 0.473118, BC Loss: 3.770679, 
+              nn loss: 4477.18750000, 
+              minloss: 0.007181
+              
+14250/30000 mse loss: 5.221477, 
+              PDE Loss: 1.459293, BC Loss: 3.762184, 
+              nn loss: -1382.12133789, 
+              minloss: 0.007181
+              
+14300/30000 mse loss: 3.538109, 
+              PDE Loss: 0.754185, BC Loss: 2.783924, 
+              nn loss: 12532.09570312, 
+              minloss: 0.007181
+              
+14350/30000 mse loss: 4.917726, 
+              PDE Loss: 2.312796, BC Loss: 2.604929, 
+              nn loss: -8968.79785156, 
+              minloss: 0.007181
+              
+14400/30000 mse loss: 2.346600, 
+              PDE Loss: 0.857804, BC Loss: 1.488796, 
+              nn loss: -1126.13342285, 
+              minloss: 0.007181
+              
+14450/30000 mse loss: 16.056873, 
+              PDE Loss: 2.305742, BC Loss: 13.751132, 
+              nn loss: -4153.51708984, 
+              minloss: 0.007181
+              
+14500/30000 mse loss: 4.515753, 
+              PDE Loss: 0.530339, BC Loss: 3.985415, 
+              nn loss: -5086.53564453, 
+              minloss: 0.007181
+              
+14550/30000 mse loss: 6.316504, 
+              PDE Loss: 0.536072, BC Loss: 5.780432, 
+              nn loss: 3245.99047852, 
+              minloss: 0.007181
+              
+14600/30000 mse loss: 8.548408, 
+              PDE Loss: 1.119036, BC Loss: 7.429371, 
+              nn loss: -1882.75744629, 
+              minloss: 0.007181
+              
+14650/30000 mse loss: 1.374501, 
+              PDE Loss: 0.294245, BC Loss: 1.080256, 
+              nn loss: -14177.06152344, 
+              minloss: 0.007181
+              
+14700/30000 mse loss: 3.373642, 
+              PDE Loss: 0.496127, BC Loss: 2.877515, 
+              nn loss: 4025.97045898, 
+              minloss: 0.007181
+              
+14750/30000 mse loss: 3.903556, 
+              PDE Loss: 0.360195, BC Loss: 3.543362, 
+              nn loss: -3568.79003906, 
+              minloss: 0.007181
+              
+14800/30000 mse loss: 3.915721, 
+              PDE Loss: 0.239732, BC Loss: 3.675989, 
+              nn loss: -2462.73901367, 
+              minloss: 0.007181
+              
+14850/30000 mse loss: 4.934867, 
+              PDE Loss: 0.380114, BC Loss: 4.554753, 
+              nn loss: 22905.81445312, 
+              minloss: 0.007181
+              
+14900/30000 mse loss: 8.117373, 
+              PDE Loss: 0.982273, BC Loss: 7.135100, 
+              nn loss: 998.94934082, 
+              minloss: 0.007181
+              
+14950/30000 mse loss: 3.502373, 
+              PDE Loss: 0.511431, BC Loss: 2.990942, 
+              nn loss: -611.68395996, 
+              minloss: 0.007181
+              
+15000/30000 mse loss: 9.103930, 
+              PDE Loss: 0.691958, BC Loss: 8.411971, 
+              nn loss: -4255.51660156, 
+              minloss: 0.007181
+              
+15050/30000 mse loss: 9.915446, 
+              PDE Loss: 1.313234, BC Loss: 8.602212, 
+              nn loss: -5765.97363281, 
+              minloss: 0.007181
+              
+15100/30000 mse loss: 13.746561, 
+              PDE Loss: 1.173734, BC Loss: 12.572827, 
+              nn loss: 12437.08984375, 
+              minloss: 0.007181
+              
+15150/30000 mse loss: 23.673130, 
+              PDE Loss: 2.426971, BC Loss: 21.246159, 
+              nn loss: 4830.56396484, 
+              minloss: 0.007181
+              
+15200/30000 mse loss: 32.662376, 
+              PDE Loss: 1.182993, BC Loss: 31.479382, 
+              nn loss: -10611.32812500, 
+              minloss: 0.007181
+              
+15250/30000 mse loss: 16.448679, 
+              PDE Loss: 0.619497, BC Loss: 15.829182, 
+              nn loss: -3651.82739258, 
+              minloss: 0.007181
+              
+15300/30000 mse loss: 34.455151, 
+              PDE Loss: 1.414080, BC Loss: 33.041069, 
+              nn loss: 1875.06066895, 
+              minloss: 0.007181
+              
+15350/30000 mse loss: 7.247048, 
+              PDE Loss: 0.962961, BC Loss: 6.284087, 
+              nn loss: -3146.91723633, 
+              minloss: 0.007181
+              
+15400/30000 mse loss: 9.701156, 
+              PDE Loss: 1.585955, BC Loss: 8.115201, 
+              nn loss: 2094.87060547, 
+              minloss: 0.007181
+              
+15450/30000 mse loss: 10.534548, 
+              PDE Loss: 0.739558, BC Loss: 9.794990, 
+              nn loss: 1471.36010742, 
+              minloss: 0.007181
+              
+15500/30000 mse loss: 7.017751, 
+              PDE Loss: 1.473092, BC Loss: 5.544660, 
+              nn loss: -155.44273376, 
+              minloss: 0.007181
+              
+15550/30000 mse loss: 6.985910, 
+              PDE Loss: 2.348828, BC Loss: 4.637083, 
+              nn loss: 13605.53613281, 
+              minloss: 0.007181
+              
+15600/30000 mse loss: 9.155539, 
+              PDE Loss: 2.710529, BC Loss: 6.445010, 
+              nn loss: -1564.58178711, 
+              minloss: 0.007181
+              
+15650/30000 mse loss: 2.979049, 
+              PDE Loss: 0.893086, BC Loss: 2.085963, 
+              nn loss: -6096.37744141, 
+              minloss: 0.007181
+              
+15700/30000 mse loss: 12.057376, 
+              PDE Loss: 0.743044, BC Loss: 11.314332, 
+              nn loss: -5286.49267578, 
+              minloss: 0.007181
+              
+15750/30000 mse loss: 17.372368, 
+              PDE Loss: 1.053441, BC Loss: 16.318928, 
+              nn loss: 523.45367432, 
+              minloss: 0.007181
+              
