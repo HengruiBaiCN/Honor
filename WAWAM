@@ -234,6 +234,8 @@ class Model:
                 optimizer_adam_weight.step()
 
             print('Adam done!')
+            
+            
             self.optimizer_LBGFS.step(self.LBGFS_epoch_loss)
             print('LBGFS done!')
 
