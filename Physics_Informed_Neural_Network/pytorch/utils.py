@@ -49,7 +49,7 @@ def trainingData3(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, nu
     
 
     # final condition (t = 0, S is randomized)
-    i_st_train = np.concatenate([np.zeros((num_fc, 1)),
+    i_st_train = np.concatenate([np.ones((num_fc, 1)),
                     np.random.uniform(*S_range, (num_fc, 1))], axis=1)
     i_v_train = gs(i_st_train[:, 1]).reshape(-1, 1)
     
@@ -111,8 +111,6 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     
     
     return bc_st_train, bc_v_train, n_st_train, n_v_train
-
-
 
 
 
@@ -262,9 +260,10 @@ def network_training(
     
     # training
     loss_hist = []
-    log_loss_hist = []
     logging.info(f'{model}\n')
     logging.info(f'Training started at {datetime.datetime.now()}\n')
+    min_train_loss = float("inf")  # Initialize with a large value
+    final_model = None
     start_time = timer()
     
     # training loop
@@ -301,8 +300,8 @@ def network_training(
         loss.backward()
         optimizer.step()
         
-        total_loss = pde_loss + bc_loss
-        loss_hist.append(total_loss.item())
+        mse_loss = pde_loss + bc_loss
+        loss_hist.append(mse_loss.item())
         
         if adaptive_weight:
             # update the weight
@@ -310,34 +309,45 @@ def network_training(
             loss = torch.exp(-x_f_s) * pde_loss.detach() + x_f_s + torch.exp(-x_label_s) * bc_loss.detach() + x_label_s
             loss.backward()
             optimizer_adam_weight.step()
+            pass
+        
+        if mse_loss.item() < min_train_loss:
+            min_train_loss = mse_loss.item()
+            final_model = model
+            pass
         
         
     elapsed = timer() - start_time
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
-    return model, loss_hist
+    return final_model, loss_hist
 
+import pandas as pd
 
-
-
-
-# def testingData(lb, ub, u, f, num):
-#   device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-#   X=np.linspace(lb[0], ub[0], num)
-#   Y=np.linspace(lb[1], ub[1], num)
+def test(device, model):
+    data = pd.read_csv("sample.csv")
+    # Create a mapping from column names to integers
+    # column_to_int_mapping = {col: idx for idx, col in enumerate(data.columns)}
     
-#   X, Y = np.meshgrid(X,Y) #X, Y are (256, 256) matrices
+    # the size of each grid
+    ds = 250/200
+    dt = 1 / 10000
 
-#   U = u(X,Y)
-#   u_test = U.flatten('F')[:,None]
-#   u_test = torch.from_numpy(u_test).to(device)
+
+    input_data = []
+    output_data = []
+    for row_index, row in data.iterrows():
+        for col_index, value in enumerate(row):
+            input_data.append([(10000-row_index)*dt, col_index*ds])  # Store row and column index as input
+            output_data.append([value])  # Store the corresponding value as output
+    X = torch.tensor(input_data, dtype=torch.float32).to(device)
+    y = torch.tensor(output_data, dtype=torch.float32).to(device)
     
-#   xy_test = np.hstack((X.flatten('F')[:,None], Y.flatten('F')[:,None]))
-#   f_test = f(xy_test[:,[0]], xy_test[:,[1]])
-#   f_test = torch.from_numpy(f_test).to(device)
-
-#   x_test = torch.from_numpy(xy_test[:,[0]]).to(device)
-#   y_test = torch.from_numpy(xy_test[:,[1]]).to(device)
-# #   f_test = f(x_test, y_test)
-#   return x_test, y_test, xy_test, u_test, f_test, X, Y, U
-
+    lossfunction = nn.MSELoss()
+    prediction = model(X)
+    
+    print(prediction[0])
+    print(prediction[1])
+    print(y[0])
+    print(y[1])
+    
+    return lossfunction(prediction, y).item()
