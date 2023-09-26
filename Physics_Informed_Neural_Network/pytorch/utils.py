@@ -48,10 +48,10 @@ def trainingData3(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, nu
     n_v_train = np.zeros((num_nc, 1))
     
 
-    # final condition (t = T, S is randomized)
-    f_st_train = np.concatenate([np.ones((num_fc, 1)),
+    # final condition (t = 0, S is randomized)
+    i_st_train = np.concatenate([np.zeros((num_fc, 1)),
                     np.random.uniform(*S_range, (num_fc, 1))], axis=1)
-    f_v_train = gs(f_st_train[:, 1]).reshape(-1, 1)
+    i_v_train = gs(i_st_train[:, 1]).reshape(-1, 1)
     
     # lower boundary condition (S = 0, t is randomized)
     lb_st = np.concatenate([np.random.uniform(*t_range, (num_bc, 1)),
@@ -68,7 +68,7 @@ def trainingData3(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, nu
     bc_v_train = np.vstack([lb_v, ub_v])
     
     
-    return f_st_train, f_v_train, bc_st_train, bc_v_train, n_st_train, n_v_train
+    return i_st_train, i_v_train, bc_st_train, bc_v_train, n_st_train, n_v_train
 
 
 
@@ -90,10 +90,10 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     n_v_train = np.zeros((num_nc, 1))
     
 
-    # final condition (t = T, S is randomized)
-    f_st_train = np.concatenate([np.ones((num_fc, 1)),
+    # initial condition (t = T, S is randomized)
+    i_st_train = np.concatenate([np.ones((num_fc, 1)),
                     np.random.uniform(*S_range, (num_fc, 1))], axis=1)
-    f_v_train = gs(f_st_train[:, 1]).reshape(-1, 1)
+    i_v_train = gs(i_st_train[:, 1]).reshape(-1, 1)
     
     # lower boundary condition (S = 0, t is randomized)
     lb_st = np.concatenate([np.random.uniform(*t_range, (num_bc, 1)),
@@ -106,8 +106,8 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     ub_v = (Smax - K*np.exp(-r*(T-ub_st[:, 0].reshape(-1)))).reshape(-1, 1)
     
     # append boundary condition training points (edge points)
-    bc_st_train = np.vstack([lb_st, ub_st, f_st_train])
-    bc_v_train = np.vstack([lb_v, ub_v, f_v_train])
+    bc_st_train = np.vstack([lb_st, ub_st, i_st_train])
+    bc_v_train = np.vstack([lb_v, ub_v, i_v_train])
     
     
     return bc_st_train, bc_v_train, n_st_train, n_v_train
@@ -146,6 +146,7 @@ def optimizer_dispatcher(optimizer, parameters, learning_rate):
     else:
         return torch.optim.Adam(parameters, lr=learning_rate, betas=(0.9, 0.999), eps=1e-5)
 
+
 def network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adaptive_rate_scaler):
     r"""Return optimization function from `SUPPORTED_OPTIMIZERS`.
 
@@ -174,10 +175,32 @@ def network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adap
     else:
         return 'Incorrect neural network input'
 
+
+def loss_dispatcher(pde_loss, bc_loss, adaptive_rate, model, w1, w2, adaptive_weight, x_f_s, x_label_s):
+    '''
+    @param adaptive_rate: bool, whether to use adaptive rate or not
+    @param model: model, used to get the local recovery term
+    @param w1: weight for pde loss
+    @param w2: weight for bc loss
+    @param adaptive_weight: bool, whether to use adaptive weight or not
+    @return: loss
+    '''
+    loss = None
+    if adaptive_rate:
+        local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
+        slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
+        loss = w1 * pde_loss + w2 * bc_loss + slope_recovery_term
+    elif adaptive_weight:
+        loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss
+    else:
+        loss = w1 * pde_loss + w2 * bc_loss
+    return loss
+
+
 def network_training(
         K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key,
         device, net, opt, sizes, activation, learning_rate, n_epochs, lossFunction,
-        dropout_rate, adaptive_rate, adaptive_rate_scaler,
+        dropout_rate, adaptive_rate, adaptive_rate_scaler, w1, w2, adaptive_weight,
         ):
     r"""Train PINN and return trained network alongside loss over time.
 
@@ -227,66 +250,71 @@ def network_training(
         Loss values during training process
     """
     
+    # initialize model and optimizer
     model = network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adaptive_rate_scaler).to(device=device)
     optimizer = optimizer_dispatcher(opt, model.parameters(), learning_rate)
+    
+    # adaptive weight
+    x_f_s = torch.tensor(0.).float().to(device).requires_grad_(True)
+    x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
+    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s], lr=0.0003)
+    
+    
+    # training
     loss_hist = []
+    log_loss_hist = []
     logging.info(f'{model}\n')
     logging.info(f'Training started at {datetime.datetime.now()}\n')
     start_time = timer()
     
+    # training loop
     for _ in tqdm.tqdm(range(n_epochs), desc='[Training procedure]', ascii=True, total=n_epochs):
-        def closure():
-            # sampling
-            bc_st_train, bc_v_train, n_st_train, n_v_train = \
-              trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key)
-            # save training data points to tensor and send to device
-            n_st_train = torch.from_numpy(n_st_train).float().requires_grad_().to(device)
-            n_v_train = torch.from_numpy(n_v_train).float().to(device)
-                    
-            bc_st_train = torch.from_numpy(bc_st_train).float().to(device)
-            bc_v_train = torch.from_numpy(bc_v_train).float().to(device)
-            
-            # pde residual loss
-            y1_hat = model(n_st_train)
-            grads = tgrad.grad(y1_hat, n_st_train, grad_outputs=torch.ones(y1_hat.shape).cuda(), 
-                       retain_graph=True, create_graph=True, only_inputs=True)[0]
-            dVdt, dVdS = grads[:, 0].view(-1, 1), grads[:, 1].view(-1, 1)
-            grads2nd = tgrad.grad(dVdS, n_st_train, grad_outputs=torch.ones(dVdS.shape).cuda(), 
-                          create_graph=True, only_inputs=True, allow_unused=True)[0]
-            S1 = n_st_train[:, 1].view(-1, 1)
-            d2VdS2 = grads2nd[:, 1].view(-1, 1)
-            pde_loss = lossFunction(-dVdt, 0.5*((sigma*S1)**2)*d2VdS2 + r*S1*dVdS - r*y1_hat)
-            
-            # boudary condition loss
-            y21_hat = model(bc_st_train)
-            bc_loss = lossFunction(bc_v_train, y21_hat)
-            
-            if adaptive_rate:
-                local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
-                slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
-                loss = pde_loss + bc_loss + slope_recovery_term
-            else:
-                loss = pde_loss + bc_loss
-            optimizer.zero_grad()
+
+        # sampling
+        bc_st_train, bc_v_train, n_st_train, n_v_train = \
+            trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key)
+        # save training data points to tensor and send to device
+        n_st_train = torch.from_numpy(n_st_train).float().requires_grad_().to(device)
+        n_v_train = torch.from_numpy(n_v_train).float().to(device)
+                
+        bc_st_train = torch.from_numpy(bc_st_train).float().to(device)
+        bc_v_train = torch.from_numpy(bc_v_train).float().to(device)
+        
+        # pde residual loss
+        y1_hat = model(n_st_train)
+        grads = tgrad.grad(y1_hat, n_st_train, grad_outputs=torch.ones(y1_hat.shape).cuda(), 
+                    retain_graph=True, create_graph=True, only_inputs=True)[0]
+        dVdt, dVdS = grads[:, 0].view(-1, 1), grads[:, 1].view(-1, 1)
+        grads2nd = tgrad.grad(dVdS, n_st_train, grad_outputs=torch.ones(dVdS.shape).cuda(), 
+                        create_graph=True, only_inputs=True, allow_unused=True)[0]
+        S1 = n_st_train[:, 1].view(-1, 1)
+        d2VdS2 = grads2nd[:, 1].view(-1, 1)
+        pde_loss = lossFunction(-dVdt, 0.5*((sigma*S1)**2)*d2VdS2 + r*S1*dVdS - r*y1_hat)
+        
+        # boudary condition loss
+        y21_hat = model(bc_st_train)
+        bc_loss = lossFunction(bc_v_train, y21_hat)
+        
+        
+        loss = loss_dispatcher(pde_loss, bc_loss, adaptive_rate, model, w1, w2, adaptive_weight, x_f_s, x_label_s)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        
+        total_loss = pde_loss + bc_loss
+        loss_hist.append(total_loss.item())
+        
+        if adaptive_weight:
+            # update the weight
+            optimizer_adam_weight.zero_grad()
+            loss = torch.exp(-x_f_s) * pde_loss.detach() + x_f_s + torch.exp(-x_label_s) * bc_loss.detach() + x_label_s
             loss.backward()
-            
-            total_loss = pde_loss + bc_loss
-            loss_hist.append(total_loss.item())
-            
-            return loss
-        optimizer.step(closure)
+            optimizer_adam_weight.step()
+        
+        
     elapsed = timer() - start_time
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
     return model, loss_hist
-
-
-
-
-
-
-
-
-
 
 
 
