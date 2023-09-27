@@ -1,15 +1,18 @@
-import numpy as np
 import torch
 import torch.cuda
 import torch.nn as nn
+from torch import from_numpy
 import torch.autograd as tgrad
 
 
 import pyDOE
+import numpy as np
+import pandas as pd
 from pyDOE import lhs
-from torch import from_numpy
+
 
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
 import tqdm
 
@@ -111,6 +114,32 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     
     
     return bc_st_train, bc_v_train, n_st_train, n_v_train
+
+
+def fdm_data(Smax, T, M, N, src, device):
+    data = pd.read_csv(src)
+    
+    ds = Smax/M
+    dt = T / N
+
+    input_data = []
+    output_data = []
+    for row_index, row in data.iterrows():
+        for col_index, value in enumerate(row):
+            input_data.append([(N-row_index)*dt, col_index*ds])  # Store row and column index as input
+            output_data.append([value])  # Store the corresponding value as output
+    # X = torch.tensor(input_data, dtype=torch.float32).to(device)
+    # y = torch.tensor(output_data, dtype=torch.float32).to(device)
+
+    X_train, X_test, y_train, y_test = train_test_split(input_data, output_data, test_size=0.2, random_state=42)
+
+    # Convert data to PyTorch tensors
+    X_train_tensor = torch.tensor(X_train, dtype=torch.float32).to(device)
+    y_train_tensor = torch.tensor(y_train, dtype=torch.float32).to(device)
+    X_test_tensor = torch.tensor(X_test, dtype=torch.float32).to(device)
+    y_test_tensor = torch.tensor(y_test, dtype=torch.float32).to(device)
+    
+    return X_train_tensor, y_train_tensor, X_test_tensor, y_test_tensor
 
 
 
@@ -321,33 +350,33 @@ def network_training(
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
     return final_model, loss_hist
 
-import pandas as pd
-
-def test(device, model):
-    data = pd.read_csv("sample.csv")
-    # Create a mapping from column names to integers
-    # column_to_int_mapping = {col: idx for idx, col in enumerate(data.columns)}
-    
-    # the size of each grid
-    ds = 250/200
-    dt = 1 / 10000
 
 
-    input_data = []
-    output_data = []
-    for row_index, row in data.iterrows():
-        for col_index, value in enumerate(row):
-            input_data.append([(10000-row_index)*dt, col_index*ds])  # Store row and column index as input
-            output_data.append([value])  # Store the corresponding value as output
-    X = torch.tensor(input_data, dtype=torch.float32).to(device)
-    y = torch.tensor(output_data, dtype=torch.float32).to(device)
+# def test(device, model):
+#     data = pd.read_csv("sample.csv")
+#     # Create a mapping from column names to integers
+#     # column_to_int_mapping = {col: idx for idx, col in enumerate(data.columns)}
     
-    lossfunction = nn.MSELoss()
-    prediction = model(X)
+#     # the size of each grid
+#     ds = 250/200
+#     dt = 1 / 10000
+
+
+#     input_data = []
+#     output_data = []
+#     for row_index, row in data.iterrows():
+#         for col_index, value in enumerate(row):
+#             input_data.append([(10000-row_index)*dt, col_index*ds])  # Store row and column index as input
+#             output_data.append([value])  # Store the corresponding value as output
+#     X = torch.tensor(input_data, dtype=torch.float32).to(device)
+#     y = torch.tensor(output_data, dtype=torch.float32).to(device)
     
-    print(prediction[0])
-    print(prediction[1])
-    print(y[0])
-    print(y[1])
+#     lossfunction = nn.MSELoss()
+#     prediction = model(X)
     
-    return lossfunction(prediction, y).item()
+#     print(prediction[0])
+#     print(prediction[1])
+#     print(y[0])
+#     print(y[1])
+    
+#     return lossfunction(prediction, y).item()
