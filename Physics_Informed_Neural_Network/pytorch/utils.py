@@ -203,7 +203,7 @@ def network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adap
         return 'Incorrect neural network input'
 
 
-def loss_dispatcher(pde_loss, bc_loss, adaptive_rate, model, w1, w2, adaptive_weight, x_f_s, x_label_s):
+def loss_dispatcher(pde_loss, bc_loss, data_loss, adaptive_rate, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s):
     '''
     @param adaptive_rate: bool, whether to use adaptive rate or not
     @param model: model, used to get the local recovery term
@@ -213,21 +213,26 @@ def loss_dispatcher(pde_loss, bc_loss, adaptive_rate, model, w1, w2, adaptive_we
     @return: loss
     '''
     loss = None
-    if adaptive_rate:
+    if adaptive_rate and adaptive_weight:
         local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
         slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
-        loss = w1 * pde_loss + w2 * bc_loss + slope_recovery_term
+        loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss + torch.exp(-x_data_s.detach()) * data_loss + x_f_s + x_label_s + x_data_s + slope_recovery_term
+    elif adaptive_rate:
+        local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
+        slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
+        loss = loss_weights[0] * pde_loss + loss_weights[1] * bc_loss + loss_weights[2] * data_loss + slope_recovery_term
     elif adaptive_weight:
-        loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss
+        loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss + torch.exp(-x_data_s.detach()) * data_loss + x_f_s + x_label_s + x_data_s
     else:
-        loss = w1 * pde_loss + w2 * bc_loss
+        loss = loss_weights[0] * pde_loss + loss_weights[1] * bc_loss + loss_weights[2] * data_loss
     return loss
 
 
 def network_training(
         K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key,
         device, net, opt, sizes, activation, learning_rate, n_epochs, lossFunction,
-        dropout_rate, adaptive_rate, adaptive_rate_scaler, w1, w2, adaptive_weight,
+        dropout_rate, adaptive_rate, adaptive_rate_scaler, loss_weights, adaptive_weight,
+        X_train_tensor, y_train_tensor
         ):
     r"""Train PINN and return trained network alongside loss over time.
 
@@ -284,7 +289,8 @@ def network_training(
     # adaptive weight
     x_f_s = torch.tensor(0.).float().to(device).requires_grad_(True)
     x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
-    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s], lr=0.0003)
+    x_data_s = torch.tensor(0.).float().to(device).requires_grad_(True)
+    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=learning_rate*10)
     
     
     # training
@@ -320,35 +326,52 @@ def network_training(
         pde_loss = lossFunction(-dVdt, 0.5*((sigma*S1)**2)*d2VdS2 + r*S1*dVdS - r*y1_hat)
         
         # boudary condition loss
-        y21_hat = model(bc_st_train)
-        bc_loss = lossFunction(bc_v_train, y21_hat)
+        y2_hat = model(bc_st_train)
+        bc_loss = lossFunction(bc_v_train, y2_hat)
         
+        # data Round
+        y3_hat = model(X_train_tensor)
+        data_loss = lossFunction(y_train_tensor, y3_hat)
         
-        loss = loss_dispatcher(pde_loss, bc_loss, adaptive_rate, model, w1, w2, adaptive_weight, x_f_s, x_label_s)
+        # calculate the total loss and update the model
         optimizer.zero_grad()
+        loss = loss_dispatcher(pde_loss, bc_loss, data_loss, adaptive_rate, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s)
         loss.backward()
         optimizer.step()
         
-        mse_loss = pde_loss + bc_loss
-        loss_hist.append(mse_loss.item())
-        
+        # update the weight if adaptive weight is used
         if adaptive_weight:
-            # update the weight
             optimizer_adam_weight.zero_grad()
-            loss = torch.exp(-x_f_s) * pde_loss.detach() + x_f_s + torch.exp(-x_label_s) * bc_loss.detach() + x_label_s
-            loss.backward()
+            loss1 = torch.exp(-x_f_s) * pde_loss.detach() + x_f_s + torch.exp(-x_label_s) * bc_loss.detach() + x_label_s + torch.exp(-x_data_s) * data_loss.detach() + x_data_s
+            loss1.backward()
             optimizer_adam_weight.step()
             pass
         
+        mse_loss = pde_loss + bc_loss + data_loss
+        loss_hist.append(mse_loss.item())
         if mse_loss.item() < min_train_loss:
             min_train_loss = mse_loss.item()
-            final_model = model
+            final_model = model.state_dict()
             pass
-        
-        
     elapsed = timer() - start_time
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
-    return final_model, loss_hist
+    
+    
+    # model = Net(
+#     sizes=[2, 50, 50, 50, 1], activation='relu', dropout_rate=0, adaptive_rate=0.1, adaptive_rate_scaler=10.0
+#     )
+    # model.load_state_dict(final_model)
+    # model.eval()
+    # model.to(device)
+    # print(utils.test(device, model))
+    # Evaluate the model on the test set
+    # model.eval()
+    # with torch.no_grad():
+    #     test_outputs = pinn(X_test_tensor)
+    #     test_loss = lossFunction(test_outputs, y_test_tensor)
+    #     print(f'Test Loss: {test_loss.item():.4f}')
+    
+    return model, loss_hist, final_model
 
 
 
