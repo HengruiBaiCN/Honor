@@ -195,7 +195,7 @@ def network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adap
     net = net.lower()
     # assert net in SUPPORTED_OPTIMIZERS, 'Invalid optimizer. Falling to default.'
     if net == 'pinn':
-        return networks.FeedforwardNeuralNetwork(sizes[0], sizes[-2], sizes[-1], len(sizes))
+        return networks.FeedforwardNeuralNetwork(sizes[0], sizes[-2], sizes[-1], len(sizes)-2)
     elif net == 'ipinn':
         return networks.ImprovedNeuralNetwork(
             sizes, activation, dropout_rate, adaptive_rate, adaptive_rate_scaler                                    )
@@ -217,11 +217,11 @@ def loss_dispatcher(pde_loss, bc_loss, data_loss, adaptive_rate, model, loss_wei
         local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
         slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
         loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss + torch.exp(-x_data_s.detach()) * data_loss + x_f_s + x_label_s + x_data_s + slope_recovery_term
-    elif adaptive_rate:
+    elif adaptive_rate and not adaptive_weight:
         local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
         slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
         loss = loss_weights[0] * pde_loss + loss_weights[1] * bc_loss + loss_weights[2] * data_loss + slope_recovery_term
-    elif adaptive_weight:
+    elif adaptive_weight and not adaptive_rate:
         loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss + torch.exp(-x_data_s.detach()) * data_loss + x_f_s + x_label_s + x_data_s
     else:
         loss = loss_weights[0] * pde_loss + loss_weights[1] * bc_loss + loss_weights[2] * data_loss
@@ -356,50 +356,22 @@ def network_training(
     elapsed = timer() - start_time
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
     
-    
-    # model = Net(
-#     sizes=[2, 50, 50, 50, 1], activation='relu', dropout_rate=0, adaptive_rate=0.1, adaptive_rate_scaler=10.0
-#     )
-    # model.load_state_dict(final_model)
-    # model.eval()
-    # model.to(device)
-    # print(utils.test(device, model))
-    # Evaluate the model on the test set
-    # model.eval()
-    # with torch.no_grad():
-    #     test_outputs = pinn(X_test_tensor)
-    #     test_loss = lossFunction(test_outputs, y_test_tensor)
-    #     print(f'Test Loss: {test_loss.item():.4f}')
-    
     return model, loss_hist, final_model
 
 
 
-# def test(device, model):
-#     data = pd.read_csv("sample.csv")
-#     # Create a mapping from column names to integers
-#     # column_to_int_mapping = {col: idx for idx, col in enumerate(data.columns)}
-    
-#     # the size of each grid
-#     ds = 250/200
-#     dt = 1 / 10000
+def test_error(device, model, x_test, y_test, lossFunction):
 
-
-#     input_data = []
-#     output_data = []
-#     for row_index, row in data.iterrows():
-#         for col_index, value in enumerate(row):
-#             input_data.append([(10000-row_index)*dt, col_index*ds])  # Store row and column index as input
-#             output_data.append([value])  # Store the corresponding value as output
-#     X = torch.tensor(input_data, dtype=torch.float32).to(device)
-#     y = torch.tensor(output_data, dtype=torch.float32).to(device)
+    # Create a mapping from column names to integers
+    # column_to_int_mapping = {col: idx for idx, col in enumerate(data.columns)}
     
-#     lossfunction = nn.MSELoss()
-#     prediction = model(X)
+    # model = network.to(device)
+    model = model.eval()
+    prediction = model(x_test)
     
-#     print(prediction[0])
-#     print(prediction[1])
-#     print(y[0])
-#     print(y[1])
+    print(prediction[0])
+    print(prediction[1])
+    print(y_test[0])
+    print(y_test[1])
     
-#     return lossfunction(prediction, y).item()
+    return lossFunction(prediction, y_test).item()
