@@ -191,7 +191,7 @@ def network_training(
     x_f_s = torch.tensor(0.).float().to(device).requires_grad_(True)
     x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
     x_data_s = torch.tensor(0.).float().to(device).requires_grad_(True)
-    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=learning_rate*0.0001)
+    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=learning_rate)
     
     # record loss history for plotting and save the best model
     mse_loss_hist = []
