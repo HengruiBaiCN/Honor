@@ -44,13 +44,11 @@ def trainingData3(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, nu
         np.random.seed(RNG_key)
         pass
     
-    
     # normal condition / interior points
     n_st_train = np.concatenate([np.random.uniform(*t_range, (num_nc, 1)), 
                       np.random.uniform(*S_range, (num_nc, 1))], axis=1)
     n_v_train = np.zeros((num_nc, 1))
     
-
     # final condition (t = 0, S is randomized)
     i_st_train = np.concatenate([np.ones((num_fc, 1)),
                     np.random.uniform(*S_range, (num_fc, 1))], axis=1)
@@ -70,7 +68,6 @@ def trainingData3(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, nu
     bc_st_train = np.vstack([lb_st, ub_st])
     bc_v_train = np.vstack([lb_v, ub_v])
     
-    
     return i_st_train, i_v_train, bc_st_train, bc_v_train, n_st_train, n_v_train
 
 
@@ -86,13 +83,11 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
         np.random.seed(RNG_key)
         pass
     
-    
     # normal condition / interior points
     n_st_train = np.concatenate([np.random.uniform(*t_range, (num_nc, 1)), 
                       np.random.uniform(*S_range, (num_nc, 1))], axis=1)
     n_v_train = np.zeros((num_nc, 1))
     
-
     # initial condition (t = T, S is randomized)
     i_st_train = np.concatenate([np.ones((num_fc, 1)),
                     np.random.uniform(*S_range, (num_fc, 1))], axis=1)
@@ -111,7 +106,6 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     # append boundary condition training points (edge points)
     bc_st_train = np.vstack([lb_st, ub_st, i_st_train])
     bc_v_train = np.vstack([lb_v, ub_v, i_v_train])
-    
     
     return bc_st_train, bc_v_train, n_st_train, n_v_train
 

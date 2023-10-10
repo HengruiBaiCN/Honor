@@ -119,7 +119,7 @@ def network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adap
         return 'Incorrect neural network input'
 
 
-def loss_dispatcher(pde_loss, bc_loss, data_loss, adaptive_rate, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s):
+def loss_dispatcher(pde_loss, bc_loss, data_loss, slope_recovery_term, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s):
     '''
     @param adaptive_rate: bool, whether to use adaptive rate or not
     @param model: model, used to get the local recovery term
@@ -130,19 +130,16 @@ def loss_dispatcher(pde_loss, bc_loss, data_loss, adaptive_rate, model, loss_wei
     @return: loss
     '''
     loss = None
-    if adaptive_rate and adaptive_weight:
-        local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
-        slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
+    if slope_recovery_term and adaptive_weight:
         loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss + torch.exp(-x_data_s.detach()) * data_loss + x_f_s + x_label_s + x_data_s + slope_recovery_term
-    elif adaptive_rate and not adaptive_weight:
-        local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
-        slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
+    elif slope_recovery_term and not adaptive_weight:
         loss = loss_weights[0] * pde_loss + loss_weights[1] * bc_loss + loss_weights[2] * data_loss + slope_recovery_term
-    elif adaptive_weight and not adaptive_rate:
+    elif adaptive_weight and not slope_recovery_term:
         loss = torch.exp(-x_f_s.detach()) * pde_loss + torch.exp(-x_label_s.detach()) * bc_loss + torch.exp(-x_data_s.detach()) * data_loss + x_f_s + x_label_s + x_data_s
     else:
         loss = loss_weights[0] * pde_loss + loss_weights[1] * bc_loss + loss_weights[2] * data_loss
     return loss
+
 
 
 def network_training(
@@ -234,16 +231,27 @@ def network_training(
         y3_hat = model(X_train_tensor)
         data_loss = lossFunction(y_train_tensor, y3_hat)
         
+        # slope recovery term
+        slope_recovery_term = 0
+        if adaptive_rate:
+            local_recovery_terms = torch.tensor([torch.mean(model.regressor[layer][0].A.data) for layer in range(len(model.regressor) - 1)])
+            slope_recovery_term = 1 / torch.mean(torch.exp(local_recovery_terms))
+        
         # update the model by backpropagation and calculate the total loss
         optimizer.zero_grad()
-        loss = loss_dispatcher(pde_loss, bc_loss, data_loss, adaptive_rate, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s)
+        loss = loss_dispatcher(pde_loss, bc_loss, data_loss, slope_recovery_term, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s)
         loss.backward()
         optimizer.step()
         
         # update the weight if adaptive weight is used by backpropagation 
-        if adaptive_weight:
+        if adaptive_weight and not adaptive_rate:
             optimizer_adam_weight.zero_grad()
             loss1 = torch.exp(-x_f_s) * pde_loss.detach() + torch.exp(-x_label_s) * bc_loss.detach() + torch.exp(-x_data_s) * data_loss.detach() + x_data_s + x_f_s + x_label_s
+            loss1.backward()
+            optimizer_adam_weight.step()
+        elif adaptive_rate and adaptive_weight:
+            optimizer_adam_weight.zero_grad()
+            loss1 = torch.exp(-x_f_s) * pde_loss.detach() + torch.exp(-x_label_s) * bc_loss.detach() + torch.exp(-x_data_s) * data_loss.detach() + x_data_s + x_f_s + x_label_s + slope_recovery_term
             loss1.backward()
             optimizer_adam_weight.step()
             pass
