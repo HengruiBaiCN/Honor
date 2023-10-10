@@ -48,7 +48,7 @@ def trainingData(K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num
     # normal condition / interior points
     n_st_train = np.concatenate([np.random.uniform(*t_range, (num_nc, 1)), 
                       np.random.uniform(*S_range, (num_nc, 1))], axis=1)
-    n_v_train = np.zeros((num_nc, 1))
+    # n_v_train = np.zeros((num_nc, 1))
     
 
     # initial condition (t = T, S is randomized)
@@ -119,7 +119,7 @@ def network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adap
         return 'Incorrect neural network input'
 
 
-def loss_dispatcher(pde_loss, bc_loss, data_loss, slope_recovery_term, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s):
+def loss_dispatcher(pde_loss, bc_loss, data_loss, slope_recovery_term, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s):
     '''
     @param adaptive_rate: bool, whether to use adaptive rate or not
     @param model: model, used to get the local recovery term
@@ -185,13 +185,13 @@ def network_training(
     """
     # initialize model and optimizer
     model = network_dispatcher(net, sizes, activation, dropout_rate, adaptive_rate, adaptive_rate_scaler).to(device=device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate, betas=(0.9, 0.999), eps=1e-5)
+    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     
     # adaptive weight
     x_f_s = torch.tensor(0.).float().to(device).requires_grad_(True)
     x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
     x_data_s = torch.tensor(0.).float().to(device).requires_grad_(True)
-    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=learning_rate*10)
+    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=learning_rate*0.0001)
     
     # record loss history for plotting and save the best model
     mse_loss_hist = []
@@ -239,22 +239,21 @@ def network_training(
         
         # update the model by backpropagation and calculate the total loss
         optimizer.zero_grad()
-        loss = loss_dispatcher(pde_loss, bc_loss, data_loss, slope_recovery_term, model, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s)
+        loss = loss_dispatcher(pde_loss, bc_loss, data_loss, slope_recovery_term, loss_weights, adaptive_weight, x_f_s, x_label_s, x_data_s)
         loss.backward()
         optimizer.step()
         
         # update the weight if adaptive weight is used by backpropagation 
-        if adaptive_weight and not adaptive_rate:
+        if adaptive_weight:
             optimizer_adam_weight.zero_grad()
-            loss1 = torch.exp(-x_f_s) * pde_loss.detach() + torch.exp(-x_label_s) * bc_loss.detach() + torch.exp(-x_data_s) * data_loss.detach() + x_data_s + x_f_s + x_label_s
+            if adaptive_rate:
+                loss1 = torch.exp(-x_f_s) * pde_loss.detach() + torch.exp(-x_label_s) * bc_loss.detach() + torch.exp(-x_data_s) * data_loss.detach() + x_data_s + x_f_s + x_label_s + slope_recovery_term
+                pass
+            else:
+                loss1 = torch.exp(-x_f_s) * pde_loss.detach() + torch.exp(-x_label_s) * bc_loss.detach() + torch.exp(-x_data_s) * data_loss.detach() + x_data_s + x_f_s + x_label_s
+                pass
             loss1.backward()
             optimizer_adam_weight.step()
-        elif adaptive_rate and adaptive_weight:
-            optimizer_adam_weight.zero_grad()
-            loss1 = torch.exp(-x_f_s) * pde_loss.detach() + torch.exp(-x_label_s) * bc_loss.detach() + torch.exp(-x_data_s) * data_loss.detach() + x_data_s + x_f_s + x_label_s + slope_recovery_term
-            loss1.backward()
-            optimizer_adam_weight.step()
-            pass
         
         # record loss history for plotting
         mse_loss = pde_loss + bc_loss + data_loss
