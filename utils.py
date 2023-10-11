@@ -144,7 +144,7 @@ def loss_dispatcher(pde_loss, bc_loss, data_loss, slope_recovery_term, loss_weig
 
 def network_training(
         K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key,
-        device, net, sizes, activation, learning_rate, n_epochs, lossFunction,
+        device, net, sizes, activation, learning_rate, aw_learning_rate, n_epochs, lossFunction,
         dropout_rate, adaptive_rate, adaptive_rate_scaler, loss_weights, adaptive_weight,
         X_train_tensor, y_train_tensor
         ):
@@ -191,7 +191,7 @@ def network_training(
     x_f_s = torch.tensor(0.).float().to(device).requires_grad_(True)
     x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
     x_data_s = torch.tensor(0.).float().to(device).requires_grad_(True)
-    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=learning_rate)
+    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=aw_learning_rate)
     
     # record loss history for plotting and save the best model
     mse_loss_hist = []
