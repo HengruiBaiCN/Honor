@@ -188,16 +188,26 @@ def network_training(
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     
     # adaptive weight
-    x_f_s = torch.tensor(0.).float().to(device).requires_grad_(True)
-    x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
-    x_data_s = torch.tensor(0.).float().to(device).requires_grad_(True)
-    optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=aw_learning_rate)
+    if net == 'pinn':
+        x_f_s = torch.tensor(-1.).float().to(device).requires_grad_(True)
+        x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
+        x_data_s = torch.tensor(0.).float().to(device).requires_grad_(True)
+        optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=aw_learning_rate)
+    else:
+        x_f_s = torch.tensor(0.).float().to(device).requires_grad_(True)
+        x_label_s = torch.tensor(0.).float().to(device).requires_grad_(True)
+        x_data_s = torch.tensor(-1.).float().to(device).requires_grad_(True)
+        optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=aw_learning_rate)
     
     # record loss history for plotting and save the best model
     mse_loss_hist = []
     pde_loss_hist = []
     bc_loss_hist = []
     data_loss_hist = []
+    x_f_s_hist = []
+    x_label_s_hist = []
+    x_data_s_hist = []
+    loss_weights_hist = {}
     min_train_loss = float("inf")  # Initialize with a large value
     final_model = None
     
@@ -261,6 +271,9 @@ def network_training(
         pde_loss_hist.append(pde_loss.item())
         bc_loss_hist.append(bc_loss.item())
         data_loss_hist.append(data_loss.item())
+        x_f_s_hist.append(x_f_s.item())
+        x_label_s_hist.append(x_label_s.item())
+        x_data_s_hist.append(x_data_s.item())
         
         # save the best model by comparing the loss for testing data
         if mse_loss.item() < min_train_loss:
@@ -269,11 +282,14 @@ def network_training(
             pass
         pass
     
-    # logging setup and training time calculation 
+    # logging setup and training time calculation
+    loss_weights_hist['PDE Weight'] = x_f_s_hist
+    loss_weights_hist['BC Weight'] = x_label_s_hist
+    loss_weights_hist['Data Weight'] = x_data_s_hist
     elapsed = timer() - start_time
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
     
-    return model, final_model, mse_loss_hist, pde_loss_hist, bc_loss_hist, data_loss_hist
+    return model, final_model, mse_loss_hist, pde_loss_hist, bc_loss_hist, data_loss_hist, loss_weights_hist
 
 
 
