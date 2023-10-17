@@ -188,9 +188,9 @@ def network_training(
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     
     # adaptive weight
-    x_f_s = torch.tensor(np.log(loss_weights[0])).float().to(device).requires_grad_(True)
-    x_label_s = torch.tensor(np.log(loss_weights[1])).float().to(device).requires_grad_(True)
-    x_data_s = torch.tensor(np.log(loss_weights[2])).float().to(device).requires_grad_(True)
+    x_f_s = torch.tensor(-np.log(loss_weights[0])).float().to(device).requires_grad_(True)
+    x_label_s = torch.tensor(-np.log(loss_weights[1])).float().to(device).requires_grad_(True)
+    x_data_s = torch.tensor(-np.log(loss_weights[2])).float().to(device).requires_grad_(True)
     optimizer_adam_weight = torch.optim.Adam([x_f_s] + [x_label_s] + [x_data_s], lr=aw_learning_rate)
     
     # record loss history for plotting and save the best model
@@ -277,9 +277,9 @@ def network_training(
         pass
     
     # logging setup and training time calculation
-    loss_weights_hist['PDE Weight'] = x_f_s_hist
-    loss_weights_hist['BC Weight'] = x_label_s_hist
-    loss_weights_hist['Data Weight'] = x_data_s_hist
+    loss_weights_hist[0] = x_f_s_hist
+    loss_weights_hist[1] = x_label_s_hist
+    loss_weights_hist[2] = x_data_s_hist
     elapsed = timer() - start_time
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
     
