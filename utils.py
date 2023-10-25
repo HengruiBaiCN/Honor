@@ -142,7 +142,7 @@ def network_training(
         K, r, sigma, T, Smax, S_range, t_range, gs, num_bc, num_fc, num_nc, RNG_key,
         device, net, sizes, activation, learning_rate, aw_learning_rate, n_epochs, lossFunction,
         dropout_rate, adaptive_rate, adaptive_rate_scaler, loss_weights, adaptive_weight,
-        X_train_tensor, y_train_tensor
+        X_train_tensor, y_train_tensor, X_test_tensor, y_test_tensor
         ):
     r"""Train PINN and return trained network alongside loss over time.
 
@@ -194,11 +194,12 @@ def network_training(
     pde_loss_hist = []
     bc_loss_hist = []
     data_loss_hist = []
+    relative_L2_loss_hist = []
     x_f_s_hist = []
     x_label_s_hist = []
     x_data_s_hist = []
     loss_weights_hist = {}
-    min_train_loss = float("inf")  # Initialize with a large value
+    min_loss = float("inf")  # Initialize with a large value
     final_model = None
     
     # training loop and logging setup
@@ -255,6 +256,10 @@ def network_training(
             loss1.backward()
             optimizer_adam_weight.step()
         
+        # relative L2 loss
+        y4_hat = model(X_test_tensor)
+        relative_L2_loss = torch.sqrt(torch.mean((y_test_tensor - y4_hat)**2)) / torch.sqrt(torch.mean(y_test_tensor**2))
+        
         # record loss history for plotting
         mse_loss = pde_loss + bc_loss + data_loss
         mse_loss_hist.append(mse_loss.item())
@@ -264,10 +269,11 @@ def network_training(
         x_f_s_hist.append(x_f_s.item())
         x_label_s_hist.append(x_label_s.item())
         x_data_s_hist.append(x_data_s.item())
+        relative_L2_loss_hist.append(relative_L2_loss.item())
         
         # save the best model by comparing the loss for testing data
-        if mse_loss.item() < min_train_loss:
-            min_train_loss = mse_loss.item()
+        if relative_L2_loss.item() < min_loss:
+            min_loss = relative_L2_loss.item()
             final_model = model.state_dict()
             pass
         pass
@@ -279,4 +285,4 @@ def network_training(
     elapsed = timer() - start_time
     logging.info(f'Training finished. Elapsed time: {elapsed} s\n')
     
-    return model, final_model, mse_loss_hist, pde_loss_hist, bc_loss_hist, data_loss_hist, loss_weights_hist
+    return model, final_model, mse_loss_hist, pde_loss_hist, bc_loss_hist, data_loss_hist, loss_weights_hist, relative_L2_loss_hist
